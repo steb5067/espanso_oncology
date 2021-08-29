@@ -1,0 +1,407 @@
+  name: rxreview
+  parent: default
+  matches:
+  - trigger: ":iorv"
+    replace: |
+       Pretreatment review for {{iorv.situation}}
+       
+       Assessment {{iorv.asst}}
+       
+       Plan {{iorv.plan}}
+        {{iorv.planr}}
+       
+       Medication changes {{iorv.meds}}
+        {{iorv.medsr}}
+       Next cycle {{iorv.nextcycle}} 
+       Clinical Summary
+       Symptoms
+       Pain {{iorv.pain}}
+       Constitutional symptoms  {{iorv.constit}}
+       Palpable abnormality  {{iorv.lump}}
+       Ulceration  {{iorv.ulcer}}
+         {{iorv.chest}}         
+       Other {{iorv.symptomsr}}
+       Treatment toxicity
+       Fatigue {{iorv.fatigue}}
+       Skin rash {{iorv.rash}}
+       Pruritus {{iorv.itch}}
+       Arthralgias {{iorv.joints}}
+       Possible indicators of toxicity {{iorv.posstox}}
+       Objective findings   {{iorv.exam}}
+       {{iorv.examr}} 
+       Blood tests {{iorv.labs}}
+       {{iorv.labsr}}       
+       Imaging {{iorv.xray}}
+       {{iorv.xrayr}}
+    vars:
+      - name: "iorv"
+        type: form
+        params:
+          layout: "Immunotherapy review
+                   Situation {{situation}}
+                   Assessment {{asst}}
+                   \n Plan {{plan}}
+                   remarks {{planr}} 
+                   \n Medication changes {{meds}}
+                   remarks {{medsr}}
+                   \n Symptoms
+                   \n   Pain  {{pain}}
+                   \n   Constitutional symptoms  {{constit}}
+                   \n   Palpable abnormality {{lump}}
+                   \n   Fatigue  {{fatigue}}
+                   \n   Pulmonary symptoms grade {{chest}}
+                   \n   Rash {{rash}}
+                   \n  Itching {{itch}}
+                   \n  Joints  {{joints}}
+                   \n  Possible indicators of toxicty {{posstox}}
+                   \n   remarks {{symptomsr}}
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n Scans {{xray}} remarks {{xrayr}}"
+          fields:
+            situation:
+              type: choice
+              values:
+                - pembrolizumab
+                - nivolumab 
+                - avelumab 
+                - atezolizumab
+                - ipilimumab-nivolumab
+                - investigational immunotherapy
+            asst:
+              type: choice
+              values:
+                - No evidence of active disease
+                - Suspicious findings
+                - Relapse suspected or proven
+            plan:
+              type: choice
+              values:
+                - ongoing monitoring
+                - further investigation
+                - start therapy
+                - other
+            planr:
+              multiline: false
+            meds:
+              type: choice
+              values:
+                - no changes
+                - stopped medication
+                - started medication
+                - stopped and started medication
+            medsr:
+              multiline: false
+            exam:
+              type: choice
+              values:
+                - not required
+                - oral cavity, neck no evidence of disease
+                - oral cavity, neck no evidence of disease, chest no significant abnormality
+                - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
+                - concerning findings
+            exam2:
+              type: choice
+              values:
+                - no or mild lymphedema and fibrosis
+                - moderate or significant fibrosis without lymphedema
+                - moderate or significant fibrosis with lymphedema
+                - moderate or significant lymphedema with little or no fibrosis
+                - moderate or significant lymphedema with significant fibrosis
+            examr: 
+              multiline: false
+            labs:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - abnormality requiring further investigation
+                - abnormality requiring intervention
+            labsr:
+              multiline: false
+            xray:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - stable abnormalities not concerning for recurrence
+                - new abnormalities of unclear significance
+                - abnormalities suspicious of malignancy
+            xrayr:
+              multiline: false   
+            pain:
+              type: choice
+              values:
+               - no pain 
+               - no change 
+               - change in type or severity
+               - new onset severe
+               - new onset persistent and consistent
+            constit:
+              type: choice
+              values:
+               - none 
+               - minor weight loss
+               - significant weight loss
+               - fever
+               - drenching night sweats
+               - multiple constitutional symptoms
+            lump:
+              type: choice
+              values:
+               - none noted
+               - visible abnormality
+               - lump suggesting adenopathy
+               - other palpable abnormality
+            fatigue:
+              type: choice
+              values:
+               - none 
+               - chronic and unchanged
+               - new onset
+               - significant increase 
+            chest:
+              type: choice
+              values:
+               - none 
+               - chronic and unchanged
+               - new onset
+               - significant increase
+            symptomsr:
+              multiline: false
+            dry:
+              type: choice
+              values:
+                - mild
+                - moderate
+                - severe
+            eat:
+              type: choice
+              values:
+                - minor alteration in diet
+                - avoid certain foods, eating a variety
+                - limited diet
+                - soft diet only
+                - liquid only
+                - no oral intake
+            swallow:
+              type: choice
+              values:
+                - no restriction
+                - care with food size or dryness
+                - avoidance of some food
+                - significant restrictions but no coughing or spluttering
+                - significant restrictions with coughing and spluttering
+                - no restrictions but coughing and spluttering
+                - gastrostomy dependent
+            voice:
+              type: choice
+              values:
+                - no significant impact
+                - mild changes in voice or speech
+                - moderate changes in voice or speech
+                - major impact on voice or speech 
+   
+
+  - trigger: ":crtrv"
+    replace: |
+       Followup for {{crtrv.situation}}
+       
+       Assessment {{crtrv.asst}}
+       
+       Plan {{crtrv.plan}}
+        {{crtrv.planr}}
+       
+       Medication changes {{crtrv.meds}}
+        {{crtrv.medsr}}
+
+       Clinical Summary
+       Symptoms
+       Pain {{crtrv.pain}}
+       Constitutional symptoms  {{crtrv.constit}}
+       Palpable abnormality  {{crtrv.lump}}
+       Ulceration  {{crtrv.ulcer}}
+         {{crtrv.chest}}         
+       Other {{crtrv.symptomsr}}
+       Treatment toxicity
+       Fatigue {{crtrv.fatigue}}
+       Dryness {{crtrv.dry}}
+       Difficulty eating {{crtrv.eat}}
+       Swallowing issues {{crtrv.swallow}}
+       Voice and speech {{crtrv.voice}}
+       Objective findings   {{crtrv.exam}}
+       Fibrosis/edema {{crtrv.exam2}}
+       {{crtrv.examr}} 
+       Blood tests {{crtrv.labs}}
+       {{crtrv.labsr}}       
+       Imaging {{crtrv.xray}}
+       {{crtrv.xrayr}}
+    vars:
+      - name: "crtrv"
+        type: form
+        params:
+          layout: "H&N cancer followup
+                   Situation {{situation}}
+                   Assessment {{asst}}
+                   \n Plan {{plan}}
+                   remarks {{planr}} 
+                   \n Medication changes {{meds}}
+                   remarks {{medsr}}
+                   \n Symptoms
+                   \n   Pain  {{pain}}
+                   \n   Constitutional symptoms  {{constit}}
+                   \n   Palpable abnormality {{lump}}
+                   \n   Fatigue  {{fatigue}}
+                   \n   Pulmonary symptoms grade {{chest}}
+                   \n   Xerostomia {{dry}}
+                   \n  Eating {{eat}}
+                   \n Swallowing {{swallow}}
+                   \n Voice and speech {{voice}}
+                   \n   remarks {{symptomsr}}
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n fibrosis and edema {{exam2}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n Scans {{xray}} remarks {{xrayr}}"
+          fields:
+            situation:
+              type: choice
+              values:
+                - Post definitive chemoradiotherapy
+                - Post adjuvant chemoradiotherapy
+                - Post radiotherapy
+                - Post adjuvant radiotherapy
+                - Late effects of therapy
+            asst:
+              type: choice
+              values:
+                - No evidence of active disease
+                - Suspicious findings
+                - Relapse suspected or proven
+            plan:
+              type: choice
+              values:
+                - ongoing monitoring
+                - further investigation
+                - start therapy
+                - other
+            planr:
+              multiline: false
+            meds:
+              type: choice
+              values:
+                - no changes
+                - stopped medication
+                - started medication
+                - stopped and started medication
+            medsr:
+              multiline: false
+            exam:
+              type: choice
+              values:
+                - not required
+                - oral cavity, neck no evidence of disease
+                - oral cavity, neck no evidence of disease, chest no significant abnormality
+                - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
+                - concerning findings
+            exam2:
+              type: choice
+              values:
+                - no or mild lymphedema and fibrosis
+                - moderate or significant fibrosis without lymphedema
+                - moderate or significant fibrosis with lymphedema
+                - moderate or significant lymphedema with little or no fibrosis
+                - moderate or significant lymphedema with significant fibrosis
+            examr: 
+              multiline: false
+            labs:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - abnormality requiring further investigation
+                - abnormality requiring intervention
+            labsr:
+              multiline: false
+            xray:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - stable abnormalities not concerning for recurrence
+                - new abnormalities of unclear significance
+                - abnormalities suspicious of malignancy
+            xrayr:
+              multiline: false   
+            pain:
+              type: choice
+              values:
+               - no pain 
+               - no change 
+               - change in type or severity
+               - new onset severe
+               - new onset persistent and consistent
+            constit:
+              type: choice
+              values:
+               - none 
+               - minor weight loss
+               - significant weight loss
+               - fever
+               - drenching night sweats
+               - multiple constitutional symptoms
+            lump:
+              type: choice
+              values:
+               - none noted
+               - visible abnormality
+               - lump suggesting adenopathy
+               - other palpable abnormality
+            fatigue:
+              type: choice
+              values:
+               - none 
+               - chronic and unchanged
+               - new onset
+               - significant increase 
+            chest:
+              type: choice
+              values:
+               - none 
+               - chronic and unchanged
+               - new onset
+               - significant increase
+            symptomsr:
+              multiline: false
+            dry:
+              type: choice
+              values:
+                - mild
+                - moderate
+                - severe
+            eat:
+              type: choice
+              values:
+                - minor alteration in diet
+                - avoid certain foods, eating a variety
+                - limited diet
+                - soft diet only
+                - liquid only
+                - no oral intake
+            swallow:
+              type: choice
+              values:
+                - no restriction
+                - care with food size or dryness
+                - avoidance of some food
+                - significant restrictions but no coughing or spluttering
+                - significant restrictions with coughing and spluttering
+                - no restrictions but coughing and spluttering
+                - gastrostomy dependent
+            voice:
+              type: choice
+              values:
+                - no significant impact
+                - mild changes in voice or speech
+                - moderate changes in voice or speech
+                - major impact on voice or speech 
+   

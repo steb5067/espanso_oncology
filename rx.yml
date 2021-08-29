@@ -1,0 +1,102 @@
+  name: rx 
+  parent: default
+  matches:
+  - trigger: ":revio"
+    form: |
+      {{choices}}
+    form_fields:
+      choices:
+        type: choice
+        values:
+          - First choice
+          - Second choice
+
+
+  - trigger: ":revio"
+    replace: |
+       Seen for immunotherapy with {{formd.drug}}
+       Functional status {{formd.ecog}}
+       Plan: {{formd.plan}}
+       Medication changes: {{formd.medchange}}
+       Clinical summary:
+         Symptoms
+         {{formd.symp1}}
+         {{formd.symp2}}
+         {{formd.symp3}}
+         Toxicity  
+         Fatigue : {{formd.severity1}}
+         Rash : {{formd.severity2}}
+         Joint pain : {{formd.severity3}}
+         Itch : {{formd.severity4}}
+         Endocrine : {{formd.severity5}}
+         Other : {{formd.toxinfo}}    
+       Information and advice given
+       {{formd.advice}}
+    vars:
+      - name: "formd"
+        type: form
+        params:
+          layout: "IO review:
+                   \n
+                   Drug: {{drug}}
+                   ECOG: {{ecog}}
+                   Plan:
+                     
+                   \n   Fatigue   {{severity1}}
+                   \n   Rash   {{severity2}}
+                   \n   Joint pain  {{severity3}}
+                   \n   Itch  {{severity4}}
+                   \n   Endocrine {{severity5}}
+                   \n   Other {{toxinfo}}
+                   Medication changes
+                   "
+          fields:
+            severity1:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            severity2:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening 
+            severity3:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            severity4:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+            severity5:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+                

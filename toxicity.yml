@@ -1,0 +1,443 @@
+  name: toxicity
+  parent: default
+  matches:
+  - trigger: ":toxgi"
+    replace: |
+       {{forma.name}} : {{forma.severity}}
+       {{forma.name2}} : {{forma.severity2}}
+       {{forma.name3}} : {{forma.severity3}}
+       {{forma.name4}} : {{forma.severity4}}
+    vars:
+      - name: "forma"
+        type: form
+        params:
+          layout: "GI Toxicity: 
+                   \n   {{name}} grade {{severity}}
+                   \n   {{name2}} grade {{severity2}}
+                   \n   {{name3}} grade {{severity3}}
+                   \n   {{name4}} grade {{severity4}}"
+          fields:
+            name:
+              type: list # or `choice`
+              values:
+                - Diarhoea
+                - Mucositis
+                - Nausea
+                - Vomiting   
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name:
+              type: list # or `choice`
+              values:
+                - Diarhoea
+                - Mucositis
+                - Nausea
+                - Vomiting   
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name2:
+              type: list # or `choice`
+              values:
+                - Diarhoea
+                - Mucositis
+                - Nausea
+                - Vomiting   
+            severity2:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name3:
+              type: list # or `choice`
+              values:
+                - Diarhoea
+                - Mucositis
+                - Nausea
+                - Vomiting   
+            severity3:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name4:
+              type: list # or `choice`
+              values:
+                - Diarhoea
+                - Mucositis
+                - Nausea
+                - Vomiting   
+            severity4:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening                
+
+  - trigger: ":toxcns"
+    replace: |
+       {{formb.name}} : {{formb.severity}}
+       {{formb.name2}} : {{formb.severity2}}
+       {{formb.name3}} : {{formb.severity3}}
+       {{formb.name4}} : {{formb.severity4}}
+    vars:
+      - name: "formb"
+        type: form
+        params:
+          layout: "CNS Toxicity: 
+                   \n   {{name}} grade {{severity}}
+                   \n   {{name2}} grade {{severity2}}
+                   \n   {{name3}} grade {{severity3}}
+                   \n   {{name4}} grade {{severity4}}"
+          fields:
+            name:
+              type: list # or `choice`
+              values:
+                - Neuropathy
+                - Ototoxicity
+                - Nausea
+                - Vomiting   
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name:
+              type: list # or `choice`
+              values:
+                - Neuropathy
+                - Ototoxicity
+                - Nausea
+                - Vomiting   
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name2:
+              type: list # or `choice`
+              values:
+                - Neuropathy
+                - Ototoxicity
+                - Nausea
+                - Vomiting   
+            severity2:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name3:
+              type: list # or `choice`
+              values:
+                - Neuropathy
+                - Ototoxicity
+                - Nausea
+                - Vomiting   
+            severity3:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name4:
+              type: list # or `choice`
+              values:
+                - Neuropathy
+                - Ototoxicity
+                - Nausea
+                - Vomiting   
+            severity4:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+
+  - trigger: ":toxgen"
+    replace: |
+       {{formc.name}} : {{formc.severity}}
+       {{formc.name2}} : {{formc.severity2}}
+       {{formc.name3}} : {{formc.severity3}}
+       {{formc.name4}} : {{formc.severity4}}
+    vars:
+      - name: "formc"
+        type: form
+        params:
+          layout: "General Toxicity: 
+                   \n   {{name}} grade {{severity}}
+                   \n   {{name2}} grade {{severity2}}
+                   \n   {{name3}} grade {{severity3}}
+                   \n   {{name4}} grade {{severity4}}"
+          fields:
+            name:
+              type: list # or `choice`
+              values:
+                - Fatigue
+                - Fever
+                - Infection
+                - Hair loss   
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name:
+              type: list # or `choice`
+              values:
+                - Fatigue
+                - Fever
+                - Infection
+                - Hair loss   
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name2:
+              type: list # or `choice`
+              values:
+                - Fatigue
+                - Fever
+                - Infection
+                - Hair loss   
+            severity2:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name3:
+              type: list # or `choice`
+              values:
+                - Fatigue
+                - Fever
+                - Infection
+                - Hair loss   
+            severity3:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name4:
+              type: list # or `choice`
+              values:
+                - Fatigue
+                - Fever
+                - Infection
+                - Hair loss   
+            severity4:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening                        
+
+  - trigger: ":toxskin"
+    replace: |
+       {{formd.name1}} : {{formd.severity1}}
+       {{formd.name2}} : {{formd.severity2}}
+       {{formd.name3}} : {{formd.severity3}}
+       {{formd.name4}} : {{formd.severity4}}
+       {{formd.name5}} : {{formd.severity5}}       
+       
+    vars:
+      - name: "formd"
+        type: form
+        params:
+          layout: "Skin Toxicity: 
+                   \n   {{name1}} grade {{severity1}}
+                   \n   {{name2}} grade {{severity2}}
+                   \n   {{name3}} grade {{severity3}}
+                   \n   {{name4}} grade {{severity4}}
+                   \n   {{name5}} grade {{severity5}}"
+          fields:
+            name1:
+              type: list # or `choice`
+              values:
+               - Rash 
+            severity1:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name:
+              type: list # or `choice`
+              values:
+               - Itching
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name2:
+              type: list # or `choice`
+              values:
+               - Hand-foot syndrome
+            severity2:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name3:
+              type: list # or `choice`
+              values:
+               - Nail changes   
+            severity3:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            name4:
+              type: list # or `choice`
+              values:
+               - Photosensitivity
+            severity4:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+            name5:
+              type: list # or `choice`
+              values:
+               - Conjunctival irritation   
+            severity5:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+
+  - trigger: ":toxsk"
+    replace: |
+       Rash : {{forme.severity1}}
+       Itch : {{forme.severity2}}
+       Hand foot syndrome : {{forme.severity3}}
+       Nail changes : {{forme.severity4}}
+       Photosensitivity  : {{forme.severity5}}       
+       
+    vars:
+      - name: "forme"
+        type: form
+        params:
+          layout: "Skin Toxicity: 
+                   \n   Rash   {{severity1}}
+                   \n   Itch   {{severity2}}
+                   \n   Hand foot syndrome  {{severity3}}
+                   \n   Nail changes  {{severity4}}
+                   \n   Photosensitivity {{severity5}}"
+          fields:
+            severity1:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            severity:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            severity2:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening 
+            severity3:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening
+            severity4:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+            severity5:
+              type: list # or `choice`
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe or interfering with life
+               - intolerable or life threatening         
+
+    # toxicities of chemo in frequency
+ # 1. fatigue 2. myelosuppression 3. nausea 4. alopecia 5. skin 6. diarhoea 7. mucositis 8. fertility 9. hsr 10. lung 11. 2nd cancer 12. fever 13. neuro-sens 14. neuro-cns
+ # 15. renal 16. hfs 17. edema 18. photosensitivity 19. nails  20 . flu-like 21. hepatic 22. conjunctival 23. cystitis 24. cerebellar 25. otoxcox
+ # ignored extravasation, radiation recall 
