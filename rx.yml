@@ -3,26 +3,26 @@
   matches:
   - trigger: ":revio"
     replace: |
-       Seen for immunotherapy with {{formd.drug}}
-       Functional status {{formd.ecog}}
-       Plan: {{formd.plan}}
-       Medication changes: {{formd.medchange}}
+       Seen for immunotherapy with {{revio.drug}}
+       Functional status {{revio.ecog}}
+       Plan: {{revio.plan}}
+       Medication changes: {{revio.medchange}}
        Clinical summary:
          Symptoms
-         {{formd.symp1}}
-         {{formd.symp2}}
-         {{formd.symp3}}
+         {{revio.symp1}}
+         {{revio.symp2}}
+         {{revio.symp3}}
          Toxicity  
-         Fatigue : {{formd.severity1}}
-         Rash : {{formd.severity2}}
-         Joint pain : {{formd.severity3}}
-         Itch : {{formd.severity4}}
-         Endocrine : {{formd.severity5}}
-         Other : {{formd.toxinfo}}    
+         Fatigue : {{revio.severity1}}
+         Rash : {{revio.severity2}}
+         Joint pain : {{revio.severity3}}
+         Itch : {{revio.severity4}}
+         Endocrine : {{revio.severity5}}
+         Other : {{revio.toxinfo}}    
        Information and advice given
-       {{formd.advice}}
+       {{revio.advice}}
     vars:
-      - name: "formd"
+      - name: "revio"
         type: form
         params:
           layout: "IO review:
