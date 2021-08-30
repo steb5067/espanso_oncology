@@ -4,22 +4,16 @@
   - trigger: ":iorv"
     replace: |
        Pretreatment review for {{iorv.situation}}
-       
        Assessment {{iorv.asst}}
-       
-       Plan {{iorv.plan}}
-        {{iorv.planr}}
-       
-       Medication changes {{iorv.meds}}
-        {{iorv.medsr}}
+       Plan {{iorv.plan}} {{iorv.planr}}
+       Medication changes {{iorv.meds}} {{iorv.medsr}}
        Next cycle {{iorv.nextcycle}} 
+
        Clinical Summary
        Symptoms
        Pain {{iorv.pain}}
        Constitutional symptoms  {{iorv.constit}}
        Palpable abnormality  {{iorv.lump}}
-       Ulceration  {{iorv.ulcer}}
-         {{iorv.chest}}         
        Other {{iorv.symptomsr}}
        Treatment toxicity
        Fatigue {{iorv.fatigue}}
@@ -27,6 +21,7 @@
        Pruritus {{iorv.itch}}
        Arthralgias {{iorv.joints}}
        Possible indicators of toxicity {{iorv.posstox}}
+       {{iorv.toxicityr}}
        Objective findings   {{iorv.exam}}
        {{iorv.examr}} 
        Blood tests {{iorv.labs}}
@@ -44,17 +39,18 @@
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
+                   \n next cycle {{nextcycle}}
                    \n Symptoms
                    \n   Pain  {{pain}}
                    \n   Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Pulmonary symptoms grade {{chest}}
+                   \n   Other symptoms {{symptomsr}}
                    \n   Rash {{rash}}
                    \n  Itching {{itch}}
                    \n  Joints  {{joints}}
-                   \n  Possible indicators of toxicty {{posstox}}
-                   \n   remarks {{symptomsr}}
+                   \n  Possible indicators of toxicity {{posstox}}
+                   \n   remarks {{toxicityr}}
                    \n Exam {{exam}}  remarks {{examr}}
                    \n labs {{labs}} remarks {{labsr}}
                    \n Scans {{xray}} remarks {{xrayr}}"
@@ -71,16 +67,18 @@
             asst:
               type: choice
               values:
-                - No evidence of active disease
-                - Suspicious findings
-                - Relapse suspected or proven
+                - Clinically stable no significant toxicity
+                - Clinically stable mild to moderate toxicity 
+                - Clinically stable major toxicity suspected
+                - Suspicion of progressive disease
             plan:
               type: choice
               values:
-                - ongoing monitoring
-                - further investigation
-                - start therapy
-                - other
+                - continue current therapy
+                - continue current therapy, start or continue supportive care
+                - hold therapy start immediate treatment of high grade immune toxicity
+                - hold therapy investigate for severe immune toxicity
+                - investigate for disease progression
             planr:
               multiline: false
             meds:
@@ -89,9 +87,17 @@
                 - no changes
                 - stopped medication
                 - started medication
-                - stopped and started medication
+                - medication changes
             medsr:
               multiline: false
+            nextcycle:
+              type: choice
+              values:
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - after investigation
             exam:
               type: choice
               values:
@@ -100,14 +106,6 @@
                 - oral cavity, neck no evidence of disease, chest no significant abnormality
                 - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
                 - concerning findings
-            exam2:
-              type: choice
-              values:
-                - no or mild lymphedema and fibrosis
-                - moderate or significant fibrosis without lymphedema
-                - moderate or significant fibrosis with lymphedema
-                - moderate or significant lymphedema with little or no fibrosis
-                - moderate or significant lymphedema with significant fibrosis
             examr: 
               multiline: false
             labs:
@@ -169,79 +167,76 @@
                - significant increase
             symptomsr:
               multiline: false
-            dry:
+            rash:
               type: choice
               values:
+                - none
                 - mild
                 - moderate
                 - severe
-            eat:
+                - blistering or with systemic symptoms
+            itch:
               type: choice
               values:
-                - minor alteration in diet
-                - avoid certain foods, eating a variety
-                - limited diet
-                - soft diet only
-                - liquid only
-                - no oral intake
-            swallow:
+                - none
+                - mild
+                - moderate
+                - severe
+            joints:
               type: choice
               values:
-                - no restriction
-                - care with food size or dryness
-                - avoidance of some food
-                - significant restrictions but no coughing or spluttering
-                - significant restrictions with coughing and spluttering
-                - no restrictions but coughing and spluttering
-                - gastrostomy dependent
-            voice:
-              type: choice
-              values:
-                - no significant impact
-                - mild changes in voice or speech
-                - moderate changes in voice or speech
-                - major impact on voice or speech 
+                - none
+                - mild arthralgias or myalgias
+                - mild or moderate arthraligais, objective synovitis
+                - severe arthraglias or myalgias
+                - polyarthralgias with systemic symptoms
+            posstox:
+              multiline: false
+            toxicicityr:
+              multiline: false
+
    
 
-  - trigger: ":crtrv"
+  - trigger: ":crtrev"
     replace: |
-       Followup for {{crtrv.situation}}
+       Review for {{crtrev.situation}}
+       Week {{crtrev.week}}
+       Assessment {{crtrev.asst}}
        
-       Assessment {{crtrv.asst}}
+       Plan {{crtrev.plan}}
+        {{crtrev.planr}}
        
-       Plan {{crtrv.plan}}
-        {{crtrv.planr}}
-       
-       Medication changes {{crtrv.meds}}
-        {{crtrv.medsr}}
+       Medication changes {{crtrev.meds}}
+        {{crtrev.medsr}}
 
        Clinical Summary
        Symptoms
-       Pain {{crtrv.pain}}
-       Constitutional symptoms  {{crtrv.constit}}
-       Palpable abnormality  {{crtrv.lump}}
-       Ulceration  {{crtrv.ulcer}}
-         {{crtrv.chest}}         
-       Other {{crtrv.symptomsr}}
+       Pain {{crtrev.pain}}
+       Constitutional symptoms  {{crtrev.constit}}
+       Palpable abnormality  {{crtrev.lump}}
+       Ulceration  {{crtrev.ulcer}}
+         {{crtrev.chest}}         
+       Other {{crtrev.symptomsr}}
        Treatment toxicity
-       Fatigue {{crtrv.fatigue}}
-       Dryness {{crtrv.dry}}
-       Difficulty eating {{crtrv.eat}}
-       Swallowing issues {{crtrv.swallow}}
-       Voice and speech {{crtrv.voice}}
-       Objective findings   {{crtrv.exam}}
-       Fibrosis/edema {{crtrv.exam2}}
-       {{crtrv.examr}} 
-       Blood tests {{crtrv.labs}}
-       {{crtrv.labsr}}       
-       Imaging {{crtrv.xray}}
-       {{crtrv.xrayr}}
+       Fatigue {{crtrev.fatigue}}
+       Dryness {{crtrev.dry}}
+       Difficulty eating {{crtrev.eat}}
+       Swallowing issues {{crtrev.swallow}}
+       Voice and speech {{crtrev.voice}}
+       Objective findings   {{crtrev.exam}}
+       Fibrosis/edema {{crtrev.exam2}}
+       {{crtrev.examr}} 
+       Blood tests {{crtrev.labs}}
+       {{crtrev.labsr}}       
+       Imaging {{crtrev.xray}}
+       {{crtrev.xrayr}}
     vars:
-      - name: "crtrv"
+      - name: "crtrev"
         type: form
         params:
-          layout: "H&N cancer followup
+          layout: "H&N cancer chemoRT
                    Situation {{situation}}
+                   Week {{week}} 
                    Assessment {{asst}}
                    \n Plan {{plan}}
                    remarks {{planr}} 
@@ -266,23 +261,34 @@
             situation:
               type: choice
               values:
-                - Post definitive chemoradiotherapy
-                - Post adjuvant chemoradiotherapy
-                - Post radiotherapy
-                - Post adjuvant radiotherapy
-                - Late effects of therapy
+                - cisplatin 3 weekly RT
+                - cisplatin weekly RT
+                - carboplatin-FU 3 weekly RT
+                - definitive cetuximab-RT
+            week:
+              type: choice
+              values:
+                - week 1
+                - week 2
+                - week 3
+                - week 4
+                - week 5
+                - week 6
+                - week 7
+                - week 8
             asst:
               type: choice
               values:
-                - No evidence of active disease
-                - Suspicious findings
-                - Relapse suspected or proven
+                - As yet little in the way of adverse effects
+                - Mild to moderate adverse effects
+                - Substantive adverse effects, as expected
+                - Major adverse effects, more than expected
             plan:
               type: choice
               values:
-                - ongoing monitoring
-                - further investigation
-                - start therapy
+                - continue therapy
+                - continue therapy, increase supportive care
+                - hold chemotherapy, increase supportive care
                 - other
             planr:
               multiline: false
@@ -292,17 +298,18 @@
                 - no changes
                 - stopped medication
                 - started medication
-                - stopped and started medication
+                - medication changes
             medsr:
               multiline: false
             exam:
               type: choice
               values:
                 - not required
-                - oral cavity, neck no evidence of disease
-                - oral cavity, neck no evidence of disease, chest no significant abnormality
-                - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
-                - concerning findings
+                - oral cavity clean, skin grade 0-1
+                - oral cavity patchy erythema or ulceration, skin 0-1
+                - oral cavity confluent ulceration skin 0-1
+                - oral cavity conlfuent ulceration skin 2
+                - other
             exam2:
               type: choice
               values:
