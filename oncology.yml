@@ -1,5 +1,6 @@
   name: oncology 
   parent: default
+  # this was the archetypal form that seems to work. kept as such
   matches:
     - trigger: ":fpt"
       replace: |
