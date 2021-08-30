@@ -71,16 +71,18 @@
             asst:
               type: choice
               values:
-                - No evidence of active disease
-                - Suspicious findings
-                - Relapse suspected or proven
+                - Clinically stable no significant toxicity
+                - Clinically stable mild to moderate toxicity 
+                - Clinically stable major toxicity suspected
+                - Suspicion of progressive disease
             plan:
               type: choice
               values:
-                - ongoing monitoring
-                - further investigation
-                - start therapy
-                - other
+                - continue current therapy
+                - continue current therapy, start or contineu supportive care
+                - hold therapy start immediate treatment of high grade immune toxicity
+                - hold therapy investigate for severe immune toxicity
+                - investigate for disease progression
             planr:
               multiline: false
             meds:
