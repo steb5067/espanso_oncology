@@ -197,41 +197,41 @@
 
    
 
-  - trigger: ":crtrv"
+  - trigger: ":crtrev"
     replace: |
-       Review for {{crtrv.situation}}
-       Week {{crtrv.week}}
-       Assessment {{crtrv.asst}}
+       Review for {{crtrev.situation}}
+       Week {{crtrev.week}}
+       Assessment {{crtrev.asst}}
        
-       Plan {{crtrv.plan}}
-        {{crtrv.planr}}
+       Plan {{crtrev.plan}}
+        {{crtrev.planr}}
        
-       Medication changes {{crtrv.meds}}
-        {{crtrv.medsr}}
+       Medication changes {{crtrev.meds}}
+        {{crtrev.medsr}}
 
        Clinical Summary
        Symptoms
-       Pain {{crtrv.pain}}
-       Constitutional symptoms  {{crtrv.constit}}
-       Palpable abnormality  {{crtrv.lump}}
-       Ulceration  {{crtrv.ulcer}}
-         {{crtrv.chest}}         
-       Other {{crtrv.symptomsr}}
+       Pain {{crtrev.pain}}
+       Constitutional symptoms  {{crtrev.constit}}
+       Palpable abnormality  {{crtrev.lump}}
+       Ulceration  {{crtrev.ulcer}}
+         {{crtrev.chest}}         
+       Other {{crtrev.symptomsr}}
        Treatment toxicity
-       Fatigue {{crtrv.fatigue}}
-       Dryness {{crtrv.dry}}
-       Difficulty eating {{crtrv.eat}}
-       Swallowing issues {{crtrv.swallow}}
-       Voice and speech {{crtrv.voice}}
-       Objective findings   {{crtrv.exam}}
-       Fibrosis/edema {{crtrv.exam2}}
-       {{crtrv.examr}} 
-       Blood tests {{crtrv.labs}}
-       {{crtrv.labsr}}       
-       Imaging {{crtrv.xray}}
-       {{crtrv.xrayr}}
+       Fatigue {{crtrev.fatigue}}
+       Dryness {{crtrev.dry}}
+       Difficulty eating {{crtrev.eat}}
+       Swallowing issues {{crtrev.swallow}}
+       Voice and speech {{crtrev.voice}}
+       Objective findings   {{crtrev.exam}}
+       Fibrosis/edema {{crtrev.exam2}}
+       {{crtrev.examr}} 
+       Blood tests {{crtrev.labs}}
+       {{crtrev.labsr}}       
+       Imaging {{crtrev.xray}}
+       {{crtrev.xrayr}}
     vars:
-      - name: "crtrv"
+      - name: "crtrev"
         type: form
         params:
           layout: "H&N cancer followup
