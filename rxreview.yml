@@ -234,7 +234,7 @@
       - name: "crtrev"
         type: form
         params:
-          layout: "H&N cancer followup
+          layout: "H&N cancer chemoRT
                    Situation {{situation}}
                    Week {{week}} 
                    Assessment {{asst}}

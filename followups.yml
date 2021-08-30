@@ -19,7 +19,7 @@
        Constitutional symptoms  {{fupmel.constit}}
        Palpable abnormality  {{fupmel.lump}}
        Change in fatigue  {{fupmel.fatigue}}
-       New or changes pulmonary symptoms  {{fupmel.chest}}         
+       Other symptoms  {{fupmel.othersx}}         
        Other {{fupmel.symptomsr}}
        Objective findings   {{fupmel.exam}}
        {{fupmel.examr}} 
@@ -43,7 +43,7 @@
                    \n   Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Pulmonary symptoms grade {{chest}}
+                   \n   Other symptoms {{othersx}}
                    \n   remarks {{symptomsr}}
                    \n Exam {{exam}}  remarks {{examr}}
                    \n labs {{labs}} remarks {{labsr}}
@@ -145,13 +145,9 @@
                - chronic and unchanged
                - new onset
                - significant increase 
-            chest:
-              type: choice
-              values:
-               - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase 
+            othersx:
+              multiline: true
+
 
   - trigger: ":fuplymph"
     replace: |
@@ -320,8 +316,8 @@
        Constitutional symptoms  {{fuphn.constit}}
        Palpable abnormality  {{fuphn.lump}}
        Ulceration  {{fuphn.ulcer}}
-         {{fuphn.chest}}         
-       Other {{fuphn.symptomsr}}
+       Other symptoms  {{fuphn.othersx}}         
+       notes {{fuphn.symptomsr}}
        Treatment toxicity
        Fatigue {{fuphn.fatigue}}
        Dryness {{fuphn.dry}}
@@ -351,7 +347,7 @@
                    \n   Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Pulmonary symptoms grade {{chest}}
+                   \n   Other symptoms {{othersx}}
                    \n   Xerostomia {{dry}}
                    \n  Eating {{eat}}
                    \n Swallowing {{swallow}}
@@ -462,13 +458,8 @@
                - chronic and unchanged
                - new onset
                - significant increase 
-            chest:
-              type: choice
-              values:
-               - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase
+            othersx:
+              multiline: true
             symptomsr:
               multiline: false
             dry:
