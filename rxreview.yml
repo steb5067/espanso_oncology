@@ -106,14 +106,6 @@
                 - oral cavity, neck no evidence of disease, chest no significant abnormality
                 - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
                 - concerning findings
-            exam2:
-              type: choice
-              values:
-                - no or mild lymphedema and fibrosis
-                - moderate or significant fibrosis without lymphedema
-                - moderate or significant fibrosis with lymphedema
-                - moderate or significant lymphedema with little or no fibrosis
-                - moderate or significant lymphedema with significant fibrosis
             examr: 
               multiline: false
             labs:
@@ -207,8 +199,8 @@
 
   - trigger: ":crtrv"
     replace: |
-       Followup for {{crtrv.situation}}
-       
+       Review for {{crtrv.situation}}
+       Week {{crtrv.week}}
        Assessment {{crtrv.asst}}
        
        Plan {{crtrv.plan}}
@@ -244,6 +236,7 @@
         params:
           layout: "H&N cancer followup
                    Situation {{situation}}
+                   Week {{week}} 
                    Assessment {{asst}}
                    \n Plan {{plan}}
                    remarks {{planr}} 
@@ -268,23 +261,34 @@
             situation:
               type: choice
               values:
-                - Post definitive chemoradiotherapy
-                - Post adjuvant chemoradiotherapy
-                - Post radiotherapy
-                - Post adjuvant radiotherapy
-                - Late effects of therapy
+                - cisplatin 3 weekly RT
+                - cisplatin weekly RT
+                - carboplatin-FU 3 weekly RT
+                - definitive cetuximab-RT
+            week:
+              type: choice
+              values:
+                - week 1
+                - week 2
+                - week 3
+                - week 4
+                - week 5
+                - week 6
+                - week 7
+                - week 8
             asst:
               type: choice
               values:
-                - No evidence of active disease
-                - Suspicious findings
-                - Relapse suspected or proven
+                - As yet little in the way of adverse effects
+                - Mild to moderate adverse effects
+                - Substantive adverse effects, as expected
+                - Major adverse effects, more than expected
             plan:
               type: choice
               values:
-                - ongoing monitoring
-                - further investigation
-                - start therapy
+                - continue therapy
+                - continue therapy, increase supportive care
+                - hold chemotherapy, increase supportive care
                 - other
             planr:
               multiline: false
@@ -294,17 +298,18 @@
                 - no changes
                 - stopped medication
                 - started medication
-                - stopped and started medication
+                - medication changes
             medsr:
               multiline: false
             exam:
               type: choice
               values:
                 - not required
-                - oral cavity, neck no evidence of disease
-                - oral cavity, neck no evidence of disease, chest no significant abnormality
-                - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
-                - concerning findings
+                - oral cavity clean, skin grade 0-1
+                - oral cavity patchy erythema or ulceration, skin 0-1
+                - oral cavity confluent ulceration skin 0-1
+                - oral cavity conlfuent ulceration skin 2
+                - other
             exam2:
               type: choice
               values:
