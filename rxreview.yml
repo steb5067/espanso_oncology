@@ -4,15 +4,11 @@
   - trigger: ":iorv"
     replace: |
        Pretreatment review for {{iorv.situation}}
-       
        Assessment {{iorv.asst}}
-       
-       Plan {{iorv.plan}}
-        {{iorv.planr}}
-       
-       Medication changes {{iorv.meds}}
-        {{iorv.medsr}}
+       Plan {{iorv.plan}} {{iorv.planr}}
+       Medication changes {{iorv.meds}} {{iorv.medsr}}
        Next cycle {{iorv.nextcycle}} 
+
        Clinical Summary
        Symptoms
        Pain {{iorv.pain}}
@@ -43,6 +39,7 @@
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
+                   \n next cycle {{nextcycle}}
                    \n Symptoms
                    \n   Pain  {{pain}}
                    \n   Constitutional symptoms  {{constit}}
@@ -78,7 +75,7 @@
               type: choice
               values:
                 - continue current therapy
-                - continue current therapy, start or contineu supportive care
+                - continue current therapy, start or continue supportive care
                 - hold therapy start immediate treatment of high grade immune toxicity
                 - hold therapy investigate for severe immune toxicity
                 - investigate for disease progression
@@ -90,9 +87,17 @@
                 - no changes
                 - stopped medication
                 - started medication
-                - stopped and started medication
+                - medication changes
             medsr:
               multiline: false
+            nextcycle:
+              type: choice
+              values:
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - after investigation
             exam:
               type: choice
               values:
