@@ -18,8 +18,6 @@
        Pain {{iorv.pain}}
        Constitutional symptoms  {{iorv.constit}}
        Palpable abnormality  {{iorv.lump}}
-       Ulceration  {{iorv.ulcer}}
-         {{iorv.chest}}         
        Other {{iorv.symptomsr}}
        Treatment toxicity
        Fatigue {{iorv.fatigue}}
@@ -27,6 +25,7 @@
        Pruritus {{iorv.itch}}
        Arthralgias {{iorv.joints}}
        Possible indicators of toxicity {{iorv.posstox}}
+       {{iorv.toxicityr}}
        Objective findings   {{iorv.exam}}
        {{iorv.examr}} 
        Blood tests {{iorv.labs}}
@@ -49,12 +48,12 @@
                    \n   Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Pulmonary symptoms grade {{chest}}
+                   \n   Other symptoms {{symptomsr}}
                    \n   Rash {{rash}}
                    \n  Itching {{itch}}
                    \n  Joints  {{joints}}
-                   \n  Possible indicators of toxicty {{posstox}}
-                   \n   remarks {{symptomsr}}
+                   \n  Possible indicators of toxicity {{posstox}}
+                   \n   remarks {{toxicityr}}
                    \n Exam {{exam}}  remarks {{examr}}
                    \n labs {{labs}} remarks {{labsr}}
                    \n Scans {{xray}} remarks {{xrayr}}"
@@ -171,38 +170,34 @@
                - significant increase
             symptomsr:
               multiline: false
-            dry:
+            rash:
               type: choice
               values:
+                - none
                 - mild
                 - moderate
                 - severe
-            eat:
+                - blistering or with systemic symptoms
+            itch:
               type: choice
               values:
-                - minor alteration in diet
-                - avoid certain foods, eating a variety
-                - limited diet
-                - soft diet only
-                - liquid only
-                - no oral intake
-            swallow:
+                - none
+                - mild
+                - moderate
+                - severe
+            joints:
               type: choice
               values:
-                - no restriction
-                - care with food size or dryness
-                - avoidance of some food
-                - significant restrictions but no coughing or spluttering
-                - significant restrictions with coughing and spluttering
-                - no restrictions but coughing and spluttering
-                - gastrostomy dependent
-            voice:
-              type: choice
-              values:
-                - no significant impact
-                - mild changes in voice or speech
-                - moderate changes in voice or speech
-                - major impact on voice or speech 
+                - none
+                - mild arthralgias or myalgias
+                - mild or moderate arthraligais, objective synovitis
+                - severe arthraglias or myalgias
+                - polyarthralgias with systemic symptoms
+            posstox:
+              multiline: false
+            toxicicityr:
+              multiline: false
+
    
 
   - trigger: ":crtrv"
