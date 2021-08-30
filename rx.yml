@@ -2,17 +2,6 @@
   parent: default
   matches:
   - trigger: ":revio"
-    form: |
-      {{choices}}
-    form_fields:
-      choices:
-        type: choice
-        values:
-          - First choice
-          - Second choice
-
-
-  - trigger: ":revio"
     replace: |
        Seen for immunotherapy with {{formd.drug}}
        Functional status {{formd.ecog}}
