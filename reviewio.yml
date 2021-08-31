@@ -1,40 +1,40 @@
   name: reviewio
   parent: default
   matches:
-  - trigger: ":iorv"
+  - trigger: ":iorev"
     replace: |
-       Pretreatment review for {{iorv.situation}}
-       Assessment {{iorv.asst}}
-       Plan {{iorv.plan}} {{iorv.planr}}
-       Medication changes {{iorv.meds}} {{iorv.medsr}}
-       Next cycle {{iorv.nextcycle}} 
+       Pretreatment review for {{iorev.situation}}
+       Assessment {{iorev.asst}}
+       Plan {{iorev.plan}} {{iorev.planr}}
+       Medication changes {{iorev.meds}} {{iorev.medsr}}
+       Next cycle {{iorev.nextcycle}} 
 
        Clinical Summary
        Symptoms
-       Pain {{iorv.pain}}
-       Constitutional symptoms  {{iorv.constit}}
-       Palpable abnormality  {{iorv.lump}}
-       Other {{iorv.symptomsr}}
+       Pain {{iorev.pain}}
+       Constitutional symptoms  {{iorev.constit}}
+       Palpable abnormality  {{iorev.lump}}
+       Other {{iorev.symptomsr}}
        Treatment toxicity
-       Fatigue {{iorv.fatigue}}
-       Skin rash {{iorv.rash}}
-       Pruritus {{iorv.itch}}
-       Arthralgias {{iorv.joints}}
-       Diarhoea / colitis {{iorv.diarhoea}}
-       Pneumonitis {{iorv.pneumonitis}}
-       Neurological {{iorv.neurotox}}  
-       Hepatic {{iorv.liver}}
-       Renal {{iorv.nephro}}
-       Other indicators of toxicity {{iorv.posstox}}
-       {{iorv.toxicityr}}
-       Objective findings   {{iorv.exam}}
-       {{iorv.examr}} 
-       Blood tests {{iorv.labs}}
-       {{iorv.labsr}}       
-       Imaging {{iorv.xray}}
-       {{iorv.xrayr}}
+       Fatigue {{iorev.fatigue}}
+       Skin rash {{iorev.rash}}
+       Pruritus {{iorev.itch}}
+       Arthralgias {{iorev.joints}}
+       Diarhoea / colitis {{iorev.diarhoea}}
+       Pneumonitis {{iorev.pneumonitis}}
+       Neurological {{iorev.neurotox}}  
+       Hepatic {{iorev.liver}}
+       Renal {{iorev.nephro}}
+       Other indicators of toxicity {{iorev.posstox}}
+       {{iorev.toxicityr}}
+       Objective findings   {{iorev.exam}}
+       {{iorev.examr}} 
+       Blood tests {{iorev.labs}}
+       {{iorev.labsr}}       
+       Imaging {{iorev.xray}}
+       {{iorev.xrayr}}
     vars:
-      - name: "iorv"
+      - name: "iorev"
         type: form
         params:
           layout: "Immunotherapy review

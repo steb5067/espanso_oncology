@@ -1,0 +1,50 @@
+    - trigger: ":nhlfup"
+      word: true
+      replace: | 
+        Current issue:
+          Follow up of lymphoma
+
+          Assessment:
+            No clinical indication of active disease requiring intervention
+
+      Plan and requested actions:
+        Ongoing monitoring
+      
+     Requested actions of healthcare professionals:
+        Nil
+        
+     Clinical summary:
+       There are no concerning symptoms to suggest disease activity (constitutional symptoms, masses or node enlargement, symptoms suggestive of pressure on structures or obstruction). On examination there is no lymphadenopathy, hepatosplenomegally, abdominal masses and the chest is clear. Blood picture and biochemistry is within acceptable limits. 
+     
+     Information and advice given:
+       No indication for intervention or further investigation; ongoing monitoring discussed; indications for early presentation discussed. 
+     
+     Medication changes:  
+       Nil
+
+ -trigger: ":hnfup"
+    word: true
+    replace: |
+        Problems and issues:
+          Followup after curative treatment of H&N SCC
+          
+        Assessment:
+          No evidence of active malignancy
+          Late effects of therapy stable
+
+        Plan and requested actions:
+          Ongoing monitoring
+      
+        Requested actions of healthcare professionals:
+          Annual thyroid function testing
+          
+        Clinical summary:
+          There are no concerning symptoms to suggest recurrence (new pain, ulceration, nodal enlargement, changes in eating and swallow, constitutional symptoms). There is no palpable adenopathy, no visible active disease in the oral cavity and oropharynx. Fibrosis stable, lymphedema stable. 
+        
+      
+        Information and advice given:
+          No indication for further investigation, indications for early presentation discussed.
+          
+        Medication changes:
+          Nil
+

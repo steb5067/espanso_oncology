@@ -1,0 +1,148 @@
+  name: exps
+  parent: default
+  matches:
+    - trigger: ":newletter"
+      word: true
+      replace:  |
+         Diagnoses:
+ 
+         Problems and issues:
+
+         Assessment:  
+
+         Functional status:
+
+         Allergies and adverse reactions:
+      
+         Plan and requested actions:
+      
+         Requested actions of healthcare professionals:
+      
+         Clinical summary:
+      
+         Patient and carer concerns, expectations and wishes:
+
+         Information and advice given:
+
+    - trigger: ":revletter"
+      word: true
+      replace:  |
+        Diagnoses
+
+        Problems and issues:
+
+        Assessment:
+          
+        Functional status:
+      
+        Allergies and adverse reactions:
+
+        Plan and requested actions:
+      
+        Requested actions of healthcare professionals:
+      
+        Clinical summary:
+      
+        Patient and carer concerns, expectations and wishes:
+      
+        Information and advice given:
+      
+        Medication changes:
+      
+    - trigger: ":rxletter"
+      word: true
+      replace:  |
+        Diagnoses:
+      
+        Problems and issues:
+
+        Assessment:   
+
+        Functional status:
+      
+        Allergies and adverse reactions:
+      
+        Plan and requested actions:
+      
+        Clinical summary:
+      
+        Information and advice given:
+     
+# my abbrevs version 1
+
+    - trigger: ":ecog0"
+      word: true
+      replace: |
+         ECOG 0 ( Fully active, able to carry on all pre-disease performance without restriction)
+
+    - trigger: ":ecog1"
+      word: true
+      replace: |
+         ECOG 1 ( Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature)
+
+    - trigger: ":ecog2"
+      word: true
+      replace: |
+         ECOG 2 (Ambulatory and capable of all self-care but unable to carry out any work activities; up and about more than 50% of waking hours)
+
+    - trigger: ":ecog3"
+      word: true
+      replace: |
+         ECOG 3 (Capable of only limited self-care; confined to bed or chair more than 50% of waking hours )
+
+    - trigger: ":ecog4"
+      word: true
+      replace: |
+         ECOG 4 (Completely disabled; cannot carry on any self-care; totally confined to bed or chair)
+
+
+    - trigger: ":kps100"
+      word: true
+      replace: |
+         100—Normal, no complaints; no evidence of disease
+
+    - trigger: ":kps90"
+      word: true
+      replace: |
+         90—Able to carry on normal activity; minor signs or symptoms of disease
+      
+    - trigger: ":kps80"
+      word: true
+      replace: |
+         80—Normal activity with effort, some signs or symptoms of disease
+      
+    - trigger: ":kps70"
+      word: true
+      replace: |
+         70—Cares for self but unable to carry on normal activity or to do active work
+      
+    - trigger: ":kps60"
+      word: true
+      replace: |     
+         60—Requires occasional assistance but is able to care for most of personal needs
+
+    - trigger: ":kps50"
+      word: true
+      replace: |
+         50—Requires considerable assistance and frequent medical care
+      
+    - trigger: ":kps40"
+      word: true
+      replace: |
+         40—Disabled; requires special care and assistance
+      
+    - trigger: ":kps30"
+      word: true
+      replace: |
+         30—Severely disabled; hospitalization is indicated although death not imminent
+      
+    - trigger: ":kps20"
+      word: true
+      replace: |
+        20-Very ill; hospitalization  and active supportive care necessary
+
+    - trigger: ":kps10"
+      word: true
+      replace: |
+        10 moribund
+
