@@ -7,11 +7,12 @@
        Assessment {{iorev.asst}}
        Plan {{iorev.plan}} {{iorev.planr}}
        Medication changes {{iorev.meds}} {{iorev.medsr}}
+       Patient discussion {{iorev.discuss}}
        Next cycle {{iorev.nextcycle}} 
-
+       
        Clinical Summary
        Symptoms
-       Pain {{iorev.pain}}
+       Pain {{iorev.pain}} {{iorev.painr}}
        Constitutional symptoms  {{iorev.constit}}
        Palpable abnormality  {{iorev.lump}}
        Other {{iorev.symptomsr}}
@@ -40,7 +41,7 @@
           layout: "Immunotherapy review
                    Situation {{situation}}
                    \n Symptoms
-                   \n   Pain  {{pain}}
+                   \n   Pain  {{pain}} notes {{painr}}
                    \n   Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
@@ -59,7 +60,8 @@
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
-                   \n next cycle {{nextcycle}}"
+                   \n next cycle {{nextcycle}}
+                   \n Patient discuussion {{discuss}}"
           fields:
             situation:
               type: choice
@@ -146,6 +148,8 @@
                - worse pain related to known disease
                - new onset pain
                - changed pain 
+            painr:
+              multiline: false
             constit:
               type: choice
               values:
@@ -257,4 +261,6 @@
                  - creat over ULN and 1.5-2 x baseline, + proteinuria, < 1g/24h
                  - creat 2-3x baseline, proteinuria 2+, 1-3.4g proteinuria 24 hrs
                  - creat over 3 x baseline, over 3.5g ptoeteinuria 24 hrs
-                 - creat over 6 x N, dialysis 
+                 - creat over 6 x N, dialysis
+            discuss:
+              multiline: false
