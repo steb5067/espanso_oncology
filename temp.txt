@@ -1,4 +1,9 @@
-    - trigger: ":nhlfup"
+to scan for triggers
+
+awk '/":/{print FILENAME "   " $3$4} ./*.yml
+
+
+- trigger: ":nhlfup"
       word: true
       replace: | 
         Current issue:
