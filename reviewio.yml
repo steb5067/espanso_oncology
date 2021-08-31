@@ -20,7 +20,12 @@
        Skin rash {{iorv.rash}}
        Pruritus {{iorv.itch}}
        Arthralgias {{iorv.joints}}
-       Possible indicators of toxicity {{iorv.posstox}}
+       Diarhoea / colitis {{iorv.diarhoea}}
+       Pneumonitis {{iorv.pneumonitis}}
+       Neurological {{iorv.neurotox}}  
+       Hepatic {{iorv.liver}}
+       Renal {{iorv.nephro}}
+       Other indicators of toxicity {{iorv.posstox}}
        {{iorv.toxicityr}}
        Objective findings   {{iorv.exam}}
        {{iorv.examr}} 
@@ -34,26 +39,27 @@
         params:
           layout: "Immunotherapy review
                    Situation {{situation}}
-                   Assessment {{asst}}
-                   \n Plan {{plan}}
-                   remarks {{planr}} 
-                   \n Medication changes {{meds}}
-                   remarks {{medsr}}
-                   \n next cycle {{nextcycle}}
                    \n Symptoms
                    \n   Pain  {{pain}}
                    \n   Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
                    \n   Other symptoms {{symptomsr}}
-                   \n   Rash {{rash}}
-                   \n  Itching {{itch}}
-                   \n  Joints  {{joints}}
-                   \n  Possible indicators of toxicity {{posstox}}
+                   \n   Rash {{rash}} Itching {{itch}}
+                   \n  Joints  {{joints}} Diarhoea {{diarhoea}}
+                   \n Pneumonitis {{pneumonitis}} Neurolgical {{neurotox}}  
+                   \n  Hepatic {{liver}} Renal {{nephro}}
+                   \n  Other indicators of toxicity {{posstox}}
                    \n   remarks {{toxicityr}}
                    \n Exam {{exam}}  remarks {{examr}}
                    \n labs {{labs}} remarks {{labsr}}
-                   \n Scans {{xray}} remarks {{xrayr}}"
+                   \n Scans {{xray}} remarks {{xrayr}}
+                   Assessment {{asst}}
+                   \n Plan {{plan}}
+                   remarks {{planr}} 
+                   \n Medication changes {{meds}}
+                   remarks {{medsr}}
+                   \n next cycle {{nextcycle}}"
           fields:
             situation:
               type: choice
@@ -221,6 +227,7 @@
             liver:
               type: choice
               values:
+                - not evaluated
                 - none
                 - AST ALT up to 3 x N or bili up to 1.5 x N ( or 2 x baseline)
                 - AST ALT 3-5X N or bili 1.5-3x N (or over 2 x baseline)
@@ -245,6 +252,8 @@
             nephro:
                type: choice
                values:
+                 - not evaluated
+                 - none
                  - creat over ULN and 1.5-2 x baseline, + proteinuria, < 1g/24h
                  - creat 2-3x baseline, proteinuria 2+, 1-3.4g proteinuria 24 hrs
                  - creat over 3 x baseline, over 3.5g ptoeteinuria 24 hrs
