@@ -115,6 +115,7 @@
                 - no significant abnormality
                 - abnormality requiring further investigation
                 - abnormality requiring intervention
+                - results pending
             labsr:
               multiline: false
             xray:
@@ -125,6 +126,7 @@
                 - stable abnormalities not concerning for recurrence
                 - new abnormalities of unclear significance
                 - abnormalities suspicious of malignancy
+                - results pending
             xrayr:
               multiline: false   
             pain:
