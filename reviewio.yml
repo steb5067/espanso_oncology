@@ -131,10 +131,12 @@
               type: choice
               values:
                - no pain 
-               - no change 
-               - change in type or severity
-               - new onset severe
-               - new onset persistent and consistent
+               - chronic pain not related to disease 
+               - stable pain related to known disease
+               - reduced pain related to known disease
+               - worse pain related to known disease
+               - new onset pain
+               - changed pain 
             constit:
               type: choice
               values:
@@ -155,16 +157,18 @@
               type: choice
               values:
                - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase 
+               - mild
+               - moderate
+               - significant increase
+               - significant improvement
             chest:
               type: choice
               values:
-               - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase
+               - no symptoms 
+               - stable symptoms not related to disease or treatment
+               - stable symptoms related to disease
+               - increased symptoms
+               - new onset symptoms
             symptomsr:
               multiline: false
             rash:
@@ -187,7 +191,7 @@
               values:
                 - none
                 - mild arthralgias or myalgias
-                - mild or moderate arthraligais, objective synovitis
+                - mild or moderate arthralgias, objective synovitis
                 - severe arthraglias or myalgias
                 - polyarthralgias with systemic symptoms
             posstox:
