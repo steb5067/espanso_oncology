@@ -20,7 +20,8 @@
        Pain {{iorev.pain}} {{iorev.painr}}
        Weight {{iorev.weight}} Constitutional symptoms  {{iorev.constit}}
        Palpable abnormality  {{iorev.lump}}
-       Other {{iorev.symptomsr}}
+       Other
+       {{iorev.symptomsr}}
        
        Treatment toxicity
        Fatigue {{iorev.fatigue}}
@@ -35,13 +36,16 @@
        Other indicators of toxicity {{iorev.posstox}}
        {{iorev.toxicityr}}
        
-       Objective findings   {{iorev.exam}}
+       Objective findings
+       {{iorev.exam}}
        {{iorev.examr}} 
 
-       Blood tests {{iorev.labs}}
+       Blood tests
+       {{iorev.labs}}
        {{iorev.labsr}}       
 
-       Imaging {{iorev.xray}}
+       Imaging
+       {{iorev.xray}}
        {{iorev.xrayr}}
     vars:
       - name: "iorev"
@@ -109,9 +113,10 @@
               type: choice
               values:
                 - no changes
+                - non-pharmacological therapy
                 - stopped medication
                 - started medication
-                - medication changes
+                - multiple changes
             medsr:
               multiline: false
             nextcycle:
@@ -127,10 +132,16 @@
               type: choice
               values:
                 - not required
-                - oral cavity, neck no evidence of disease
-                - oral cavity, neck no evidence of disease, chest no significant abnormality
-                - oral cavity, neck no evidence of disease chest and abdomen no significant abnormality 
-                - concerning findings
+                - no significant abnormalities on screening examination (cardiac, respiratory, abdominal)
+                - no significant abnormalities on general oncological examination ( lymphadenopathy, cardiac, respiratory, abdominal)
+                - no significant abnormalities on head and neck examination (oral cavity and pharynx, mirror, neck, thyroid, supraclavicular fossa)
+                - concerning findings for recurrence
+                - abnormal findings from malignancy; stable
+                - abnormal findings from malignancy; reducing
+                - abnormal findings from malignancy; increasing
+                - abnormal findings post treatment; stable
+                - abnormal findings post treatment; reducing
+                - abnormal findings post treatment; increasing
             examr: 
               multiline: false
             labs:
@@ -138,6 +149,9 @@
               values:
                 - not scheduled
                 - no significant abnormality
+                - improvement in disease related abnormalities
+                - stable disease related abnormalities
+                - increasing abnormalities suspicious of disease progression
                 - abnormality requiring further investigation
                 - abnormality requiring intervention
                 - results pending
@@ -150,12 +164,12 @@
                 - no significant abnormality
                 - stable abnormalities not concerning for recurrence
                 - new abnormalities of unclear significance
-                - abnormalities suspicious of malignancy
+                - abnormalities suspicious for recurrence
                 - RECIST stable disease
                 - RECIST responding disease
                 - RECIST complete response
-                - unconfirmed progressive disease
-                - confirmed progressive disease
+                - unconfirmed progressive disease (iUPD)
+                - confirmed progressive disease (iPD)
                 - oligoprogressive disease
                 - results pending
             xrayr:
@@ -163,11 +177,14 @@
             pain:
               type: choice
               values:
-               - no pain 
-               - chronic pain not related to disease 
-               - stable pain related to known disease
-               - reduced pain related to known disease
-               - worse pain related to known disease
+               - none 
+               - chronic pain not related to malignancy or therapy
+               - stable pain related to known malignancy
+               - reduced pain related to known malignancy
+               - worse pain related to known malignancy
+               - chronic pain related to therapy; stable
+               - chronic pain related to therapy; improved
+               - chronic pain related to therapy; increased    
                - new onset pain
                - changed pain 
             painr:
