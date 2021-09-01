@@ -38,7 +38,7 @@
        {{iorev.toxicityr}}
 
        General issues
-       {{fupmel.gen}} {{fupmle.genr}}
+       {{iorev.gen}} {{iorev.genr}}
        
        Objective findings
        {{iorev.exam}}
@@ -199,7 +199,7 @@
             weight:
               type: choice
               values:
-                - none
+                - no change
                 - minor weight gain
                 - significant weight gain
                 - minor weight loss (<5%)
