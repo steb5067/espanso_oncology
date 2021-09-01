@@ -10,6 +10,9 @@
        
        Plan {{fupmel.plan}}
         {{fupmel.planr}}
+
+       Discussion with patient
+       {{fupmel.discuss}}
        
        Medication changes {{fupmel.meds}}
         {{fupmel.medsr}}
@@ -27,6 +30,10 @@
        Change in fatigue  {{fupmel.fatigue}}
        Other symptoms  {{fupmel.othersx}}         
        Other {{fupmel.symptomsr}}
+
+       General issues
+       {{fupmel.gen}} {{fupmle.genr}}
+       
        Late effects of therapy
        {{fupmel.late}}
        {{fupmel.later}}
@@ -54,8 +61,8 @@
                    \n   Weight {{weight}} Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Other symptoms {{othersx}}
-                   remarks {{symptomsr}}
+                   \n   Other symptoms {{othersx}} remarks {{symptomsr}}
+                   \n General issues {{gen}} {{genr}} 
                    \n Late effects {{late}} remarks {{later}}
                    \n Exam {{exam}}  remarks {{examr}}
                    \n labs {{labs}} remarks {{labsr}}
@@ -65,6 +72,7 @@
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
+                   \n Discussion with patient {{discuss}}
                    \n review {{nextreview}}"
           fields:
             situation:
@@ -211,3 +219,13 @@
                 - other
             later:
               multiline: false
+            discuss:
+              multiline: true
+            gen:
+              type: choice
+              values:
+                - no significant changes
+                -
+            genr:
+              multline: false
+                
