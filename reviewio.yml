@@ -4,34 +4,43 @@
   - trigger: ":iorev"
     replace: |
        Pretreatment review for {{iorev.situation}}
+       
        Assessment {{iorev.asst}}
+
        Plan {{iorev.plan}} {{iorev.planr}}
+
        Medication changes {{iorev.meds}} {{iorev.medsr}}
+
        Patient discussion {{iorev.discuss}}
+
        Next cycle {{iorev.nextcycle}} 
        
        Clinical Summary
        Symptoms
        Pain {{iorev.pain}} {{iorev.painr}}
-       Constitutional symptoms  {{iorev.constit}}
+       Weight {{iorev.weight}} Constitutional symptoms  {{iorev.constit}}
        Palpable abnormality  {{iorev.lump}}
        Other {{iorev.symptomsr}}
+       
        Treatment toxicity
        Fatigue {{iorev.fatigue}}
        Skin rash {{iorev.rash}}
        Pruritus {{iorev.itch}}
        Arthralgias {{iorev.joints}}
-       Diarhoea / colitis {{iorev.diarhoea}}
+       Diarrhoea / colitis {{iorev.diarhoea}}
        Pneumonitis {{iorev.pneumonitis}}
        Neurological {{iorev.neurotox}}  
        Hepatic {{iorev.liver}}
        Renal {{iorev.nephro}}
        Other indicators of toxicity {{iorev.posstox}}
        {{iorev.toxicityr}}
+       
        Objective findings   {{iorev.exam}}
        {{iorev.examr}} 
+
        Blood tests {{iorev.labs}}
        {{iorev.labsr}}       
+
        Imaging {{iorev.xray}}
        {{iorev.xrayr}}
     vars:
@@ -42,13 +51,13 @@
                    Situation {{situation}}
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
-                   \n   Constitutional symptoms  {{constit}}
+                   \n   Weight {{weight}} Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
                    \n   Other symptoms {{symptomsr}}
                    \n   Rash {{rash}} Itching {{itch}}
-                   \n  Joints  {{joints}} Diarhoea {{diarhoea}}
-                   \n Pneumonitis {{pneumonitis}} Neurolgical {{neurotox}}  
+                   \n  Joints  {{joints}} Diarrhoea {{diarhoea}}
+                   \n Pneumonitis {{pneumonitis}} Neurological {{neurotox}}  
                    \n  Hepatic {{liver}} Renal {{nephro}}
                    \n  Other indicators of toxicity {{posstox}}
                    \n   remarks {{toxicityr}}
@@ -79,12 +88,18 @@
                 - Clinically stable no significant toxicity
                 - Clinically stable mild to moderate toxicity 
                 - Clinically stable major toxicity suspected
+                - Clinically stable major toxicity 
                 - Suspicion of progressive disease
+                - Responding disease acceptable toxicity
+                - Responding disease problematic toxicity
+                - Responding disease major toxicity
+                - Unclear
+                - Progressive disease
             plan:
               type: choice
               values:
                 - continue current therapy
-                - continue current therapy, start or continue supportive care
+                - continue current therapy, start or change supportive care
                 - hold therapy start immediate treatment of high grade immune toxicity
                 - hold therapy investigate for severe immune toxicity
                 - investigate for disease progression
@@ -102,6 +117,7 @@
             nextcycle:
               type: choice
               values:
+                - 1 week
                 - 2 weeks
                 - 3 weeks
                 - 4 weeks
@@ -135,6 +151,12 @@
                 - stable abnormalities not concerning for recurrence
                 - new abnormalities of unclear significance
                 - abnormalities suspicious of malignancy
+                - RECIST stable disease
+                - RECIST responding disease
+                - RECIST complete response
+                - unconfirmed progressive disease
+                - confirmed progressive disease
+                - oligoprogressive disease
                 - results pending
             xrayr:
               multiline: false   
@@ -150,15 +172,22 @@
                - changed pain 
             painr:
               multiline: false
+            weight:
+              type: choice
+              values:
+                - none
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)
             constit:
               type: choice
               values:
                - none 
-               - minor weight loss
-               - significant weight loss
                - fever
                - drenching night sweats
-               - multiple constitutional symptoms
+               - fever and drenching sweats
             lump:
               type: choice
               values:
@@ -172,6 +201,7 @@
                - none 
                - mild
                - moderate
+               - severe
                - significant increase
                - significant improvement
             chest:
