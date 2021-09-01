@@ -191,7 +191,10 @@
                - worse pain related to known malignancy
                - chronic pain related to therapy; stable
                - chronic pain related to therapy; improved
-               - chronic pain related to therapy; increased    
+               - chronic pain related to therapy; increased
+                - acute pain related to therapy; stable
+                - acute pain related to therapy; improved
+                - acute pain related to therapy; increased                   
                - new onset pain
                - changed pain 
             painr:
@@ -323,8 +326,9 @@
             gen:
               type: choice
               values:
-                - no significant changes
-                -
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
             genr:
               multline: false
             func:

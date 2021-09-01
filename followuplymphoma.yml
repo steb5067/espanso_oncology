@@ -7,53 +7,66 @@
        
        Assessment {{fuplymph.asst}}
        
-       Plan {{fuplymph.plan}}
-        {{fuplymph.planr}}
+       Plan {{fuplymph.plan}} {{fuplymph.planr}}
        
-       Medication changes {{fuplymph.meds}}
-        {{fuplymph.medsr}}
+       Medication changes {{fuplymph.meds}} {{fuplymph.medsr}}
+
+       Patient discussion {{fuplymph.discuss}}
+
+       Next review {{fuplymph.nextrev}}
 
        Clinical Summary
+       Functional status {{fuplymph.func}} {{fuplymph.funcr}}
+       
        Symptoms
        Pain {{fuplymph.pain}}
+       notes {{fuplymph.painr}}
+       Weight {{fuplymph.weight}}
        Constitutional symptoms  {{fuplymph.constit}}
        Palpable abnormality  {{fuplymph.lump}}
        Change in fatigue  {{fuplymph.fatigue}}
        Other concerning symptoms {{fuplymph.othersx}}         
        Other {{fuplymph.symptomsr}}
-       Objective findings   {{fuplymph.exam}}
-       {{fuplymph.examr}} 
-       Laboratory investigations {{fuplymph.labs}}
-       {{fuplymph.labsr}}       
-       Imaging {{fuplymph.xray}}
-       {{fuplymph.xrayr}}
+
+       General issues
+       {{fuplymph.gen}} {{fuplymph.genr}}
+
+       Objective findings   {{fuplymph.exam}}  {{fuplymph.examr}} 
+
+       Laboratory investigations {{fuplymph.labs}}   {{fuplymph.labsr}}       
+
+       Imaging {{fuplymph.xray}} {{fuplymph.xrayr}}
     vars:
       - name: "fuplymph"
         type: form
         params:
           layout: "Lymphoma  followup
                    Situation {{situation}}
+
+                   \n Symptoms
+                   \n   Pain  {{pain}} notes {{painr}}
+                   \n   Weight {{weight}} Constitutional symptoms  {{constit}}
+                   \n   Palpable abnormality {{lump}}
+                   \n   Fatigue  {{fatigue}}
+                   \n   Other concerning  {{othersx}}
+                   \n   remarks {{symptomsr}}
+                   \n General issues {{gen}} {{genr}} 
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n Scans {{xray}} remarks {{xrayr}}
                    Assessment {{asst}}
                    \n Plan {{plan}}
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
-                   \n Symptoms
-                   \n   Pain  {{pain}}
-                   \n   Constitutional symptoms  {{constit}}
-                   \n   Palpable abnormality {{lump}}
-                   \n   Fatigue  {{fatigue}}
-                   \n   Other concerning  {{othersx}}
-                   \n   remarks {{symptomsr}}
-                   \n Exam {{exam}}  remarks {{examr}}
-                   \n labs {{labs}} remarks {{labsr}}
-                   \n Scans {{xray}} remarks {{xrayr}}"
+                   \n Patient discussion {{discuss}}
+                   \n next review {{nextrev}}"
           fields:
             situation:
               type: choice
               values:
                 - Monitoring post definitive therapy of early stage indolent NHL 
-                - Watch and wait for advanced sage indolent NHL 
+                - Watch and wait for advanced stage indolent NHL 
                 - Monitoring after therapy for advanced indolent NHL
                 - Monitoring after therapy for localized aggressive NHL
                 - Monitoring after therapy for advanced aggressive NHL
@@ -65,7 +78,7 @@
                 - No evidence of active disease
                 - Suspicious findings
                 - Relapse suspected or proven
-                - No indication for intervention (lacks criteria for therapy)
+                - Evidence of disease, but no indication for intervention (lacks criteria for therapy)
             plan:
               type: choice
               values:
@@ -79,9 +92,9 @@
               type: choice
               values:
                 - no changes
+                - non-pharmacological therapy
                 - stopped medication
                 - started medication
-                - stopped and started medication
             medsr:
               multiline: false
             exam:
@@ -116,20 +129,37 @@
             pain:
               type: choice
               values:
-               - no pain 
-               - no change 
-               - change in type or severity
-               - new onset severe
-               - new onset persistent and consistent
+                - none 
+                - chronic pain not related to malignancy or therapy
+                - stable pain related to known malignancy
+                - reduced pain related to known malignancy
+                - worse pain related to known malignancy
+                - chronic pain related to therapy; stable
+                - chronic pain related to therapy; improved
+                - chronic pain related to therapy; increased
+                - acute pain related to therapy; stable
+                - acute pain related to therapy; improved
+                - acute pain related to therapy; increased                 
+                - new onset pain
+                - changed pain
+            painr:
+              multiline: false
+            weight:
+              type: choice
+              values:
+                - no change
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)
             constit:
               type: choice
               values:
                - none 
-               - minor weight loss
-               - significant weight loss
                - fever
                - drenching night sweats
-               - multiple constitutional symptoms
+               - fever and drenching sweats
             lump:
               type: choice
               values:
@@ -149,4 +179,40 @@
               values:
                - none 
                - new symptoms of concern
-
+            discuss:
+              multiline: false
+            gen:
+              type: choice
+              values:
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
+            genr:
+              multline: false
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            funcr:
+              multiline: false
+            discuss:
+              multiline: false  
+            nextrev:
+              type: choice
+              values:
+                - 1 week
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - 2 months
+                - 3 months
+                - 6 months
+                - 1 year

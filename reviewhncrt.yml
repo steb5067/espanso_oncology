@@ -299,8 +299,9 @@
             gen:
               type: choice
               values:
-                - no significant changes
-                -
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
             genr:
               multline: false
             func:
