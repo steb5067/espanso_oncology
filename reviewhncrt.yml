@@ -17,23 +17,29 @@
        Clinical Summary
        Functional status {{crtrev.func}} {{crtrev.funcr}}
 
-       Symptoms
+       Subjective
        Pain {{crtrev.pain}} {{crtrev.painr}}
-       Weight {{crtrev.weight}}  Constitutional symptoms  {{crtrev.constit}}
-       Palpable abnormality  {{crtrev.lump}}
-       Ulceration  {{crtrev.ulcer}}
-       Chest symptoms  {{crtrev.chest}}         
-       Other {{crtrev.symptomsr}}
-
-       Treatment toxicity
-       Fatigue {{crtrev.fatigue}}
-       Dryness {{crtrev.dry}}
+       Ulceration {{crtrev.ulcer}}
        Odynophagia {{crtrev.odyn}}
+       Fatigue {{crtrev.fatigue}}
+       Taste change {{crtrev.taste}}
+       Appetite {{crtrev.appetite}}
+       Dryness {{crtrev.dry}}
        Difficulty eating {{crtrev.eat}}
        Swallowing issues {{crtrev.swallow}}
+       Weight {{crtrev.weight}}
+       Constitutional symptoms  {{crtrev.constit}}
+       Nausea {{crtrev.nausea}}
+       Vomiting {{crtrev.vomiting}}      
+       Chest symptoms  {{crtrev.chest}}         
+       Other {{crtrev.symptomsr}}
        Voice and speech {{crtrev.voice}}
-       Skin {{crtrev.rash}}
-
+       Skin {{crtrev.skin}}
+       Constipation {{crtrv.constipation}}
+       Sedation {{crtrev.sedate}}
+       Sleep {{crtrev.sleep}}
+       Mood {{crtrev.mood}}
+       
        General issues
        {{crtrev.gen}} {crtrev.genr}}
        
@@ -56,13 +62,17 @@
                    \n Functional status {{func}} notes {{funcr}}
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
-                   \n   Weight {{weight}} Constitutional symptoms  {{constit}}
-                   \n   Palpable abnormality {{lump}}
+                   \n Ulceration {{ulcer}} Odynophagia {{odyn}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Pulmonary symptoms {{chest}}
-                   \n   Xerostomia {{dry}} Odynophagia {{odyn}}
+                   \n Taste change {{taste}} Appetite {{appetite}}
+                   \n   Xerostomia {{dry}}
                    \n  Eating {{eat}} Swallowing {{swallow}}
-                   \n Voice and speech {{voice}} Skin {{rash}}
+                   \n   Weight {{weight}} Constitutional symptoms {{constit}}
+                   \n   Nausea {{nausea}} Vomiting {{vomit}}             
+                   \n   Pulmonary symptoms {{chest}}
+                   \n Voice and speech {{voice}} Skin {{skin}}
+                   \n Constipation {{constipation}} Sedation {{sedate}}
+                   \n Sleep {{sleep}} Mood {{mood}}
                    \n  Other symptoms  {{symptomsr}}
                    \n General issues {{gen}} {{genr}} 
                    \n Exam {{exam}}  remarks {{examr}}
@@ -215,10 +225,13 @@
             fatigue:
               type: choice
               values:
+              values:
                - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase 
+               - mild
+               - moderate
+               - severe
+               - significant increase
+               - significant improvement
             chest:
               type: choice
               values:
@@ -291,4 +304,81 @@
                 - ECOG 2 with frailty markers
                 - ECOG 3 or 4 with frailty markers
             funcr:
-              multiline: false                
+              multiline: false
+            ulcer:
+              type: choice
+              values:
+                - none
+                - minor
+                - moderate
+                - substantial
+            odyn:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate, not interfering with eating
+                - moderate, interfering with eating
+                - severe, liquid diet
+                - severe, no oral intake
+            taste:
+              type: choice
+              values:
+                - no change
+                - mild change
+                - moderate change
+                - severe but still eating
+                - severe, preventing eating
+            appetite:
+              type: choice
+              values:
+                - no change
+                - minor loss
+                - moderate loss
+                - severe loss
+                - mild improvement
+                - moderate improvement
+            nausea:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            vomiting:
+              type: choice
+              values:
+                - none
+                - occasional
+                - daily
+                - multiple times daily
+            constipation:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            sedate:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            sleep:
+              type: choice
+              values:
+                - no change
+                - mild interference
+                - moderate interference
+                - severely disturbed
+            mood:
+              type: choice
+              values:
+                - no change
+                - mildly altered
+                - moderately altered
+                - severely altered
+
+                
