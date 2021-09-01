@@ -74,10 +74,14 @@
             situation:
               type: choice
               values:
-                - Post definitive chemoradiotherapy
-                - Post adjuvant chemoradiotherapy
-                - Post radiotherapy
-                - Post adjuvant radiotherapy
+                - Early post definitive chemoradiotherapy
+                - Early post adjuvant chemoradiotherapy
+                - Early post radiotherapy
+                - Early post adjuvant radiotherapy
+                - Late post definitive chemoradiotherapy
+                - Late post adjuvant chemoradiotherapy
+                - Late post radiotherapy
+                - Late post adjuvant radiotherapy                
                 - Late effects of therapy
             asst:
               type: choice
@@ -158,7 +162,10 @@
                 - worse pain related to known malignancy
                 - chronic pain related to therapy; stable
                 - chronic pain related to therapy; improved
-                - chronic pain related to therapy; increased    
+                - chronic pain related to therapy; increased
+                - acute pain related to therapy; stable
+                - acute pain related to therapy; improved
+                - acute pain related to therapy; increased                 
                 - new onset pain
                 - changed pain
             painr:

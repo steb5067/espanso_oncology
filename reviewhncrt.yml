@@ -94,6 +94,7 @@
                 - cisplatin weekly RT
                 - carboplatin-FU 3 weekly RT
                 - definitive cetuximab-RT
+                - other
             week:
               type: choice
               values:
@@ -108,6 +109,7 @@
             asst:
               type: choice
               values:
+                - Doing well
                 - As yet little in the way of adverse effects
                 - Mild to moderate adverse effects
                 - Substantive adverse effects, as expected
@@ -141,7 +143,8 @@
               type: choice
               values:
                 - not required
-                - oral cavity clean, skin grade 0-1
+                - oral cavity clean, no ulceration, skin grade 0
+                - oral cavity clean, no ulceration, skin grade 1
                 - oral cavity patchy erythema or ulceration, skin grade 0-1
                 - oral cavity confluent ulceration skin  grade 0-1
                 - oral cavity confluent ulceration skin grade 2
@@ -149,7 +152,8 @@
             exam2:
               type: choice
               values:
-                - no or mild lymphedema and fibrosis
+                - no lymphedema or fibrosis
+                -  mild lymphedema and fibrosis
                 - moderate or significant fibrosis without lymphedema
                 - moderate or significant fibrosis with lymphedema
                 - moderate or significant lymphedema with little or no fibrosis
@@ -196,7 +200,10 @@
                 - worse pain related to known malignancy
                 - chronic pain related to therapy; stable
                 - chronic pain related to therapy; improved
-                - chronic pain related to therapy; increased    
+                - chronic pain related to therapy; increased
+                - acute pain related to therapy; stable
+                - acute pain related to therapy; improved
+                - acute pain related to therapy; increased                 
                 - new onset pain
                 - changed pain
             painr:
@@ -279,9 +286,10 @@
             skin:
               type: choice
               values:
+                - none
                 - dryness
-                - radiation changes no pain or ulceration
-                - radiation changes with pain no ulceration
+                - erythema and or scaling no pain or ulceration
+                - erythema  with pain no ulceration
                 - localized ulceration
                 - confluent ulceration
             discuss:
@@ -346,7 +354,7 @@
                 - mild
                 - moderate
                 - severe
-            vomiting:
+            vomit:
               type: choice
               values:
                 - none
