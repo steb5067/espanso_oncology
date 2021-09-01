@@ -7,59 +7,69 @@
        
        Assessment {{fuphn.asst}}
        
-       Plan {{fuphn.plan}}
-        {{fuphn.planr}}
+       Plan {{fuphn.plan}} {{fuphn.planr}}
        
-       Medication changes {{fuphn.meds}}
-        {{fuphn.medsr}}
+       Medication changes {{fuphn.meds}} {{fuphn.medsr}}
+
+       Next review {{fuphn.nextrev}}
 
        Clinical Summary
+       Functional status {{fuphn.func}} {{fuphn.funcr}}
+       
        Symptoms
-       Pain {{fuphn.pain}}
+       Pain {{fuphn.pain}} {{fuphn.painr}}
        Constitutional symptoms  {{fuphn.constit}}
        Palpable abnormality  {{fuphn.lump}}
        Ulceration  {{fuphn.ulcer}}
+       Weight {{fuphn.weight}}
        Other symptoms  {{fuphn.othersx}}         
        notes {{fuphn.symptomsr}}
+       
        Treatment toxicity
        Fatigue {{fuphn.fatigue}}
+       Taste change {{crtrev.taste}}
+       Appetite {{crtrev.appetite}}
        Dryness {{fuphn.dry}}
        Difficulty eating {{fuphn.eat}}
        Swallowing issues {{fuphn.swallow}}
        Voice and speech {{fuphn.voice}}
+       Dental {{fuphn.dental}}
+       Skin changes {{fuphn.skin}}
+       
        Objective findings   {{fuphn.exam}}
-       Fibrosis/edema {{fuphn.exam2}}
-       {{fuphn.examr}} 
-       Blood tests {{fuphn.labs}}
-       {{fuphn.labsr}}       
-       Imaging {{fuphn.xray}}
-       {{fuphn.xrayr}}
+       Fibrosis/edema {{fuphn.exam2}} {{fuphn.examr}} 
+
+       Blood tests {{fuphn.labs}} {{fuphn.labsr}}       
+
+       Imaging {{fuphn.xray}} {{fuphn.xrayr}}
     vars:
       - name: "fuphn"
         type: form
         params:
           layout: "H&N cancer followup
                    Situation {{situation}}
-                   Assessment {{asst}}
-                   \n Plan {{plan}}
-                   remarks {{planr}} 
-                   \n Medication changes {{meds}}
-                   remarks {{medsr}}
                    \n Symptoms
-                   \n   Pain  {{pain}}
-                   \n   Constitutional symptoms  {{constit}}
+                   \n   Pain  {{pain}} notes {{painr}}
+                   \n Odynophagia {{odyn}}
+                   \n Weight {{weight}}  Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
-                   \n   Other symptoms {{othersx}}
-                   \n   Xerostomia {{dry}}
-                   \n  Eating {{eat}}
-                   \n Swallowing {{swallow}}
-                   \n Voice and speech {{voice}}
-                   \n   remarks {{symptomsr}}
+                   \n   Xerostomia {{dry}} Appetite {{appetite}}
+                   \n  Eating {{eat}} Swallowing {{swallow}}
+                   \n Voice and speech {{voice}} Dental {{dental}}
+                   \n Taste {{taste}} Skin {{skin}}
+                   \n   Other symptoms {{othersx}}   remarks {{symptomsr}}
+                   \n General issues {{gen}} {{genr}} 
                    \n Exam {{exam}}  remarks {{examr}}
                    \n fibrosis and edema {{exam2}}
                    \n labs {{labs}} remarks {{labsr}}
-                   \n Scans {{xray}} remarks {{xrayr}}"
+                   \n Scans {{xray}} remarks {{xrayr}}
+                   \n Assessment {{asst}}
+                   \n Plan {{plan}}
+                   remarks {{planr}} 
+                   \n Medication changes {{meds}} remarks {{medsr}}
+                   \n next review {{nextrev}}
+                   \n Patient discussion {{discuss}}"
           fields:
             situation:
               type: choice
@@ -88,9 +98,9 @@
               type: choice
               values:
                 - no changes
+                - non-pharmacological therapy
                 - stopped medication
                 - started medication
-                - stopped and started medication
             medsr:
               multiline: false
             exam:
@@ -104,7 +114,8 @@
             exam2:
               type: choice
               values:
-                - no or mild lymphedema and fibrosis
+                - none of note
+                - mild lymphedema and fibrosis
                 - moderate or significant fibrosis without lymphedema
                 - moderate or significant fibrosis with lymphedema
                 - moderate or significant lymphedema with little or no fibrosis
@@ -127,26 +138,37 @@
                 - no significant abnormality
                 - stable abnormalities not concerning for recurrence
                 - new abnormalities of unclear significance
-                - abnormalities suspicious of malignancy
+                - abnormalities suspicious for recurrence
+                - RECIST stable disease
+                - RECIST responding disease
+                - RECIST complete response
+                - unconfirmed progressive disease (iUPD)
+                - confirmed progressive disease (iPD)
+                - oligoprogressive disease
+                - results pending
             xrayr:
               multiline: false   
             pain:
               type: choice
               values:
-               - no pain 
-               - no change 
-               - change in type or severity
-               - new onset severe
-               - new onset persistent and consistent
+                - none 
+                - chronic pain not related to malignancy or therapy
+                - stable pain related to known malignancy
+                - reduced pain related to known malignancy
+                - worse pain related to known malignancy
+                - chronic pain related to therapy; stable
+                - chronic pain related to therapy; improved
+                - chronic pain related to therapy; increased    
+                - new onset pain
+                - changed pain
+            painr:
+              multiline: false
             constit:
               type: choice
               values:
                - none 
-               - minor weight loss
-               - significant weight loss
-               - fever
-               - drenching night sweats
-               - multiple constitutional symptoms
+               - drenching sweats
+               - severe asthenia
             lump:
               type: choice
               values:
@@ -154,13 +176,24 @@
                - visible abnormality
                - lump suggesting adenopathy
                - other palpable abnormality
+            weight:
+              type: choice
+              values:
+                - no change
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)   
             fatigue:
               type: choice
               values:
                - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase 
+               - mild
+               - moderate
+               - severe
+               - significant increase
+               - significant improvement
             othersx:
               multiline: true
             symptomsr:
@@ -168,12 +201,14 @@
             dry:
               type: choice
               values:
+                - none
                 - mild
                 - moderate
                 - severe
             eat:
               type: choice
               values:
+                - no change in diet
                 - minor alteration in diet
                 - avoid certain foods, eating a variety
                 - limited diet
@@ -196,5 +231,80 @@
                 - no significant impact
                 - mild changes in voice or speech
                 - moderate changes in voice or speech
-                - major impact on voice or speech 
+                - major impact on voice or speech
+            skin:
+              type: choice
+              values:
+                - dryness
+                - radiation changes no pain or ulceration
+                - radiation changes with pain no ulceration
+                - localized ulceration
+                - confluent ulceration
+            discuss:
+              multiline: false
+            gen:
+              type: choice
+              values:
+                - no significant changes
+                -
+            genr:
+              multline: false
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            funcr:
+              multiline: false
+            odyn:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate, not interfering with eating
+                - moderate, interfering with eating
+                - severe, liquid diet
+                - severe, no oral intake
+            taste:
+              type: choice
+              values:
+                - no change
+                - mild change
+                - moderate change
+                - severe but still eating
+                - severe, preventing eating
+            appetite:
+              type: choice
+              values:
+                - no change
+                - minor loss
+                - moderate loss
+                - severe loss
+                - mild improvement
+                - moderate improvement
+            dental:
+              type: choice
+              values:
+                - none
+                - accelerated decay
+                - major dental
+                - osteoradionecrosis
+            nextrev:
+              type: choice
+              values:
+                - 1 week
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - 2 months
+                - 3 months
+                - 6 months
+                - 1 year
    

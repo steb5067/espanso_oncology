@@ -112,6 +112,8 @@
                 - Mild to moderate adverse effects
                 - Substantive adverse effects, as expected
                 - Major adverse effects, more than expected
+                - Major adverse effects, further chemotherapy likely to compromise radiotherapy
+                - Not fit for chemotherapy
             plan:
               type: choice
               values:
@@ -224,7 +226,6 @@
                - other palpable abnormality
             fatigue:
               type: choice
-              values:
               values:
                - none 
                - mild
