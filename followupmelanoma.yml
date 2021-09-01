@@ -3,7 +3,8 @@
   matches:
   - trigger: ":fupmel"
     replace: |
-       Melanoma followup for {{fupmel.situation}}
+
+       Skin malignancy followup;  {{fupmel.situation}}
        
        Assessment {{fupmel.asst}}
        
@@ -13,19 +14,33 @@
        Medication changes {{fupmel.meds}}
         {{fupmel.medsr}}
 
+       Next review {{fupmel.nextreview}}
+
        Clinical Summary
        Symptoms
-       Pain {{fupmel.pain}}
+       Pain
+       {{fupmel.pain}}
+       {{fupmel.painr}}
+       Weight {{fupmel.weight}}
        Constitutional symptoms  {{fupmel.constit}}
        Palpable abnormality  {{fupmel.lump}}
        Change in fatigue  {{fupmel.fatigue}}
        Other symptoms  {{fupmel.othersx}}         
        Other {{fupmel.symptomsr}}
-       Objective findings   {{fupmel.exam}}
+       Late effects of therapy
+       {{fupmel.late}}
+       {{fupmel.later}}
+       
+       Objective findings
+       {{fupmel.exam}}
        {{fupmel.examr}} 
-       Blood tests {{fupmel.labs}}
+
+       Blood tests
+       {{fupmel.labs}}
        {{fupmel.labsr}}       
-       Imaging {{fupmel.xray}}
+
+       Imaging
+       {{fupmel.xray}}
        {{fupmel.xrayr}}
     vars:
       - name: "fupmel"
@@ -33,32 +48,35 @@
         params:
           layout: "Skin cancer followup
                    Situation {{situation}}
-                   Assessment {{asst}}
+
+                   \n Symptoms
+                   \n   Pain  {{pain}} notes: {{painr}}
+                   \n   Weight {{weight}} Constitutional symptoms  {{constit}}
+                   \n   Palpable abnormality {{lump}}
+                   \n   Fatigue  {{fatigue}}
+                   \n   Other symptoms {{othersx}}
+                   remarks {{symptomsr}}
+                   \n Late effects {{late}} remarks {{later}}
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n Scans {{xray}} remarks {{xrayr}}
+                   \n Assessment {{asst}}
                    \n Plan {{plan}}
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
-                   \n Symptoms
-                   \n   Pain  {{pain}}
-                   \n   Constitutional symptoms  {{constit}}
-                   \n   Palpable abnormality {{lump}}
-                   \n   Fatigue  {{fatigue}}
-                   \n   Other symptoms {{othersx}}
-                   \n   remarks {{symptomsr}}
-                   \n Exam {{exam}}  remarks {{examr}}
-                   \n labs {{labs}} remarks {{labsr}}
-                   \n Scans {{xray}} remarks {{xrayr}}"
+                   \n review {{nextreview}}"
           fields:
             situation:
               type: choice
               values:
-                - Monitoring stage III melanoma on observation
-                - Post adjuvant therapy for resected melanoma
-                - Post therapy for metastatic melanoma
-                - Monitoring post adjuvant therapy for cutaneous SCC
-                - Monitoring post therapy for metastatic cutaneous SCC
-                - Post therapy for metastatic Merkel cell cancer
-                - Post therapy for high risk Merkel cell cancer
+                - stage III melanoma on observation
+                - post adjuvant therapy for resected melanoma
+                - post therapy for metastatic melanoma
+                - post adjuvant therapy for cutaneous SCC
+                - post therapy for metastatic cutaneous SCC
+                - post therapy for metastatic Merkel cell cancer
+                - post adjuvant therapy for Merkel cell cancer
             asst:
               type: choice
               values:
@@ -78,11 +96,21 @@
               type: choice
               values:
                 - no changes
+                - non-pharmacological therapy
                 - stopped medication
                 - started medication
-                - stopped and started medication
+                - multiple changes
             medsr:
               multiline: false
+            nextreview:
+              type: choice
+              values:
+                - 1 week
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - after investigation  
             exam:
               type: choice
               values:
@@ -103,11 +131,19 @@
             xray:
               type: choice
               values:
+              values:
                 - not scheduled
                 - no significant abnormality
                 - stable abnormalities not concerning for recurrence
                 - new abnormalities of unclear significance
-                - abnormalities suspicious of malignancy
+                - abnormalities suspicious for recurrence
+                - RECIST stable disease
+                - RECIST responding disease
+                - RECIST complete response
+                - unconfirmed progressive disease (iUPD)
+                - confirmed progressive disease (iPD)
+                - oligoprogressive disease
+                - results pending
             xrayr:
               multiline: false
             symptomsr:
@@ -117,20 +153,32 @@
             pain:
               type: choice
               values:
-               - no pain 
-               - no change 
-               - change in type or severity
-               - new onset severe
-               - new onset persistent and consistent
+               - none 
+               - chronic pain not related to malignancy or therapy
+               - stable pain related to known malignancy
+               - reduced pain related to known malignancy
+               - worse pain related to known malignancy
+               - chronic pain related to therapy; stable
+               - chronic pain related to therapy; improved
+               - chronic pain related to therapy; increased    
+               - new onset pain
+               - changed pain 
+            weight:
+              type: choice
+              values:
+                - none
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)
             constit:
               type: choice
               values:
                - none 
-               - minor weight loss
-               - significant weight loss
                - fever
                - drenching night sweats
-               - multiple constitutional symptoms
+               - fever and drenching sweats
             lump:
               type: choice
               values:
@@ -142,8 +190,24 @@
               type: choice
               values:
                - none 
-               - chronic and unchanged
-               - new onset
-               - significant increase 
+               - mild
+               - moderate
+               - severe
+               - significant increase
+               - significant improvement
             othersx:
               multiline: true
+            late:
+              type: choice
+              values:
+                - none
+                - endocrine
+                - skin
+                - rheumatological
+                - endocrine and skin
+                - endocrine skin and rheumatological
+                - endocrine and rheumatological
+                - skin and rheumatological
+                - other
+            later:
+              multiline: false
