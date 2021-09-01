@@ -29,6 +29,8 @@
        Fatigue {{fuphn.fatigue}}
        Taste change {{crtrev.taste}}
        Appetite {{crtrev.appetite}}
+       Mucosal sensitivity {{fuphn.mucsens}}
+       Mucous production {{fuphn.mucprod}}
        Dryness {{fuphn.dry}}
        Difficulty eating {{fuphn.eat}}
        Swallowing issues {{fuphn.swallow}}
@@ -50,10 +52,10 @@
                    Situation {{situation}}
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
-                   \n Odynophagia {{odyn}}
+                   \n Odynophagia {{odyn}} mucosal sensitivity {{mucsens}}
                    \n Weight {{weight}}  Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
-                   \n   Fatigue  {{fatigue}}
+                   \n   Fatigue  {{fatigue}} mucous production {{mucprod}}
                    \n   Xerostomia {{dry}} Appetite {{appetite}}
                    \n  Eating {{eat}} Swallowing {{swallow}}
                    \n Voice and speech {{voice}} Dental {{dental}}
@@ -302,6 +304,20 @@
                 - accelerated decay
                 - major dental
                 - osteoradionecrosis
+            mucsens:
+              type: choice
+              values:
+                - none
+                - mild; increased to spice, acid
+                - moderate; difficult to tolerate spice or acid
+                - severe; unable to tolerate spice or acid
+            mucprod:
+              type: choice
+              values:
+                - no excess
+                - mild increase
+                - moderate increase, sticky+
+                - substantial issues with excess mucous production
             nextrev:
               type: choice
               values:

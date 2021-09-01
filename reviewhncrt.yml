@@ -24,7 +24,9 @@
        Fatigue {{crtrev.fatigue}}
        Taste change {{crtrev.taste}}
        Appetite {{crtrev.appetite}}
+       Mucosal sensitivty {{crtrev.mucsens}}
        Dryness {{crtrev.dry}}
+       Mucous production {{crtrev.mucprod}}
        Difficulty eating {{crtrev.eat}}
        Swallowing issues {{crtrev.swallow}}
        Weight {{crtrev.weight}}
@@ -65,11 +67,11 @@
                    \n Ulceration {{ulcer}} Odynophagia {{odyn}}
                    \n   Fatigue  {{fatigue}}
                    \n Taste change {{taste}} Appetite {{appetite}}
-                   \n   Xerostomia {{dry}}
+                   \n   Xerostomia {{dry}} Mucosal sensitivity {{mucsens}}
                    \n  Eating {{eat}} Swallowing {{swallow}}
                    \n   Weight {{weight}} Constitutional symptoms {{constit}}
                    \n   Nausea {{nausea}} Vomiting {{vomit}}             
-                   \n   Pulmonary symptoms {{chest}}
+                   \n   Pulmonary symptoms {{chest}} Mucous production {{mucprod}}
                    \n Voice and speech {{voice}} Skin {{skin}}
                    \n Constipation {{constipation}} Sedation {{sedate}}
                    \n Sleep {{sleep}} Mood {{mood}}
@@ -84,7 +86,7 @@
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
-                   \next cycle {{nextcycle}}
+                   \n Next cycle {{nextcycle}}
                    \n Patient discussion {{discuss}}"
           fields:
             situation:
@@ -389,5 +391,19 @@
                 - mildly altered
                 - moderately altered
                 - severely altered
+            mucsens:
+              type: choice
+              values:
+                - none
+                - mild; increased to spice, acid
+                - moderate; difficult to tolerate spice or acid
+                - severe; unable to tolerate spice or acid
+            mucprod:
+              type: choice
+              values:
+                - no excess
+                - mild increase
+                - moderate increase, sticky+
+                - substantial issues with excess mucous production    
 
                 
