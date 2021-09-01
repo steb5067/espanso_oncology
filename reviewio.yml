@@ -78,7 +78,7 @@
                    \n Medication changes {{meds}}
                    remarks {{medsr}}
                    \n next cycle {{nextcycle}}
-                   \n Patient discuussion {{discuss}}"
+                   \n Patient discussion {{discuss}}"
           fields:
             situation:
               type: choice
@@ -146,6 +146,7 @@
                 - abnormal findings post treatment; stable
                 - abnormal findings post treatment; reducing
                 - abnormal findings post treatment; increasing
+                - other
             examr: 
               multiline: false
             labs:

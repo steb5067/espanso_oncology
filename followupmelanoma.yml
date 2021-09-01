@@ -113,11 +113,10 @@
             nextreview:
               type: choice
               values:
-                - 1 week
-                - 2 weeks
-                - 3 weeks
-                - 4 weeks
-                - 6 weeks
+                - 3 months
+                - 6 months
+                - 12 months
+                - other
                 - after investigation  
             exam:
               type: choice
