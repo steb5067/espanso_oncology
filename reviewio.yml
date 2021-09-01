@@ -16,6 +16,7 @@
        Next cycle {{iorev.nextcycle}} 
        
        Clinical Summary
+       Functional status {{iorev.func}} {{iorev.funcr}}
        Symptoms
        Pain {{iorev.pain}} {{iorev.painr}}
        Weight {{iorev.weight}} Constitutional symptoms  {{iorev.constit}}
@@ -56,6 +57,7 @@
         params:
           layout: "Immunotherapy review
                    Situation {{situation}}
+                   \n Functional status {{func}} notes {{funcr}} 
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
                    \n   Weight {{weight}} Constitutional symptoms  {{constit}}
@@ -325,4 +327,17 @@
                 -
             genr:
               multline: false
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            funcr:
+              multiline: false
                 
