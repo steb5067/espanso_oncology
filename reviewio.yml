@@ -60,14 +60,19 @@
                    \n Functional status {{func}} notes {{funcr}} 
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
-                   \n   Weight {{weight}} Constitutional symptoms  {{constit}}
+                   \n   Weight {{weight}} 
+                   \n Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
                    \n   Other symptoms {{symptomsr}}
-                   \n   Rash {{rash}} Itching {{itch}}
-                   \n  Joints  {{joints}} Diarrhoea {{diarhoea}}
-                   \n Pneumonitis {{pneumonitis}} Neurological {{neurotox}}  
-                   \n  Hepatic {{liver}} Renal {{nephro}}
+                   \n   Rash {{rash}} 
+                   \n Itching {{itch}}
+                   \n  Joints  {{joints}} 
+                   \n Diarrhoea {{diarhoea}}
+                   \n Pneumonitis {{pneumonitis}} 
+                   \n Neurological {{neurotox}}  
+                   \n  Hepatic {{liver}} 
+                   \n Renal {{nephro}}
                    \n  Other indicators of toxicity {{posstox}}
                    \n   remarks {{toxicityr}}
                    \n General issues {{gen}} {{genr}} 
