@@ -60,28 +60,45 @@
         params:
           layout: "H&N cancer chemoRT
                    Situation {{situation}}
-                   Week {{week}} 
+                   \n Week {{week}} 
+                   \n 
                    \n Functional status {{func}} notes {{funcr}}
                    \n Symptoms
-                   \n   Pain  {{pain}} notes {{painr}}
-                   \n Ulceration {{ulcer}} Odynophagia {{odyn}}
-                   \n   Fatigue  {{fatigue}}
-                   \n Taste change {{taste}} Appetite {{appetite}}
-                   \n   Xerostomia {{dry}} Mucosal sensitivity {{mucsens}}
-                   \n  Eating {{eat}} Swallowing {{swallow}}
-                   \n   Weight {{weight}} Constitutional symptoms {{constit}}
-                   \n   Nausea {{nausea}} Vomiting {{vomit}}             
-                   \n   Pulmonary symptoms {{chest}} Mucous production {{mucprod}}
-                   \n Voice and speech {{voice}} Skin {{skin}}
-                   \n Constipation {{constipation}} Sedation {{sedate}}
-                   \n Sleep {{sleep}} Mood {{mood}}
+                   \n
+                   \n Oral--ENT
+                   \n Eating {{eat}}
+                   \n Mucosal sensitivity {{mucsens}}
+                   \n Mucous production {{mucprod}}
+                   \n Odynophagia {{odyn}}
+                   \n Swallowing {{swallow}}
+                   \n Taste change {{taste}}
+                   \n Ulceration {{ulcer}}
+                   \n Voice and speech {{voice}}
+                   \n Xerostomia {{dry}}
+                   \n General
+                   \n Appetite {{appetite}}
+                   \n Fatigue  {{fatigue}}
+                   \n Mood {{mood}}
+                   \n Sedation {{sedate}}
+                   \n Sleep {{sleep}}
+                   \n GIT
+                   \n Constipation {{constipation}} 
+                   \n Nausea {{nausea}}
+                   \n Other
+                   \n Pain  {{pain}} notes {{painr}}
+                   \n Pulmonary symptoms {{chest}} 
+                   \n Skin {{skin}}
+                   \n Vomiting {{vomit}}
+                   \n Weight {{weight}}
                    \n  Other symptoms  {{symptomsr}}
                    \n General issues {{gen}} {{genr}} 
+                   \n
                    \n Exam {{exam}}  remarks {{examr}}
                    \n fibrosis and edema {{exam2}}
                    \n labs {{labs}} remarks {{labsr}}
+                   \n
                    \n Scans {{xray}} remarks {{xrayr}}
-                   Assessment {{asst}}
+                   \n Assessment {{asst}}
                    \n Plan {{plan}}
                    remarks {{planr}} 
                    \n Medication changes {{meds}}
