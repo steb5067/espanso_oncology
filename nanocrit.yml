@@ -33,70 +33,84 @@
             situation:
               type: choice
               values:
-                - not assessed
-                - not evaluable
-                - normal (score 0)
-                - 
+                - reassesment on treatment
+                - reassessment off treatment
+                - pretreatment review
             gait:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - Abnormal, walks without assistance (score 1)
+                - abnormal, requires assistance (aid etc) (score 2)
+                - unable to walk (score 3)
             strength:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - movement present, reduced against resistance (score 1)
+                - movement present, not against resistance (score 2)
+                - no movement (score 3)
             ataxia:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
-                - normal (score 0)
-                - 
+                - finger--nose without difficulty (score 0)
+                - finger--nose with difficulty (score 1)
+                - unable to finger--nose (score 3)
             sensation:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - decreased, aware of sensory modality (score 1)
+                - unaware of sensory modality (score 3)
             visfield:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - inconsistent of partial hemianopia (score 1)
+                - consistent or unequivocal partial hemianopia (score 2)
+                - complete hemianopia (score 3)
             face:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - mild-moderate weakness (score 2)
+                - severe weakness (score 3)
             language:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - abnormal, easily conveys meaning (score 1)
+                - abnormal difficulty conveying meaning (score 2)
+                - non-verbal or unable to convey meaning (score 3)
             levelofcons:     
               type: choice
               values:
                 - not assessed
                 - not evaluable
                 - normal (score 0)
-                - 
+                - drowsy-easily arousable (score 1)
+                - somnolent-dificult to rouse (score 2)
+                - unrousable (score 3)
             behav:     
               type: choice
               values:
                 - not assessed                
                 - not evaluable
                 - normal (score 0)
+                - mild-moderate changes (score 1)
+                - severe change (score 2)
                 - 
