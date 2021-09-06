@@ -1,0 +1,102 @@
+  name: nanocrit
+  parent: default
+  matches:
+  - trigger: ":gbmnano"
+    replace: |
+      Situation {{nano.situation}}
+      Gait {{nano.gait}}
+      Strength{{nano.strength}}
+      Ataxia {{nano.ataxia}}
+      Sensation {{nano.sensation}}
+      Visual fields {{nano.visfield}}
+      Facial strength {{nano.face}}
+      Language {{nano.language}}
+      Consciousness {{nano.levelofcons}}
+      Behaviour {{nano.behav}}
+    vars:
+      - name: "nano"
+        type: form
+        params:
+          layout: "Nano evaluation for brain cancer
+               Situation {{situation}}
+               \n Gait {{gait}}
+               \n Strength {{strength}}
+               \n Ataxia {{ataxia}}
+               \n Sensation {{sensation}}
+               \n Visual Fields {{visfield}}
+               \n Facial Strength {{face}}
+               \n Language {{language}}
+               \n Level of consciousness {{levelofcons}}
+               \n Behavious {{behav}}
+               "
+          fields:
+            situation:
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            gait:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            strength:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            ataxia:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            sensation:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            visfield:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            face:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            language:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            levelofcons:     
+              type: choice
+              values:
+                - not assessed
+                - not evaluable
+                - normal (score 0)
+                - 
+            behav:     
+              type: choice
+              values:
+                - not assessed                
+                - not evaluable
+                - normal (score 0)
+                - 
