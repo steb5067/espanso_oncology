@@ -129,8 +129,18 @@
               values:
                 - not scheduled
                 - no significant abnormality
+                - improvement in disease related abnormalities
+                - stable disease related abnormalities
+                - increasing abnormalities suspicious of disease progression
+                - stable treatment related abnormalities
+                - increasing abnormalities from treatment
+                - reducing treatment realted abnormalities
+                - increasing multifactorial (disease, therapy) abnormalities
+                - reducing multifactorial (disease, therapy) abnormalities
+                - stable multifactorial (disease, therapy) abnormalities
                 - abnormality requiring further investigation
                 - abnormality requiring intervention
+                - results pending
             labsr:
               multiline: false
             xray:
