@@ -38,7 +38,7 @@
        {{iorev.toxicityr}}
 
        General issues
-       {{fupmel.gen}} {{fupmle.genr}}
+       {{iorev.gen}} {{iorev.genr}}
        
        Objective findings
        {{iorev.exam}}
@@ -60,14 +60,19 @@
                    \n Functional status {{func}} notes {{funcr}} 
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
-                   \n   Weight {{weight}} Constitutional symptoms  {{constit}}
+                   \n   Weight {{weight}} 
+                   \n Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
                    \n   Other symptoms {{symptomsr}}
-                   \n   Rash {{rash}} Itching {{itch}}
-                   \n  Joints  {{joints}} Diarrhoea {{diarhoea}}
-                   \n Pneumonitis {{pneumonitis}} Neurological {{neurotox}}  
-                   \n  Hepatic {{liver}} Renal {{nephro}}
+                   \n   Rash {{rash}} 
+                   \n Itching {{itch}}
+                   \n  Joints  {{joints}} 
+                   \n Diarrhoea {{diarhoea}}
+                   \n Pneumonitis {{pneumonitis}} 
+                   \n Neurological {{neurotox}}  
+                   \n  Hepatic {{liver}} 
+                   \n Renal {{nephro}}
                    \n  Other indicators of toxicity {{posstox}}
                    \n   remarks {{toxicityr}}
                    \n General issues {{gen}} {{genr}} 
@@ -197,7 +202,10 @@
                - worse pain related to known malignancy
                - chronic pain related to therapy; stable
                - chronic pain related to therapy; improved
-               - chronic pain related to therapy; increased    
+               - chronic pain related to therapy; increased
+                - acute pain related to therapy; stable
+                - acute pain related to therapy; improved
+                - acute pain related to therapy; increased                   
                - new onset pain
                - changed pain 
             painr:
@@ -205,7 +213,7 @@
             weight:
               type: choice
               values:
-                - none
+                - no change
                 - minor weight gain
                 - significant weight gain
                 - minor weight loss (<5%)
@@ -329,8 +337,9 @@
             gen:
               type: choice
               values:
-                - no significant changes
-                -
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
             genr:
               multline: false
             func:
