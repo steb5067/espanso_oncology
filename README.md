@@ -30,7 +30,7 @@
 * cover most common clinical scenarios I encounter
   + predominantly head and neck and cutaneous and rare cancer
   + older pts mostly in followup or mets: lymphoma, breast, crc
-* DONE
+* IN PROGRESS - DONE
   + rev
     - review on immunotherapy
     - review on h&N chemoradiotherapy
