@@ -33,9 +33,9 @@
 * IN PROGRESS - DONE
   + rev
     - review on immunotherapy
-    - review on h&N chemoradiotherapy
+    - review on H&N chemoradiotherapy
   + fup
-    - nano cirteria for brain cancer
+    - nano criteria for brain cancer
     - H&N cancer post therapy
     - skin cancer (systemic rx)
     - lymphoma
@@ -55,4 +55,15 @@
     - H&N r/m
     - melanoma adjuvant
     - skin ca r/m
+  + treatment consent documentation?
+    - immunotherapy
+    - adjuvant immunotherapy
+    - H&N chemoRT
+    - definitive chemotherapy
+    - adjuvant chemotherapy
+    - palliative chemotherapy
+    - adjuvant Braf
+    - palliative signal transduction blockade
+    - adjuvant hormonal
+    - palliative hormonal
     
