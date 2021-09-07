@@ -15,10 +15,10 @@
 
 ## naming convention
 * task::situation
-* tasks so far are:
+* tasks:
   + rev = review
   + fup = follow up
-* situations so far are:
+* situations:
   + io = immunotherapy
   + crt = H&N chemoradiotherapy
   + gbmn = nano criteria for brain cancer
@@ -26,7 +26,33 @@
   + fupgbmn = follow up gbm using nano 
   + revio = review on immunotherapy
 
-
 ## eventually
 * cover most common clinical scenarios I encounter
-* maybe not initial consultations
+  + predominantly head and neck and cutaneous and rare cancer
+  + older pts mostly in followup or mets: lymphoma, breast, crc
+* DONE
+  + rev
+    - review on immunotherapy
+    - review on h&N chemoradiotherapy
+  + fup
+    - nano cirteria for brain cancer
+    - H&N cancer post therapy
+    - skin cancer (systemic rx)
+    - lymphoma
+* TODO
+  + rev
+    - chemo (split how?)
+    - non hn crt 
+    - EGFR tki
+    - Braf tki
+    - VEGF tki
+  + fup
+    - breast
+    - crc
+    - gbm general
+  + new letter? maybe not initial consultations. leave till last
+    - H&N pretreatment curative
+    - H&N r/m
+    - melanoma adjuvant
+    - skin ca r/m
+    
