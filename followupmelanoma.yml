@@ -4,23 +4,23 @@
   - trigger: ":fupmel"
     replace: |
 
-       Skin malignancy followup;  {{fupmel.situation}}
+       ++> Skin malignancy followup;  {{fupmel.situation}}
        
-       Assessment {{fupmel.asst}}
+       ++> Assessment {{fupmel.asst}}
        
-       Plan {{fupmel.plan}}
+       ++> Plan {{fupmel.plan}}
         {{fupmel.planr}}
 
-       Discussion with patient
+       +> Discussion with patient
        {{fupmel.discuss}}
        
-       Medication changes {{fupmel.meds}}
+       +> Medication changes {{fupmel.meds}}
         {{fupmel.medsr}}
 
        Next review {{fupmel.nextreview}}
 
-       Clinical Summary
-       Symptoms
+       ++> Clinical Summary
+       +> Symptoms
        Pain
        {{fupmel.pain}}
        {{fupmel.painr}}
@@ -32,21 +32,23 @@
        Other {{fupmel.symptomsr}}
 
        General issues
-       {{fupmel.gen}} {{fupmle.genr}}
+       {{fupmel.gen}} {{fupmel.genr}}
        
-       Late effects of therapy
+       +> Late effects of therapy
        {{fupmel.late}}
        {{fupmel.later}}
+       {{fupmel.latelrfx}}
+       {{fupmel.latelrfxr}}
        
-       Objective findings
+       ++> Objective findings
        {{fupmel.exam}}
        {{fupmel.examr}} 
 
-       Blood tests
+       +> Blood tests
        {{fupmel.labs}}
        {{fupmel.labsr}}       
 
-       Imaging
+       +> Imaging
        {{fupmel.xray}}
        {{fupmel.xrayr}}
     vars:
@@ -55,18 +57,21 @@
         params:
           layout: "Skin cancer followup
                    Situation {{situation}}
-
-                   \n Symptoms
+                   \n ==== Symptoms =====
                    \n   Pain  {{pain}} notes: {{painr}}
                    \n   Weight {{weight}} Constitutional symptoms  {{constit}}
                    \n   Palpable abnormality {{lump}}
                    \n   Fatigue  {{fatigue}}
                    \n   Other symptoms {{othersx}} remarks {{symptomsr}}
                    \n General issues {{gen}} {{genr}} 
-                   \n Late effects {{late}} remarks {{later}}
+                   \n ==== Late effects ====
+                   \n {{late}} remarks {{later}}
+                   \n Late loco-regional treatment effects {{latelrfx}} remarks {{latelrfxr}} 
+                   \n === Objective  =====
                    \n Exam {{exam}}  remarks {{examr}}
                    \n labs {{labs}} remarks {{labsr}}
                    \n Scans {{xray}} remarks {{xrayr}}
+                   \n ===== management =====
                    \n Assessment {{asst}}
                    \n Plan {{plan}}
                    remarks {{planr}} 
@@ -91,6 +96,7 @@
                 - No evidence of active disease
                 - Suspicious findings
                 - Relapse suspected or proven
+                - other 
             plan:
               type: choice
               values:
@@ -136,10 +142,10 @@
                 - increasing abnormalities suspicious of disease progression
                 - stable treatment related abnormalities
                 - increasing abnormalities from treatment
-                - reducing treatment realted abnormalities
-                - increasing multifactorial (disease, therapy) abnormalities
-                - reducing multifactorial (disease, therapy) abnormalities
-                - stable multifactorial (disease, therapy) abnormalities
+                - reducing treatment related abnormalities
+                - increasing multi-factorial (disease, therapy) abnormalities
+                - reducing multi-factorial (disease, therapy) abnormalities
+                - stable multi-factorial (disease, therapy) abnormalities
                 - abnormality requiring further investigation
                 - abnormality requiring intervention
                 - results pending
@@ -240,5 +246,16 @@
                 - other medical issues discussed
                 - other issues discussed
             genr:
-              multline: false
+              multiline: false
+            latelrfx:
+              type: choice
+              values:
+                - nil significant
+                - mild lymphedema
+                - moderate lymphedema
+                - severe lymphedema
+                - mild neuropathic pain
+                - moderate neuropathic pain
+                - severe neuropathic pain
+                - lymphedema and neuropathic pain
                 
