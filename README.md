@@ -6,7 +6,10 @@
 * intent is to be concise: 
   + as little boiler plate as will do the job
   + in the tradition of oxford neurology: the entire letter is one foolscap page, more wont be read
-  + may be inadequate to the billing requirements of USA which seem to require quantity over quality
+
+  
+### disclaimer
+ No warranty is made that these forms are fit in any way, shape, or form for any medical, billing, or recording purpose. Use at your own risk and discretion. 
 
 
 ## common tasks being targeted
