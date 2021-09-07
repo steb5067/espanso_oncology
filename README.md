@@ -3,8 +3,10 @@
 ## initial work on an espanso set of forms
 * based on https://espanso.org/
 * aim is to improve the basic data captured
-* intent is to be concise: as little boiler plate as will do the job
-* in the tradition of oxford neurology: the entire letter is one foolscap page, more wont be read
+* intent is to be concise: 
+  + as little boiler plate as will do the job
+  + in the tradition of oxford neurology: the entire letter is one foolscap page, more wont be read
+  + may be inadequate to the billing requirements of USA which seem to require quantity over quality
 
 
 ## common tasks being targeted
