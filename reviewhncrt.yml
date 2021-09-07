@@ -63,34 +63,21 @@
                    \n Week {{week}} 
                    \n 
                    \n Functional status {{func}} notes {{funcr}}
-                   \n Symptoms
-                   \n
-                   \n Oral--ENT
-                   \n Eating {{eat}}
-                   \n Mucosal sensitivity {{mucsens}}
-                   \n Mucous production {{mucprod}}
-                   \n Odynophagia {{odyn}}
-                   \n Swallowing {{swallow}}
-                   \n Taste change {{taste}}
-                   \n Ulceration {{ulcer}}
+                    \n ===== Oral--ENT =======
+                   \n  Taste change {{taste}} Eating {{eat}} Mucosal sensitivity {{mucsens}}
+                   \n Swallowing {{swallow}}  Odynophagia {{odyn}} Mucous production {{mucprod}}
+                   \n Ulceration {{ulcer}} Xerostomia {{dry}}
                    \n Voice and speech {{voice}}
-                   \n Xerostomia {{dry}}
-                   \n General
+                   \n ===== General ======
                    \n Appetite {{appetite}}
-                   \n Fatigue  {{fatigue}}
-                   \n Mood {{mood}}
-                   \n Sedation {{sedate}}
-                   \n Sleep {{sleep}}
-                   \n GIT
-                   \n Constipation {{constipation}} 
-                   \n Nausea {{nausea}}
-                   \n Other
-                   \n Pain  {{pain}} notes {{painr}}
-                   \n Pulmonary symptoms {{chest}} 
-                   \n Skin {{skin}}
-                   \n Vomiting {{vomit}}
-                   \n Weight {{weight}}
-                   \n  Other symptoms  {{symptomsr}}
+                   \n Fatigue  {{fatigue}}  Mood {{mood}}
+                   \n Sedation {{sedate}} Sleep {{sleep}}
+                   \n ===== GIT =======
+                   \n Constipation {{constipation}} Nausea {{nausea}}
+                   \n Vomiting {{vomit}} Weight {{weight}}
+                   \n ==== Other ======
+                   \n Pain  {{pain}} notes {{painr}} Pulmonary symptoms {{chest}} 
+                   \n Skin {{skin}} Other symptoms  {{symptomsr}}
                    \n General issues {{gen}} {{genr}} 
                    \n
                    \n Exam {{exam}}  remarks {{examr}}
