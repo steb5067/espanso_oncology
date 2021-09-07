@@ -171,6 +171,9 @@
               values:
                 - not scheduled
                 - no significant abnormality
+                - increasing abnormalities unrelated to disease or therapy
+                - reducing abnormalities unrelated to disease or therapy
+                - stable  abnormalities unrelated to disease or therapy                
                 - improvement in disease related abnormalities
                 - stable disease related abnormalities
                 - increasing abnormalities suspicious of disease progression

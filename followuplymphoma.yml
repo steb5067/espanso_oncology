@@ -3,22 +3,22 @@
   matches:
   - trigger: ":fuplymph"
     replace: |
-       Followup for {{fuplymph.situation}}
+       ==> Followup for {{fuplymph.situation}}
        
-       Assessment {{fuplymph.asst}}
+       ==> Assessment {{fuplymph.asst}}
        
-       Plan {{fuplymph.plan}} {{fuplymph.planr}}
+       ==> Plan {{fuplymph.plan}} {{fuplymph.planr}}
        
-       Medication changes {{fuplymph.meds}} {{fuplymph.medsr}}
+       => Medication changes {{fuplymph.meds}} {{fuplymph.medsr}}
 
-       Patient discussion {{fuplymph.discuss}}
+       => Patient discussion {{fuplymph.discuss}}
 
-       Next review {{fuplymph.nextrev}}
+       => Next review {{fuplymph.nextrev}}
 
-       Clinical Summary
+       ==> Clinical Summary
        Functional status {{fuplymph.func}} {{fuplymph.funcr}}
        
-       Symptoms
+       => Symptoms
        Pain {{fuplymph.pain}}
        notes {{fuplymph.painr}}
        Weight {{fuplymph.weight}}
@@ -31,11 +31,11 @@
        General issues
        {{fuplymph.gen}} {{fuplymph.genr}}
 
-       Objective findings   {{fuplymph.exam}}  {{fuplymph.examr}} 
+       => Objective findings   {{fuplymph.exam}}  {{fuplymph.examr}} 
 
-       Laboratory investigations {{fuplymph.labs}}   {{fuplymph.labsr}}       
+       => Laboratory investigations {{fuplymph.labs}}   {{fuplymph.labsr}}       
 
-       Imaging {{fuplymph.xray}} {{fuplymph.xrayr}}
+       => Imaging {{fuplymph.xray}} {{fuplymph.xrayr}}
     vars:
       - name: "fuplymph"
         type: form
@@ -110,6 +110,9 @@
               values:
                 - not scheduled
                 - no significant abnormality
+                - increasing abnormalities unrelated to disease or therapy
+                - reducing abnormalities unrelated to disease or therapy
+                - stable  abnormalities unrelated to disease or therapy                
                 - improvement in disease related abnormalities
                 - stable disease related abnormalities
                 - increasing abnormalities suspicious of disease progression
