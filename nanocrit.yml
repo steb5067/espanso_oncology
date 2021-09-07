@@ -1,7 +1,7 @@
   name: nanocrit
   parent: default
   matches:
-  - trigger: ":gbmnano"
+  - trigger: ":fupgbmn"
     replace: |
       Situation {{nano.situation}}
       Gait {{nano.gait}}

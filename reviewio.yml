@@ -1,7 +1,7 @@
   name: reviewio
   parent: default
   matches:
-  - trigger: ":iorev"
+  - trigger: ":revio"
     replace: |
        Pretreatment review for {{iorev.situation}}
        
@@ -94,6 +94,7 @@
                 - nivolumab 
                 - avelumab 
                 - atezolizumab
+                - atezolizumab-bevacizumab
                 - cemiplimab
                 - ipilimumab-nivolumab
                 - investigational immunotherapy

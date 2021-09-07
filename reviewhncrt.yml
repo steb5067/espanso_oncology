@@ -1,7 +1,7 @@
   name: reviewhncrt
   parent: default
   matches:
-  - trigger: ":crtrev"
+  - trigger: ":revcrt"
     replace: |
        Review for {{crtrev.situation}}
        Week {{crtrev.week}}
