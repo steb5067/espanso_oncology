@@ -24,7 +24,7 @@
        Fatigue {{crtrev.fatigue}}
        Taste change {{crtrev.taste}}
        Appetite {{crtrev.appetite}}
-       Mucosal sensitivty {{crtrev.mucsens}}
+       Mucosal sensitivity {{crtrev.mucsens}}
        Dryness {{crtrev.dry}}
        Mucous production {{crtrev.mucprod}}
        Difficulty eating {{crtrev.eat}}
@@ -37,7 +37,7 @@
        Other {{crtrev.symptomsr}}
        Voice and speech {{crtrev.voice}}
        Skin {{crtrev.skin}}
-       Constipation {{crtrv.constipation}}
+       Constipation {{crtrev.constipation}}
        Sedation {{crtrev.sedate}}
        Sleep {{crtrev.sleep}}
        Mood {{crtrev.mood}}
@@ -179,10 +179,10 @@
                 - increasing abnormalities suspicious of disease progression
                 - stable treatment related abnormalities
                 - increasing abnormalities from treatment
-                - reducing treatment realted abnormalities
-                - increasing multifactorial (disease, therapy) abnormalities
-                - reducing multifactorial (disease, therapy) abnormalities
-                - stable multifactorial (disease, therapy) abnormalities
+                - reducing treatment related abnormalities
+                - increasing multi-factorial (disease, therapy) abnormalities
+                - reducing multi-factorial (disease, therapy) abnormalities
+                - stable multi-factorial (disease, therapy) abnormalities
                 - abnormality requiring further investigation
                 - abnormality requiring intervention
                 - results pending
@@ -316,7 +316,7 @@
                 - other medical issues discussed
                 - other issues discussed
             genr:
-              multline: false
+              multiline: false
             func:
               type: choice
               values:

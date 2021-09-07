@@ -16,7 +16,7 @@
        ==> Clinical Summary
        Functional status {{fuphn.func}} {{fuphn.funcr}}
        
-       ==> Symptoms
+       => Symptoms
        Pain {{fuphn.pain}} {{fuphn.painr}}
        Constitutional symptoms  {{fuphn.constit}}
        Palpable abnormality  {{fuphn.lump}}
@@ -25,10 +25,10 @@
        Other symptoms  {{fuphn.othersx}}         
        notes {{fuphn.symptomsr}}
        
-       ==> Treatment toxicity
+       => Treatment toxicity
        Fatigue {{fuphn.fatigue}}
-       Taste change {{crtrev.taste}}
-       Appetite {{crtrev.appetite}}
+       Taste change {{fuphn.taste}}
+       Appetite {{fuphn.appetite}}
        Mucosal sensitivity {{fuphn.mucsens}}
        Mucous production {{fuphn.mucprod}}
        Dryness {{fuphn.dry}}
@@ -38,12 +38,11 @@
        Dental {{fuphn.dental}}
        Skin changes {{fuphn.skin}}
        
-       ==> Objective findings   {{fuphn.exam}}
+       => Objective findings   {{fuphn.exam}}
        Fibrosis/edema {{fuphn.exam2}} {{fuphn.examr}} 
 
-       ==> Blood tests {{fuphn.labs}} {{fuphn.labsr}}       
-
-       ==> Imaging {{fuphn.xray}} {{fuphn.xrayr}}
+       => Blood tests {{fuphn.labs}} {{fuphn.labsr}}       
+       => Imaging {{fuphn.xray}} {{fuphn.xrayr}}
     vars:
       - name: "fuphn"
         type: form
@@ -143,10 +142,10 @@
                 - increasing abnormalities suspicious of disease progression
                 - stable treatment related abnormalities
                 - increasing abnormalities from treatment
-                - reducing treatment realted abnormalities
-                - increasing multifactorial (disease, therapy) abnormalities
-                - reducing multifactorial (disease, therapy) abnormalities
-                - stable multifactorial (disease, therapy) abnormalities
+                - reducing treatment related abnormalities
+                - increasing multi-factorial (disease, therapy) abnormalities
+                - reducing multi-factorial (disease, therapy) abnormalities
+                - stable multi-factorial (disease, therapy) abnormalities
                 - abnormality requiring further investigation
                 - abnormality requiring intervention
                 - results pending
@@ -274,7 +273,7 @@
                 - other medical issues discussed
                 - other issues discussed
             genr:
-              multline: false
+              multiline: false
             func:
               type: choice
               values:

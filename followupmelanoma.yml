@@ -20,6 +20,7 @@
        Next review {{fupmel.nextreview}}
 
        ++> Clinical Summary
+       
        +> Symptoms
        Pain
        {{fupmel.pain}}
@@ -31,7 +32,7 @@
        Other symptoms  {{fupmel.othersx}}         
        Other {{fupmel.symptomsr}}
 
-       General issues
+       +> General issues
        {{fupmel.gen}} {{fupmel.genr}}
        
        +> Late effects of therapy

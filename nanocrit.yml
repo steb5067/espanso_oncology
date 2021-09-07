@@ -27,13 +27,13 @@
                \n Facial Strength {{face}}
                \n Language {{language}}
                \n Level of consciousness {{levelofcons}}
-               \n Behavious {{behav}}
+               \n Behaviour {{behav}}
                "
           fields:
             situation:
               type: choice
               values:
-                - reassesment on treatment
+                - reassessment on treatment
                 - reassessment off treatment
                 - pretreatment review
             gait:     
@@ -103,7 +103,7 @@
                 - not evaluable
                 - normal (score 0)
                 - drowsy-easily arousable (score 1)
-                - somnolent-dificult to rouse (score 2)
+                - somnolent-difficult to rouse (score 2)
                 - unrousable (score 3)
             behav:     
               type: choice
@@ -113,4 +113,3 @@
                 - normal (score 0)
                 - mild-moderate changes (score 1)
                 - severe change (score 2)
-                - 
