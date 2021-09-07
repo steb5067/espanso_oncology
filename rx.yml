@@ -1,7 +1,7 @@
   name: rx 
   parent: default
   matches:
-  - trigger: ":revio"
+  - trigger: ":rev_initial_try"
     replace: |
        Seen for immunotherapy with {{revio.drug}}
        Functional status {{revio.ecog}}
