@@ -50,7 +50,7 @@
         params:
           layout: "H&N cancer followup
                    Situation {{situation}}
-                   \n Symptoms
+                   \n ==== Symptoms ======
                    \n   Pain  {{pain}} notes {{painr}}
                    \n Odynophagia {{odyn}} mucosal sensitivity {{mucsens}}
                    \n Weight {{weight}}  Constitutional symptoms  {{constit}}
@@ -62,7 +62,8 @@
                    \n Taste {{taste}} Skin {{skin}}
                    \n   Other symptoms {{othersx}}   remarks {{symptomsr}}
                    \n General issues {{gen}} {{genr}} 
-                   \n Exam {{exam}}  remarks {{examr}}
+                   \n ==== Exam ======
+                   \n {{exam}}  remarks {{examr}}
                    \n fibrosis and edema {{exam2}}
                    \n labs {{labs}} remarks {{labsr}}
                    \n Scans {{xray}} remarks {{xrayr}}
@@ -254,6 +255,7 @@
             skin:
               type: choice
               values:
+                - no issues
                 - dryness
                 - radiation changes no pain or ulceration
                 - radiation changes with pain no ulceration
