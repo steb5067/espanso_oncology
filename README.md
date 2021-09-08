@@ -7,11 +7,6 @@
   + as little boiler plate as will do the job
   + in the tradition of oxford neurology: the entire letter is one foolscap page, more wont be read
 
-  
-### disclaimer
- No warranty is made that these forms are fit in any way, shape, or form for any medical, billing, or recording purpose. Use at your own risk and discretion. 
-
-
 ## common tasks being targeted
 * routine followup of patients on surveillance
 * routine treatment reviews
@@ -40,7 +35,7 @@
   + fup
     - nano criteria for brain cancer
     - H&N cancer post therapy
-    - skin cancer (systemic rx)
+    - skin cancer (systemic Rx)
     - lymphoma
 * TODO
   + rev
@@ -70,3 +65,20 @@
     - adjuvant hormonal
     - palliative hormonal
     
+## licencing and disclaimers
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/
+
+### disclaimer
+ No warranty is made that these forms are fit in any way, shape, or form for any medical, billing, or recording purpose. Use at your own risk and discretion. 
