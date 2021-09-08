@@ -1,0 +1,222 @@
+  name: newletter                     # these 4 on col 2
+  parent: default
+  matches:
+  - trigger: ":new"
+    replace: |              
+      ++>  Diagnoses:
+            {{newletter.dx1}}
+            {{newletter.dx2}}
+            {{newletter.dx3}}
+            {{newletter.dx4}}
+            {{newletter.dxr}}
+            
+      ++>  Problems and issues:
+            {{newletter.prob1}}
+            {{newletter.prob2}}
+            {{newletter.prob3}}
+            {{newletter.prob4}}
+            {{newletter.probr}}
+            
+      ++>  Assessment:  
+           {{newletter.asst}}
+           aim of therapy {{newletter.asst2}}
+
+      ==>  Plan and requested actions:
+           {{newletter.plan}}
+           {{newletter.planr}}
+           
+      ++> Medication changes  
+            {{newletter.meds}}
+            {{newletter.medsr}}
+            
+      +=+> Requested actions of healthcare professionals:
+            {{newletter.req}}
+            {{newletter.reqr}}
+            
+      ++>  Information and advice given:
+            {{newletter.info1}}
+            {{newletter.info2}}
+            {{newletter.info3}}
+            {{newletter.info4}}
+            {{newletter.info5}}            
+            {{newletter.info1r}}
+            
+      ++>  Functional status:
+           {{newletter.func}} {{newletter.func2}}
+           
+       +>  Allergies and adverse reactions:
+           {{newletter.all}} {{allr}}
+           
+      ++> Clinical summary:
+           {{newletter.summ}}
+           
+      ++> Patient and carer concerns, expectations and wishes:
+           {{newletter.concern}} {{newletter.concernr}}
+           
+
+
+    vars:                   # col 4
+      - name: "newletter"           # col 6
+        type: form
+        params:                  # col 8
+          layout: "Newletter
+                   \n ==== Diagnoses ======
+                   \n {{dx1}} {{dx2}}
+                   \n {{dx3}} {{dx4}}
+                   \n remarks {{dxr}}
+                   \n ==== Problems ======
+                   \n {{prob1}} {{prob2}}
+                   \n {{prob3}} {{prob4}}
+                   \n {{probr}}
+                   \n ========Assessment ======
+                   \n {{asst}} aim: {{asst2}}
+                   \n ==== Plan and actions =====
+                   \n {{plan}} notes {{planr}}
+                   \n ==== Medication changes ====
+                   \n {{meds}} notes {{medsr}}
+                   \n ==== Requested actions of others =====
+                   \n {{req}} notes {{reqr}}
+                   \n ===== Information and advice ====
+                   \n {{info1}} {{info2}}
+                   \n {{info3}} {{info4 }}
+                   \n {{info5}} notes {{info1r}}
+                   \n ===== Functional status =====
+                   \n PS {{func}} Oncogeriatrics {{func2}}
+                   \n =====Allergies and AE ====
+                   \n {{all}} notes {{allr}}
+                   \n ==== Summary =====
+                   \n {{summ}}
+                   \n ===== Patient and carer concerns =====
+                   \n {{concern}} notes {{concernr}}
+                   "     # col 10
+          fields:                  # col 10
+            dx1:
+              multiline: false
+            dx2:
+              multiline: false
+            dx3:
+              multiline: false
+            dx4:
+              multiline: false               
+            prob1:
+              multiline: false
+            prob2:
+              multiline: false
+            prob3:
+              multiline: false
+            prob4:
+              multiline: false               
+            asst:
+              multiline: true
+            asst2:
+              type: choice
+              values:
+                - establish diagnosis
+                - complete staging
+                - further investigation
+                - not clear
+                - direct cure
+                - improve chances of cure
+                - organ preservation
+                - palliative--extend survival
+                - palliative--reduce symptoms
+                - reduce risk of complication
+                - palliative--progression free survival
+                - palliative--shrink cancer
+                - palliative--best supportive care
+                - palliative--end of life care
+                - clinical trial
+            plan:
+              type: choice
+              values:
+                - biopsy and completion of staging
+                - completion of staging
+                - further investigation to establish diagnosis
+                - institution of therapy
+                - observation
+                - therapy proposed, patient to consider
+                - other
+            meds:
+              type: choice
+              values:
+                - no changes
+                - non-pharmacological therapy
+                - stopped medication
+                - started medication
+                - multiple changes
+            req:
+              type: choice
+              values:
+                - none
+                - followup of investigation
+                - review of response to medication
+                - routine investigations required
+                - care plan requested
+            info1:
+              type: choice
+              values:
+                - discussed diagnosis
+                - discussed nature of disease and behaviour
+                - discussed aim of treatment
+                - discussed treatment options
+                - proposed plan of investigation
+                - proposed plan of therapy
+            info2:
+              type: choice
+              values:
+                - discussed diagnosis
+                - discussed nature of disease and behaviour
+                - discussed aim of treatment
+                - discussed treatment options
+                - proposed plan of investigation
+                - proposed plan of therapy
+            info3:
+              type: choice
+              values:
+                - discussed diagnosis
+                - discussed nature of disease and behaviour
+                - discussed aim of treatment
+                - discussed treatment options
+                - proposed plan of investigation
+                - proposed plan of therapy
+            info4:
+              type: choice
+              values:
+                - discussed diagnosis
+                - discussed nature of disease and behaviour
+                - discussed aim of treatment
+                - discussed treatment options
+                - proposed plan of investigation
+                - proposed plan of therapy
+            info5:
+              type: choice
+              values:
+                - discussed diagnosis
+                - discussed nature of disease and behaviour
+                - discussed aim of treatment
+                - discussed treatment options
+                - proposed plan of investigation
+                - proposed plan of therapy                
+            medsr:
+              multiline: false
+            dxr:
+              multiline: false
+            probr:
+              multiline: false
+            planr:
+              multiline: false
+            reqr:
+              multiline: false
+            infor:
+              multiline: false
+            allr:
+              multiline: false
+            concernr:
+              multiline: false
+            info1r:
+              multiline: false
+            concern:
+              multiline: false
+            summ:
+              multiline: true
+              
