@@ -65,7 +65,7 @@
     - adjuvant hormonal
     - palliative hormonal
     
-## licencing and disclaimers
+## licencing
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -77,8 +77,8 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with this program. If not, see http://www.gnu.org/licenses/
+See  http://www.gnu.org/licenses/ for a copy of the GNU General Public License
 
-### disclaimer
+
+### further disclaimer
  No warranty is made that these forms are fit in any way, shape, or form for any medical, billing, or recording purpose. Use at your own risk and discretion. 
