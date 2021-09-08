@@ -1,0 +1,427 @@
+  name: crtlong
+  parent: default
+  matches:
+  - trigger: ":hncrt"
+    replace: |
+       Review for {{crtlong.situation}}
+       Week {{crtlong.week}}
+       
+       Assessment {{crtlong.asst}}
+       
+       Plan {{crtlong.plan}} {{crtlong.planr}}
+       
+       Medication changes {{crtlong.meds}} {{crtlong.medsr}}
+
+       Patient discussion {{crtlong.discuss}}
+
+       Clinical Summary
+       Functional status {{crtlong.func}} {{crtlong.funcr}}
+
+       Subjective
+       Pain {{crtlong.pain}} {{crtlong.painr}}
+       Ulceration {{crtlong.ulcer}}
+       Odynophagia {{crtlong.odyn}}
+       Fatigue {{crtlong.fatigue}}
+       Taste change {{crtlong.taste}}
+       Appetite {{crtlong.appetite}}
+       Mucosal sensitivty {{crtlong.mucsens}}
+       Dryness {{crtlong.dry}}
+       Mucous production {{crtlong.mucprod}}
+       Difficulty eating {{crtlong.eat}}
+       Swallowing issues {{crtlong.swallow}}
+       Weight {{crtlong.weight}}
+       Constitutional symptoms  {{crtlong.constit}}
+       Nausea {{crtlong.nausea}}
+       Vomiting {{crtlong.vomiting}}      
+       Chest symptoms  {{crtlong.chest}}         
+       Other {{crtlong.symptomsr}}
+       Voice and speech {{crtlong.voice}}
+       Skin {{crtlong.skin}}
+       Constipation {{crtrv.constipation}}
+       Sedation {{crtlong.sedate}}
+       Sleep {{crtlong.sleep}}
+       Mood {{crtlong.mood}}
+       
+       General issues
+       {{crtlong.gen}} {crtlong.genr}}
+       
+       Objective findings   {{crtlong.exam}}
+       Fibrosis/edema {{crtlong.exam2}}
+       {{crtlong.examr}} 
+
+       Blood tests {{crtlong.labs}}
+       {{crtlong.labsr}}       
+
+       Imaging {{crtlong.xray}}
+       {{crtlong.xrayr}}
+    vars:
+      - name: "crtlongXS"
+        type: form
+        params:
+          layout: "H&N cancer chemoRT
+                   Situation {{situation}}
+                   \n Week {{week}} 
+                   \n 
+                   \n Functional status {{func}} notes {{funcr}}
+                   \n Symptoms
+                   \n
+                   \n Oral--ENT
+                   \n Eating {{eat}}
+                   \n Mucosal sensitivity {{mucsens}}
+                   \n Mucous production {{mucprod}}
+                   \n Odynophagia {{odyn}}
+                   \n Swallowing {{swallow}}
+                   \n Taste change {{taste}}
+                   \n Ulceration {{ulcer}}
+                   \n Voice and speech {{voice}}
+                   \n Xerostomia {{dry}}
+                   \n General
+                   \n Appetite {{appetite}}
+                   \n Fatigue  {{fatigue}}
+                   \n Mood {{mood}}
+                   \n Sedation {{sedate}}
+                   \n Sleep {{sleep}}
+                   \n GIT
+                   \n Constipation {{constipation}} 
+                   \n Nausea {{nausea}}
+                   \n Other
+                   \n Pain  {{pain}} notes {{painr}}
+                   \n Pulmonary symptoms {{chest}} 
+                   \n Skin {{skin}}
+                   \n Vomiting {{vomit}}
+                   \n Weight {{weight}}
+                   \n  Other symptoms  {{symptomsr}}
+                   \n General issues {{gen}} {{genr}} 
+                   \n
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n fibrosis and edema {{exam2}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n
+                   \n Scans {{xray}} remarks {{xrayr}}
+                   \n Assessment {{asst}}
+                   \n Plan {{plan}}
+                   remarks {{planr}} 
+                   \n Medication changes {{meds}}
+                   remarks {{medsr}}
+                   \n Next cycle {{nextcycle}}
+                   \n Patient discussion {{discuss}}"
+          fields:
+            situation:
+              type: choice
+              values:
+                - cisplatin 3 weekly RT
+                - cisplatin weekly RT
+                - carboplatin-FU 3 weekly RT
+                - definitive cetuximab-RT
+                - other
+            week:
+              type: choice
+              values:
+                - week 1
+                - week 2
+                - week 3
+                - week 4
+                - week 5
+                - week 6
+                - week 7
+                - week 8
+            asst:
+              type: choice
+              values:
+                - Doing well
+                - As yet little in the way of adverse effects
+                - Mild to moderate adverse effects
+                - Substantive adverse effects, as expected
+                - Major adverse effects, more than expected
+                - Major adverse effects, further chemotherapy likely to compromise radiotherapy
+                - Not fit for chemotherapy
+            plan:
+              type: choice
+              values:
+                - continue therapy
+                - continue therapy, increase supportive care
+                - hold chemotherapy, increase supportive care
+                - other
+            planr:
+              multiline: false
+            meds:
+              type: choice
+              values:
+                - no changes
+                - non-pharmacological therapy
+                - stopped medication
+                - started medication
+            medsr:
+              multiline: false
+            nextcycle:
+              type: choice
+              values:
+                - 1 week
+                - 3 weeks
+            exam:
+              type: choice
+              values:
+                - not required
+                - oral cavity clean, no ulceration, skin grade 0
+                - oral cavity clean, no ulceration, skin grade 1
+                - oral cavity patchy erythema or ulceration, skin grade 0-1
+                - oral cavity confluent ulceration skin  grade 0-1
+                - oral cavity confluent ulceration skin grade 2
+                - other
+            exam2:
+              type: choice
+              values:
+                - no lymphedema or fibrosis
+                -  mild lymphedema and fibrosis
+                - moderate or significant fibrosis without lymphedema
+                - moderate or significant fibrosis with lymphedema
+                - moderate or significant lymphedema with little or no fibrosis
+                - moderate or significant lymphedema with significant fibrosis
+            examr: 
+              multiline: false
+            labs:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - improvement in disease related abnormalities
+                - stable disease related abnormalities
+                - increasing abnormalities suspicious of disease progression
+                - abnormality requiring further investigation
+                - abnormality requiring intervention
+                - results pending
+            labsr:
+              multiline: false
+            xray:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - stable abnormalities not concerning for recurrence
+                - new abnormalities of unclear significance
+                - abnormalities suspicious for recurrence
+                - RECIST stable disease
+                - RECIST responding disease
+                - RECIST complete response
+                - unconfirmed progressive disease (iUPD)
+                - confirmed progressive disease (iPD)
+                - oligoprogressive disease
+                - results pending
+            xrayr:
+              multiline: false   
+            pain:
+              type: choice
+              values:
+                - none 
+                - chronic pain not related to malignancy or therapy
+                - stable pain related to known malignancy
+                - reduced pain related to known malignancy
+                - worse pain related to known malignancy
+                - chronic pain related to therapy; stable
+                - chronic pain related to therapy; improved
+                - chronic pain related to therapy; increased
+                - acute pain related to therapy; stable
+                - acute pain related to therapy; improved
+                - acute pain related to therapy; increased                 
+                - new onset pain
+                - changed pain
+            painr:
+              multiline: false
+            weight:
+              type: choice
+              values:
+                - no change
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)
+            constit:
+              type: choice
+              values:
+               - none 
+               - fever
+               - drenching night sweats
+               - fever and drenching sweats
+            lump:
+              type: choice
+              values:
+               - none noted
+               - visible abnormality
+               - lump suggesting adenopathy
+               - other palpable abnormality
+            fatigue:
+              type: choice
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe
+               - significant increase
+               - significant improvement
+            chest:
+              type: choice
+              values:
+               - no chest symptoms 
+               - no change in background symptoms
+               - production of sputum more in keeping with upper airway
+               - symptoms suggesting lower respiratory tract infection
+            symptomsr:
+              multiline: false
+            dry:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            eat:
+              type: choice
+              values:
+                - no change in diet
+                - minor alteration in diet
+                - avoid certain foods, eating a variety
+                - limited diet
+                - soft diet only
+                - liquid only
+                - no oral intake
+            swallow:
+              type: choice
+              values:
+                - no restriction
+                - care with food size or dryness
+                - avoidance of some food
+                - significant restrictions but no coughing or spluttering
+                - significant restrictions with coughing and spluttering
+                - no restrictions but coughing and spluttering
+                - gastrostomy dependent
+            voice:
+              type: choice
+              values:
+                - no significant impact
+                - mild changes in voice or speech
+                - moderate changes in voice or speech
+                - major impact on voice or speech 
+            skin:
+              type: choice
+              values:
+                - none
+                - dryness
+                - erythema and or scaling no pain or ulceration
+                - erythema  with pain no ulceration
+                - localized ulceration
+                - confluent ulceration
+            discuss:
+              multiline: false
+            gen:
+              type: choice
+              values:
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
+            genr:
+              multline: false
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            funcr:
+              multiline: false
+            ulcer:
+              type: choice
+              values:
+                - none
+                - minor
+                - moderate
+                - substantial
+            odyn:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate, not interfering with eating
+                - moderate, interfering with eating
+                - severe, liquid diet
+                - severe, no oral intake
+            taste:
+              type: choice
+              values:
+                - no change
+                - mild change
+                - moderate change
+                - severe but still eating
+                - severe, preventing eating
+            appetite:
+              type: choice
+              values:
+                - no change
+                - minor loss
+                - moderate loss
+                - severe loss
+                - mild improvement
+                - moderate improvement
+            nausea:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            vomit:
+              type: choice
+              values:
+                - none
+                - occasional
+                - daily
+                - multiple times daily
+            constipation:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            sedate:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            sleep:
+              type: choice
+              values:
+                - no change
+                - mild interference
+                - moderate interference
+                - severely disturbed
+            mood:
+              type: choice
+              values:
+                - no change
+                - mildly altered
+                - moderately altered
+                - severely altered
+            mucsens:
+              type: choice
+              values:
+                - none
+                - mild; increased to spice, acid
+                - moderate; difficult to tolerate spice or acid
+                - severe; unable to tolerate spice or acid
+            mucprod:
+              type: choice
+              values:
+                - no excess
+                - mild increase
+                - moderate increase, sticky+
+                - substantial issues with excess mucous production    
+
+                

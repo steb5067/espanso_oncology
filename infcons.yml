@@ -1,0 +1,258 @@
+  name: infcon
+  parent: default
+  matches:
+  - trigger: ":infcon"
+    replace: |
+      ++> Informed consent discussion for {{infcon.situation}}
+
+      +> Treatment primary aim {{infcon.aim1}} NNT {{infcon.nnt1}}
+         Secondary aim {{infcon.aim2}} NNT {{infcon.nnt2}}
+
+      +> Regimen {{infcon.reg}}
+
+      +> Means {{infcon.means}}
+
+      ++> Adverse effects
+          Mild to moderate NNH {{infcon.nnh1}}
+          Substantial, affecting QOL NNH {{infcon.nnh2}}
+          Severe and lifethreatening NNH {{infcon.nnh3}}
+          Common toxicities {{infcon.com}}
+          Given information {{infcon.info}}
+
+      ++> reasonable alternatives
+       {{infcon.alt1}} {{infcon.alt1r}}
+       {{infcon.alt2}} {{infcon.alt2r}}
+       {{infcon.alt3}} {{infcon.alt3r}}
+       {{infcon.alt4}} {{infcon.alt4r}}
+
+      ++> specific issues
+       {{infcon.spec}} {{infcon.specr}}
+
+      ++> Late effects
+        Frequency {{infcon.freq1}} Type {{infcon.typ1}}
+        {{infcon.freq2}} {{infcon.typ2}}
+        {{infcon.freq3}} {{infcon.typ3}}
+        {{infcon.typr}}
+    vars:
+      - name: "infcon"
+        type: form
+        params:
+          layout:
+              "Informed consent discussion
+              Situation {{situation}}
+              \n Primary aim {{aim1}} NNT {{nnt1}}
+              Secondary aim {{aim2}} NNT {{nnt2}}
+              \n Regimen {{reg}}
+              \n Means {{means}}
+              \n ==== Adverse effects ======
+              \n Mild to moderate NNH {{nnh1}}
+              Substantial, affecting QOL NNH {{nnh2}}
+              Severe and lifethreatening NNH {{nnh3}}
+              \n Common toxicities {{com}}
+              \n ==== Alternatives =====
+              1. {{alt1}} notes {{alt1r}}
+              2. {{alt2}} notes {{alt2r}}
+              \n 3. {{alt3}} notes {{alt3r}}
+              4. {{alt4}} notes {{alt4r}}
+              \n Specific issues {{spec}} remarks {{specr}}
+              \n === Late effects ====
+              1. Frequency {{freq1}} Type {{typ1}}
+              2. {{freq2}} {{typ2}}
+              \n 3.{{freq3}} {{typ3}}
+              notes {{typr}}
+              \n Info given {{info}}"
+          fields:
+            situation:
+              type: choice
+              values:
+                - chemotherapy
+                - immunotherapy
+                - chemo-radiotherapy
+                - chemo-immunotherapy
+                - signal transduction therapy
+                - hormonal therapy
+                - combination therapy
+                - bone targeting agents
+            aim1:
+              type: choice
+              values:
+                - direct cure
+                - improve chances of cure
+                - organ preservation
+                - extend life
+                - reduce symptoms
+                - reduce risk of complication
+                - delay growth, no impact on survival
+                - shrink cancer, impact unclear
+            nnt1:
+              multiline: false
+            aim2:
+              type: choice
+              values:
+                - direct cure
+                - improve chances of cure
+                - organ preservation
+                - extend life
+                - reduce symptoms
+                - reduce risk of complication
+                - delay growth, no impact on survival
+                - shrink cancer, impact unclear
+            nnt2:
+              multiline: false
+            reg:
+              multiline: false
+            means:
+              type: choice
+              values:
+                - intravenous
+                - oral
+                - combined oral and intravenous
+                - subcutaneous
+            nnh1:
+              multiline: false
+            nnh2:
+              multiline: false
+            nnh3:
+              multiline: false
+            info:
+              type: choice
+              values:
+                - EviQ
+                - EviQ adapted
+                - other written
+                - other not written
+                - none
+            alt1:
+              type: choice
+              values:
+                - BSC
+                - defer therapy until symptoms
+                - observation, therapy on recurrence
+                - alternative regimen
+                - clinical trial
+                - NA                
+            alt1r:
+              multiline: false
+            alt2:
+              type: choice
+              values:
+                - BSC
+                - defer therapy until symptoms
+                - observation, therapy on recurrence
+                - alternative regimen
+                - clinical trial
+                - NA                
+            alt2r:
+              multiline: false
+            alt3:
+              type: choice
+              values:
+                - BSC
+                - defer therapy until symptoms
+                - observation, therapy on recurrence
+                - alternative regimen
+                - clinical trial
+                - NA                
+            alt3r:
+              multiline: false                
+            alt4:
+              type: choice
+              values:
+                - BSC
+                - defer therapy until symptoms
+                - observation, therapy on recurrence
+                - alternative regimen
+                - clinical trial
+                - NA                
+            alt4r:
+              multiline: false                
+            spec:
+              type: choice
+              values:
+                - no known specific issues
+                - specific issues
+                - other
+            specr:
+              multiline: false
+            com:
+              type: choice
+              values:
+                - typical of chemotherapy
+                - typical of immunotherapy
+                - typical of chemoimmunotherapy
+                - typical of chemoradiotherapy
+                - typical of EGFRi
+                - typical of Brafi
+                - typical of VEGFi
+                - typical of hormones-CDK46
+                - typical of hormonal
+                - typical of bone targeting agents
+            comr:
+              multiline: false
+            freq1:
+              type: choice
+              values:
+                - very common
+                - common
+                - uncommon
+                - rare
+                - very rare
+            typ1:
+              type: choice
+              values:
+                - swallowing, eating, dryness, dental, social eating
+                - fatigue
+                - neuropathy
+                - neuropathy and ototoxicity
+                - ototoxicity
+                - chemobrain
+                - cardiac
+                - fertility
+                - secondary malignancy
+                - NA
+            freq2:
+              type: choice
+              values:
+                - very common
+                - common
+                - uncommon
+                - rare
+                - very rare
+            typ2:
+              type: choice
+              values:
+                - swallowing, eating, dryness, dental, social eating
+                - fatigue
+                - neuropathy
+                - neuropathy and ototoxicity
+                - ototoxicity
+                - chemobrain
+                - cardiac
+                - fertility
+                - secondary malignancy
+                - NA                                
+            freq3:
+              type: choice
+              values:
+                - very common
+                - common
+                - uncommon
+                - rare
+                - very rare
+            typ3:
+              type: choice
+              values:
+                - swallowing, eating, dryness, dental, social eating
+                - fatigue
+                - neuropathy
+                - neuropathy and ototoxicity
+                - ototoxicity
+                - chemobrain
+                - cardiac
+                - fertility
+                - secondary malignancy
+                - NA                
+            typr:
+              multiline: false
+                
+    

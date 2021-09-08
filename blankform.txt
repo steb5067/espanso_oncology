@@ -1,0 +1,17 @@
+  name:                      # these 4 on col 2
+  parent: default
+  matches:
+  - trigger: ":"
+    replace: |               # col 4
+      ++> {{name.field1}}
+      
+    vars:                   # col 4
+      - name: " "           # col 6
+        type: form
+        params:                  # col 8
+          layout: "{{field1}}"     # col 10
+          fields:                  # col 10
+            field1:                # col 12
+              type: 
+              values:             # col 14 for these
+                -                 # col 16
