@@ -32,11 +32,16 @@
   + rev
     - review on immunotherapy
     - review on H&N chemoradiotherapy
+    - review immunotherapy toxicity management
   + fup
     - nano criteria for brain cancer
     - H&N cancer post therapy
     - skin cancer (systemic Rx)
     - lymphoma
+  + consent
+    - generic
+  + new patient
+    - generic
 * TODO
   + rev
     - chemo (split how?)
@@ -48,12 +53,12 @@
     - breast
     - crc
     - gbm general
-  + new letter? maybe not initial consultations. leave till last
+  + new letter broken down by situation with more pre-done boilerplate?? 
     - H&N pretreatment curative
     - H&N r/m
     - melanoma adjuvant
     - skin ca r/m
-  + treatment consent documentation?
+  + treatment consent documentation in detail?
     - immunotherapy
     - adjuvant immunotherapy
     - H&N chemoRT
