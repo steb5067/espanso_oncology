@@ -91,35 +91,35 @@
             situation:
               type: choice
               values:
-                - pembrolizumab
-                - nivolumab 
-                - avelumab 
-                - atezolizumab
-                - atezolizumab-bevacizumab
-                - cemiplimab
-                - ipilimumab-nivolumab
-                - investigational immunotherapy
+                - management of immune toxicity from pembrolizumab
+                - management of immune toxicity from nivolumab 
+                - management of immune toxicity from avelumab 
+                - management of immune toxicity from atezolizumab
+                - management of immune toxicity from atezolizumab-bevacizumab
+                - management of immune toxicity from cemiplimab
+                - management of immune toxicity from ipilimumab-nivolumab
+                - management of immune toxicity from investigational immunotherapy
             asst:
               type: choice
               values:
-                - Clinically stable no significant toxicity
-                - Clinically stable mild to moderate toxicity 
-                - Clinically stable major toxicity suspected
-                - Clinically stable major toxicity 
-                - Suspicion of progressive disease
-                - Responding disease acceptable toxicity
-                - Responding disease problematic toxicity
-                - Responding disease major toxicity
-                - Unclear
-                - Progressive disease
+                - Toxicity responding to therapy.
+                - Toxicity flaring
+                - Toxicity unresponsive to current therapy
+                - Toxicity resolved on suppressive therapy
+                - Toxicity resolved off suppressive therapy
+                - Toxicity responding to therapy; issues with toxicity of immunosuppressive treatment
+                - Toxicity flaring;  issues with toxicity of immunosuppressive therapy
+                - Toxicity unresponsive to current therapy;  issues with toxicity of immunosuppressive treatment
+                - Toxicity resolved on suppressive therapy;  issues with toxicity of immunosuppressive treatment
+                - Toxicity resolved off suppressive therapy;  issues with toxicity of immunosuppressive treatment                
             plan:
               type: choice
               values:
                 - continue current therapy
-                - continue current therapy, start or change supportive care
-                - hold therapy start immediate treatment of high grade immune toxicity
-                - hold therapy investigate for severe immune toxicity
-                - investigate for disease progression
+                - further taper of immunosuppressive therapy
+                - increase immunosuppressive therapy
+                - add second line immunosuppressive therapy
+                - stop immunosuppressive therapy
             planr:
               multiline: false
             meds:
