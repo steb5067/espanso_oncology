@@ -3,15 +3,15 @@
   matches:
   - trigger: ":revtoxio"
     replace: |
-       ++> Pretreatment review for {{revtoxio.situation}}
+       ++> Review for {{revtoxio.situation}}
        
        ++> Assessment
        {{revtoxio.asst}}
 
        ++> Plan
-       {{revtoxio.prednow}} {{revtoxio.prednext}} 
        {{revtoxio.plan}} {{revtoxio.planr}}
-
+       {{revtoxio.prednow}} {{revtoxio.prednext}}
+       
        +> Medication changes {{revtoxio.meds}} {{revtoxio.medsr}}
 
        +> Patient discussion {{revtoxio.discuss}}
@@ -129,6 +129,7 @@
                 - non-pharmacological therapy
                 - stopped medication
                 - started medication
+                - altered steroid dose
                 - multiple changes
             medsr:
               multiline: false
