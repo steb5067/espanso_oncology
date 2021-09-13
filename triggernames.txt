@@ -26,6 +26,8 @@
 ./oncology.yml   ":fpt"
 ./reviewhncrt.yml   ":revcrt"
 ./reviewio.yml   ":revio"
+./reviewiotox.yml   ":revtoxio"
+./reviobrief.yml   ":brevio"
 ./rx.yml   ":rev_initial_try"
 ./toxicity.yml   ":toxgi"
 ./toxicity.yml   ":toxcns"
