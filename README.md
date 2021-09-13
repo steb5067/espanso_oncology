@@ -15,10 +15,12 @@
 * task::situation
 * tasks:
   + rev = review
+  + brev = brief review
   + fup = follow up
 * situations:
   + io = immunotherapy
   + crt = H&N chemoradiotherapy
+  + toxio = immunotherapy toxicity
   + gbmn = nano criteria for brain cancer
 * examples:
   + fupgbmn = follow up gbm using nano 
@@ -70,7 +72,7 @@
     - adjuvant hormonal
     - palliative hormonal
     
-## licencing
+## licensing
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
