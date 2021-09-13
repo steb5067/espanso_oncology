@@ -1,7 +1,7 @@
   name: crtlong
   parent: default
   matches:
-  - trigger: ":hncrt"
+  - trigger: ":lrevcrt"
     replace: |
        Review for {{crtlong.situation}}
        Week {{crtlong.week}}
