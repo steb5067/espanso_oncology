@@ -1,0 +1,351 @@
+  name: reviewiobrief
+  parent: default
+  matches:
+  - trigger: ":brevio"
+    replace: |
+       ++> Pretreatment review for {{reviob.situation}}
+       
+       ++> Assessment {{reviob.asst}}
+
+       ++> Plan {{reviob.plan}} {{reviob.planr}}
+
+       +> Medication changes {{reviob.meds}} {{reviob.medsr}}
+
+       +> Patient discussion {{reviob.discuss}}
+
+       +> Next cycle {{reviob.nextcycle}} 
+       
+       ++> Clinical Summary
+       Functional status {{reviob.func}} {{reviob.funcr}}
+       +> Symptoms
+       Pain {{reviob.pain}} {{reviob.painr}}
+       Weight {{reviob.weight}}
+       Other
+       {{reviob.symptomsr}}
+       
+       +> Treatment toxicity
+       Fatigue {{reviob.fatigue}}
+       Skin rash {{reviob.rash}}
+       Pruritus {{reviob.itch}}
+       Arthralgias {{reviob.joints}}
+       Other indicators of toxicity {{reviob.posstox}}
+       {{reviob.toxicityr}}
+
+       +> General issues
+       {{reviob.gen}} {{reviob.genr}}
+       
+       +> Objective findings
+       {{reviob.exam}}
+       {{reviob.examr}} 
+
+       +> Blood tests
+       {{reviob.labs}}
+       {{reviob.labsr}}       
+
+       +> Imaging
+       {{reviob.xray}}
+       {{reviob.xrayr}}
+    vars:
+      - name: "reviob"
+        type: form
+        params:
+          layout: "Immunotherapy brief review
+                   Situation {{situation}}
+                   \n Functional status {{func}} notes {{funcr}} 
+                   \n Symptoms
+                   \n   Pain  {{pain}} notes {{painr}}
+                   \n   Weight {{weight}} 
+                   \n   Fatigue  {{fatigue}}
+                   \n   Other symptoms {{symptomsr}}
+                   \n   Rash {{rash}} 
+                   \n Itching {{itch}}
+                   \n  Joints  {{joints}} 
+                   \n  Other indicators of toxicity {{posstox}}
+                   \n   remarks {{toxicityr}}
+                   \n General issues {{gen}} {{genr}} 
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n Scans {{xray}} remarks {{xrayr}}
+                   Assessment {{asst}}
+                   \n Plan {{plan}}
+                   remarks {{planr}} 
+                   \n Medication changes {{meds}}
+                   remarks {{medsr}}
+                   \n next cycle {{nextcycle}}
+                   \n Patient discussion {{discuss}}"
+          fields:
+            situation:
+              type: choice
+              values:
+                - pembrolizumab
+                - nivolumab 
+                - avelumab 
+                - atezolizumab
+                - atezolizumab-bevacizumab
+                - cemiplimab
+                - ipilimumab-nivolumab
+                - investigational immunotherapy
+            asst:
+              type: choice
+              values:
+                - Clinically stable no significant toxicity
+                - Clinically stable mild to moderate toxicity 
+                - Clinically stable major toxicity suspected
+                - Clinically stable major toxicity 
+                - Suspicion of progressive disease
+                - Responding disease acceptable toxicity
+                - Responding disease problematic toxicity
+                - Responding disease major toxicity
+                - Unclear
+                - Progressive disease
+            plan:
+              type: choice
+              values:
+                - continue current therapy
+                - continue current therapy, start or change supportive care
+                - hold therapy start immediate treatment of high grade immune toxicity
+                - hold therapy investigate for severe immune toxicity
+                - investigate for disease progression
+            planr:
+              multiline: false
+            meds:
+              type: choice
+              values:
+                - no changes
+                - non-pharmacological therapy
+                - stopped medication
+                - started medication
+                - multiple changes
+            medsr:
+              multiline: false
+            nextcycle:
+              type: choice
+              values:
+                - 1 week
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - after investigation
+            exam:
+              type: choice
+              values:
+                - not required
+                - no significant abnormalities on screening examination (cardiac, respiratory, abdominal)
+                - no significant abnormalities on general oncological examination ( lymphadenopathy, cardiac, respiratory, abdominal)
+                - no significant abnormalities on head and neck examination (oral cavity and pharynx, mirror, neck, thyroid, supraclavicular fossa)
+                - concerning findings for recurrence
+                - abnormal findings from malignancy; stable
+                - abnormal findings from malignancy; reducing
+                - abnormal findings from malignancy; increasing
+                - abnormal findings post treatment; stable
+                - abnormal findings post treatment; reducing
+                - abnormal findings post treatment; increasing
+                - other
+            examr: 
+              multiline: false
+            labs:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - increasing abnormalities unrelated to disease or therapy
+                - reducing abnormalities unrelated to disease or therapy
+                - stable  abnormalities unrelated to disease or therapy                
+                - improvement in disease related abnormalities
+                - stable disease related abnormalities
+                - increasing abnormalities suspicious of disease progression
+                - stable treatment related abnormalities
+                - increasing abnormalities from treatment
+                - reducing treatment related abnormalities
+                - increasing multi-factorial (disease, therapy) abnormalities
+                - reducing multi-factorial (disease, therapy) abnormalities
+                - stable multi-factorial (disease, therapy) abnormalities
+                - abnormality requiring further investigation
+                - abnormality requiring intervention
+                - results pending
+            labsr:
+              multiline: false
+            xray:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - stable abnormalities not concerning for recurrence
+                - new abnormalities of unclear significance
+                - abnormalities suspicious for recurrence
+                - RECIST stable disease
+                - RECIST responding disease
+                - RECIST complete response
+                - unconfirmed progressive disease (iUPD)
+                - confirmed progressive disease (iPD)
+                - oligoprogressive disease
+                - results pending
+            xrayr:
+              multiline: false   
+            pain:
+              type: choice
+              values:
+               - none 
+               - chronic pain not related to malignancy or therapy
+               - stable pain related to known malignancy
+               - reduced pain related to known malignancy
+               - worse pain related to known malignancy
+               - chronic pain related to therapy; stable
+               - chronic pain related to therapy; improved
+               - chronic pain related to therapy; increased
+               - acute pain related to therapy; stable
+               - acute pain related to therapy; improved
+               - acute pain related to therapy; increased                   
+               - new onset pain
+               - changed pain 
+            painr:
+              multiline: false
+            weight:
+              type: choice
+              values:
+                - no change
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)
+            constit:
+              type: choice
+              values:
+               - none 
+               - fever
+               - drenching night sweats
+               - fever and drenching sweats
+            lump:
+              type: choice
+              values:
+               - none noted
+               - visible abnormality
+               - lump suggesting adenopathy
+               - other palpable abnormality
+            fatigue:
+              type: choice
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe
+               - significant increase
+               - significant improvement
+            chest:
+              type: choice
+              values:
+               - no symptoms 
+               - stable symptoms not related to disease or treatment
+               - stable symptoms related to disease
+               - increased symptoms
+               - new onset symptoms
+            symptomsr:
+              multiline: false
+            rash:
+              type: choice
+              values:
+                - none
+                - macules/papules <10% 
+                - macules/papules 10-30% 
+                - macules/papules  over 30%; rash impacting ADL 
+                - blistering, ulceration, widespread mucositis
+            itch:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+            joints:
+              type: choice
+              values:
+                - none
+                - mild arthralgias or myalgias
+                - mild or moderate arthralgias or myalgias
+                - objective synovitis
+                - severe arthralgias or myalgias
+                - polyarthralgias with systemic symptoms
+            posstox:
+              multiline: false
+            toxicicityr:
+              multiline: false
+            diarhoea:
+              type: choice
+              values:
+                - none
+                - <4 above baseline
+                - 4-6 above baseline, blood or mucous in stool
+                - more than 6 above baseline, incontinence, dehydration
+                - grade 3 with fever, peritonism or ileus or perforation
+            pituitary:
+              type: choice
+              values:
+                - none
+                - nil or mild symptoms
+                - headaches, hypotension limiting iADL
+                - severe symptoms or impairing ADL
+                - visual change or life threatening consequences
+            liver:
+              type: choice
+              values:
+                - not evaluated
+                - none
+                - abnormal liver function tests not related to immunotherapy
+                - pending
+                - AST ALT up to 3 x N or bili up to 1.5 x N ( or 2 x baseline)
+                - AST ALT 3-5X N or bili 1.5-3x N (or over 2 x baseline)
+                - AST ALT 5-20 x N or bili 3 - 10 x N
+                - AST ALT more than 20 X N or bili more than 10 x N
+            pneumonitis:
+              type: choice
+              values:
+                - none
+                - asymptomatic radiology change only
+                - symptomatic, limiting iADL
+                - limiting ADL, O2 requirement
+                - severe respiratory compromise
+            neurotox:
+               type: choice
+               values:
+                 - none
+                 - asymptomatic or mild symptoms
+                 - new onset moderate symptoms, limiting iADL
+                 - new onset severe symptoms, limiting ADL
+                 - life threatening
+            nephro:
+               type: choice
+               values:
+                 - not evaluated
+                 - none
+                 - abnormal renal function not related to immunotherapy
+                 - pending
+                 - creat over ULN and 1.5-2 x baseline, + proteinuria, < 1g/24h
+                 - creat 2-3x baseline, proteinuria 2+, 1-3.4g proteinuria 24 hrs
+                 - creat over 3 x baseline, over 3.5g proteinuria 24 hrs
+                 - creat over 6 x N, dialysis
+            discuss:
+              multiline: false
+            gen:
+              type: choice
+              values:
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
+            genr:
+              multiline: false
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            funcr:
+              multiline: false
+                
