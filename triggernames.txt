@@ -1,4 +1,5 @@
-./crtnew.yml   ":hncrt"
+./breviotox.yml   ":brevtoxio"
+./crtnew.yml   ":lrevcrt"
 ./exps.yml   ":newletter"
 ./exps.yml   ":revletter"
 ./exps.yml   ":rxletter"

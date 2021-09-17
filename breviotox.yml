@@ -1,19 +1,20 @@
   name: breviotox
   parent: default
   matches:
-  - trigger: ":bbrevtoxio"
+  - trigger: ":brevtoxio"
     replace: |
        ++> Review for {{brevtoxio.situation}}
            Secondary toxicity {{brevio.secondary}}
            
        ++> Assessment
        {{brevtoxio.asst}}
+       Secondary toxicity {{brevtoxio.asst2}}
 
        ++> Plan
        {{brevtoxio.plan}} {{brevtoxio.planr}}
 
        +> Medication changes {{brevtoxio.meds}} {{brevtoxio.medsr}}
-       Steroids {{brevtoxio.prednow}} {{brevtoxio.prednext}}
+       Steroids from {{brevtoxio.prednow}} to {{brevtoxio.prednext}}
        
        +> Patient discussion {{brevtoxio.discuss}}
 
@@ -25,6 +26,12 @@
        Secondary grade {{brevio.grade2}}
        Secondary response {{brevio.resp2}}
        
+       => Steroid issues
+       {{brevio.predae1}}
+       {{brevio.predae2}}
+       diabetes issues {{brevio.predDM}}
+       {{brevio.predaer}}
+
        ++> Clinical Summary
        Functional status {{brevtoxio.func}} {{brevtoxio.funcr}}
        +> Symptoms
@@ -59,7 +66,9 @@
                    Situation {{situation}} Current grade {{grade}} Response {{resp}}
                    \n Secondary toxicity {{secondary}} grade {{grade2}} response {{resp2}}
                    \n 
-                   \n Current steroid dose {{prednow}}
+                   \n Current steroid dose {{prednow}} Planned dose {{prednext}}
+                   \n Steroid AE {{predae1}} {{predae2}} 
+                   \n diabetes issues {{predDM}} notes {{predaer}}
                    \n Functional status {{func}} notes {{funcr}} 
                    \n Symptoms
                    \n   Pain  {{pain}} notes {{painr}}
@@ -77,7 +86,7 @@
                    \n Secondary toxicity {{asst2}}
                    \n Plan {{plan}} remarks {{planr}} 
                    \n Medication changes {{meds}}
-                   remarks {{medsr}} Pred changes {{prednext}}
+                   remarks {{medsr}} 
                    \n next review {{nextcycle}}
                    \n Patient discussion {{discuss}}"
           fields:
@@ -85,6 +94,7 @@
               type: choice
               values:
                 - management of skin immune toxicity
+                - management of endocrine toxicity
                 - management of endocrine immune toxicity
                 - management of GI immune toxicity
                 - management of lung immune toxicity
@@ -99,18 +109,31 @@
               type: choice
               values:
                 - none
-                - management of skin immune toxicity
-                - management of endocrine immune toxicity                
-                - management of GI immune toxicity
-                - management of lung immune toxicity
-                - management of hepatic immune toxicity
-                - management of renal immune toxicity 
-                - management of peripheral NS immune toxicity
-                - management of CNS immune toxicity
-                - management of joint immune toxicity
-                - management of systemic immune toxicity
-                - management of other immune toxicity
-                
+                - skin immune toxicity
+                - endocrine immune toxicity                
+                - GI immune toxicity
+                - lung immune toxicity
+                - hepatic immune toxicity
+                - renal immune toxicity 
+                - peripheral NS immune toxicity
+                - CNS immune toxicity
+                - joint immune toxicity
+                - systemic immune toxicity
+                - other immune toxicity
+            asst2:
+              type: choice
+              values:
+                - NA
+                - Toxicity responding to therapy.
+                - Toxicity flaring
+                - Toxicity unresponsive to current therapy
+                - Toxicity resolved on suppressive therapy
+                - Toxicity resolved off suppressive therapy
+                - Toxicity responding to therapy; issues with toxicity of immunosuppressive treatment
+                - Toxicity flaring;  issues with toxicity of immunosuppressive therapy
+                - Toxicity unresponsive to current therapy;  issues with toxicity of immunosuppressive treatment
+                - Toxicity resolved on suppressive therapy;  issues with toxicity of immunosuppressive treatment
+                - Toxicity resolved off suppressive therapy;  issues with toxicity of immunosuppressive treatment                     
             asst:
               type: choice
               values:
@@ -132,6 +155,7 @@
                 - increase immunosuppressive therapy
                 - add second line immunosuppressive therapy
                 - stop immunosuppressive therapy
+                - start endocrine replacement 
             planr:
               multiline: false
             meds:
@@ -268,6 +292,7 @@
             grade2:
               type: choice
               values:
+                - NA
                 - none
                 - mild
                 - moderate
@@ -286,6 +311,7 @@
             resp2:
               type: choice
               values:
+                - NA
                 - resolved, off therapy
                 - resolved, on therapy
                 - improved significantly
@@ -320,4 +346,38 @@
               multiline: false
             prednext:
               multiline: false
-                
+            predaer:
+              multiline: false
+            predae1:
+              type: choice
+              values:
+                - none significant
+                - minor mood or sleep changes
+                - significant mood or sleep changes
+                - weight gain without myopathy
+                - weight gain with myopathy
+                - proximal myopathy
+                - skin fragility
+                - infection
+            predae2:
+              type: choice
+              values:
+                - NA 
+                - minor mood or sleep changes
+                - significant mood or sleep changes
+                - weight gain without myopathy
+                - weight gain with myopathy
+                - proximal myopathy
+                - skin fragility
+                - infection
+            predDM:
+              type: choice
+              values:
+                - NA
+                - development of asymptomatic hyperglycemia
+                - development of symptomatic diabetes
+                - no significant changes in control
+                - mild improvement in control
+                - significant improvement in control
+                - mild deterioration in control
+                - significant deterioration in control
