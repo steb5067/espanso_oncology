@@ -1,0 +1,323 @@
+  name: breviotox
+  parent: default
+  matches:
+  - trigger: ":bbrevtoxio"
+    replace: |
+       ++> Review for {{brevtoxio.situation}}
+           Secondary toxicity {{brevio.secondary}}
+           
+       ++> Assessment
+       {{brevtoxio.asst}}
+
+       ++> Plan
+       {{brevtoxio.plan}} {{brevtoxio.planr}}
+
+       +> Medication changes {{brevtoxio.meds}} {{brevtoxio.medsr}}
+       Steroids {{brevtoxio.prednow}} {{brevtoxio.prednext}}
+       
+       +> Patient discussion {{brevtoxio.discuss}}
+
+       +> Next review {{brevtoxio.nextcycle}}
+       
+       => Toxicity
+       Current grade {{brevio.grade}}
+       Response {{brevio.resp}}
+       Secondary grade {{brevio.grade2}}
+       Secondary response {{brevio.resp2}}
+       
+       ++> Clinical Summary
+       Functional status {{brevtoxio.func}} {{brevtoxio.funcr}}
+       +> Symptoms
+       Pain {{brevtoxio.pain}} {{brevtoxio.painr}}
+       Weight {{brevtoxio.weight}} Constitutional symptoms  {{brevtoxio.constit}}
+       Fatigue {{brevtoxio.fatigue}}
+       Other   {{brevtoxio.symptomsr}}       
+    
+       +> Treatment toxicity
+       Other indicators of toxicity {{brevtoxio.posstox}}
+       {{brevtoxio.toxicityr}}
+
+       +> General issues
+       {{brevtoxio.gen}} {{brevtoxio.genr}}
+       
+       +> Objective findings
+       {{brevtoxio.exam}}
+       {{brevtoxio.examr}} 
+
+       +> Blood tests
+       {{brevtoxio.labs}}
+       {{brevtoxio.labsr}}       
+
+       +> Imaging
+       {{brevtoxio.xray}}
+       {{brevtoxio.xrayr}}
+    vars:
+      - name: "brevtoxio"
+        type: form
+        params:
+          layout: "Immunotherapy review
+                   Situation {{situation}} Current grade {{grade}} Response {{resp}}
+                   \n Secondary toxicity {{secondary}} grade {{grade2}} response {{resp2}}
+                   \n 
+                   \n Current steroid dose {{prednow}}
+                   \n Functional status {{func}} notes {{funcr}} 
+                   \n Symptoms
+                   \n   Pain  {{pain}} notes {{painr}}
+                   \n   Weight {{weight}} 
+                   \n Constitutional symptoms  {{constit}}
+                   \n   Fatigue  {{fatigue}}
+                   \n   Other symptoms {{symptomsr}}
+                   \n  Other indicators of toxicity {{posstox}}
+                   \n   remarks {{toxicityr}}
+                   \n General issues {{gen}} {{genr}} 
+                   \n Exam {{exam}}  remarks {{examr}}
+                   \n labs {{labs}} remarks {{labsr}}
+                   \n Scans {{xray}} remarks {{xrayr}}
+                   \n Assessment {{asst}}
+                   \n Secondary toxicity {{asst2}}
+                   \n Plan {{plan}} remarks {{planr}} 
+                   \n Medication changes {{meds}}
+                   remarks {{medsr}} Pred changes {{prednext}}
+                   \n next review {{nextcycle}}
+                   \n Patient discussion {{discuss}}"
+          fields:
+            situation:
+              type: choice
+              values:
+                - management of skin immune toxicity
+                - management of endocrine immune toxicity
+                - management of GI immune toxicity
+                - management of lung immune toxicity
+                - management of hepatic immune toxicity
+                - management of renal immune toxicity 
+                - management of peripheral NS immune toxicity
+                - management of CNS immune toxicity
+                - management of joint immune toxicity
+                - management of systemic immune toxicity
+                - management of other immune toxicity
+            secondary:
+              type: choice
+              values:
+                - none
+                - management of skin immune toxicity
+                - management of endocrine immune toxicity                
+                - management of GI immune toxicity
+                - management of lung immune toxicity
+                - management of hepatic immune toxicity
+                - management of renal immune toxicity 
+                - management of peripheral NS immune toxicity
+                - management of CNS immune toxicity
+                - management of joint immune toxicity
+                - management of systemic immune toxicity
+                - management of other immune toxicity
+                
+            asst:
+              type: choice
+              values:
+                - Toxicity responding to therapy.
+                - Toxicity flaring
+                - Toxicity unresponsive to current therapy
+                - Toxicity resolved on suppressive therapy
+                - Toxicity resolved off suppressive therapy
+                - Toxicity responding to therapy; issues with toxicity of immunosuppressive treatment
+                - Toxicity flaring;  issues with toxicity of immunosuppressive therapy
+                - Toxicity unresponsive to current therapy;  issues with toxicity of immunosuppressive treatment
+                - Toxicity resolved on suppressive therapy;  issues with toxicity of immunosuppressive treatment
+                - Toxicity resolved off suppressive therapy;  issues with toxicity of immunosuppressive treatment                
+            plan:
+              type: choice
+              values:
+                - continue current therapy
+                - further taper of immunosuppressive therapy
+                - increase immunosuppressive therapy
+                - add second line immunosuppressive therapy
+                - stop immunosuppressive therapy
+            planr:
+              multiline: false
+            meds:
+              type: choice
+              values:
+                - no changes
+                - non-pharmacological therapy
+                - stopped medication
+                - started medication
+                - altered steroid dose
+                - multiple changes
+            medsr:
+              multiline: false
+            nextcycle:
+              type: choice
+              values:
+                - 1 week
+                - 2 weeks
+                - 3 weeks
+                - 4 weeks
+                - 6 weeks
+                - after investigation
+            exam:
+              type: choice
+              values:
+                - not required
+                - no significant abnormalities on screening examination (cardiac, respiratory, abdominal)
+                - no significant abnormalities on general oncological examination ( lymphadenopathy, cardiac, respiratory, abdominal)
+                - no significant abnormalities on head and neck examination (oral cavity and pharynx, mirror, neck, thyroid, supraclavicular fossa)
+                - concerning findings for recurrence
+                - abnormal findings from malignancy; stable
+                - abnormal findings from malignancy; reducing
+                - abnormal findings from malignancy; increasing
+                - abnormal findings post treatment; stable
+                - abnormal findings post treatment; reducing
+                - abnormal findings post treatment; increasing
+                - other
+            examr: 
+              multiline: false
+            labs:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - increasing abnormalities unrelated to disease or therapy
+                - reducing abnormalities unrelated to disease or therapy
+                - stable  abnormalities unrelated to disease or therapy                
+                - improvement in disease related abnormalities
+                - stable disease related abnormalities
+                - increasing abnormalities suspicious of disease progression
+                - stable treatment related abnormalities
+                - increasing abnormalities from treatment
+                - reducing treatment related abnormalities
+                - increasing multi-factorial (disease, therapy) abnormalities
+                - reducing multi-factorial (disease, therapy) abnormalities
+                - stable multi-factorial (disease, therapy) abnormalities
+                - abnormality requiring further investigation
+                - abnormality requiring intervention
+                - results pending
+            labsr:
+              multiline: false
+            xray:
+              type: choice
+              values:
+                - not scheduled
+                - no significant abnormality
+                - stable abnormalities not concerning for recurrence
+                - new abnormalities of unclear significance
+                - abnormalities suspicious for recurrence
+                - RECIST stable disease
+                - RECIST responding disease
+                - RECIST complete response
+                - unconfirmed progressive disease (iUPD)
+                - confirmed progressive disease (iPD)
+                - oligoprogressive disease
+                - results pending
+            xrayr:
+              multiline: false   
+            pain:
+              type: choice
+              values:
+               - none 
+               - chronic pain not related to malignancy or therapy
+               - stable pain related to known malignancy
+               - reduced pain related to known malignancy
+               - worse pain related to known malignancy
+               - chronic pain related to therapy; stable
+               - chronic pain related to therapy; improved
+               - chronic pain related to therapy; increased
+               - acute pain related to therapy; stable
+               - acute pain related to therapy; improved
+               - acute pain related to therapy; increased                   
+               - new onset pain
+               - changed pain 
+            painr:
+              multiline: false
+            weight:
+              type: choice
+              values:
+                - no change
+                - minor weight gain
+                - significant weight gain
+                - minor weight loss (<5%)
+                - significant weight loss (5-10%)
+                - major weight loss (over 10%)
+            constit:
+              type: choice
+              values:
+               - none 
+               - fever
+               - drenching night sweats
+               - fever and drenching sweats
+            fatigue:
+              type: choice
+              values:
+               - none 
+               - mild
+               - moderate
+               - severe
+               - significant increase
+               - significant improvement
+            posstox:
+              multiline: false
+            toxicicityr:
+              multiline: false
+            grade:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+                - life threatening
+            grade2:
+              type: choice
+              values:
+                - none
+                - mild
+                - moderate
+                - severe
+                - life threatening
+            resp:
+              type: choice
+              values:
+                - resolved, off therapy
+                - resolved, on therapy
+                - improved significantly
+                - minor improvement
+                - no improvement
+                - minor deterioration
+                - major deterioration
+            resp2:
+              type: choice
+              values:
+                - resolved, off therapy
+                - resolved, on therapy
+                - improved significantly
+                - minor improvement
+                - no improvement
+                - minor deterioration
+                - major deterioration               
+            discuss:
+              multiline: false
+            gen:
+              type: choice
+              values:
+                - no other medical issues discussed
+                - other medical issues discussed
+                - other issues discussed
+            genr:
+              multiline: false
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            funcr:
+              multiline: false
+            prednow:
+              multiline: false
+            prednext:
+              multiline: false
+                
