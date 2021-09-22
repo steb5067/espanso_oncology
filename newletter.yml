@@ -6,15 +6,11 @@
       ++>  Diagnoses:
             {{newletter.dx1}}
             {{newletter.dx2}}
-            {{newletter.dx3}}
-            {{newletter.dx4}}
             {{newletter.dxr}}
             
       ++>  Problems and issues:
             {{newletter.prob1}}
             {{newletter.prob2}}
-            {{newletter.prob3}}
-            {{newletter.prob4}}
             {{newletter.probr}}
             
       ++>  Assessment:  
@@ -62,13 +58,12 @@
           layout: "Newletter
                    \n ==== Diagnoses ======
                    \n {{dx1}} {{dx2}}
-                   \n {{dx3}} {{dx4}}
                    \n remarks {{dxr}}
                    \n ==== Problems ======
                    \n {{prob1}} {{prob2}}
-                   \n {{prob3}} {{prob4}} notes  {{probr}}
+                   \n notes  {{probr}}
                    \n ========Assessment ======
-                   \n {{asst}} aim: {{asst2}}
+                   \n {{asst}} Rx aim: {{asst2}}
                    \n ==== Plan and actions =====
                    \n {{plan}} notes {{planr}}
                    \n ==== Medication changes ====
@@ -218,4 +213,26 @@
               multiline: false
             summ:
               multiline: true
+            func:
+              type: choice
+              values:
+                - ECOG 0
+                - ECOG 1
+                - ECOG 2
+                - ECOG 3 or 4
+                - ECOG 0 with frailty markers
+                - ECOG 1 with frailty markers
+                - ECOG 2 with frailty markers
+                - ECOG 3 or 4 with frailty markers
+            func2:
+              type: choice
+              values:
+                - fit
+                - fit, but polypharmacy
+                - fit, but significant comorbidity
+                - vulnerable; nutritionally depleted
+                - vulnerable; partial dependence iADL
+                - vulnerable; abnormal cognition
+                - vulnerable; falls 
+                - frail
               
