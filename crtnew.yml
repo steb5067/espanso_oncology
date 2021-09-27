@@ -3,21 +3,21 @@
   matches:
   - trigger: ":lrevcrt"
     replace: |
-       Review for {{crtlong.situation}}
-       Week {{crtlong.week}}
+       ● Review for {{crtlong.situation}}
+       ◊ Week {{crtlong.week}}
        
-       Assessment {{crtlong.asst}}
+       ● Assessment {{crtlong.asst}}
        
-       Plan {{crtlong.plan}} {{crtlong.planr}}
+       ● Plan {{crtlong.plan}} {{crtlong.planr}}
        
-       Medication changes {{crtlong.meds}} {{crtlong.medsr}}
+       ● Medication changes {{crtlong.meds}} {{crtlong.medsr}}
 
-       Patient discussion {{crtlong.discuss}}
+       ● Patient discussion {{crtlong.discuss}}
 
-       Clinical Summary
-       Functional status {{crtlong.func}} {{crtlong.funcr}}
+       ● Clinical Summary
+       ► Functional status {{crtlong.func}} {{crtlong.funcr}}
 
-       Subjective
+       ►Subjective
        Pain {{crtlong.pain}} {{crtlong.painr}}
        Ulceration {{crtlong.ulcer}}
        Odynophagia {{crtlong.odyn}}
@@ -42,20 +42,20 @@
        Sleep {{crtlong.sleep}}
        Mood {{crtlong.mood}}
        
-       General issues
+       ► General issues
        {{crtlong.gen}} {crtlong.genr}}
        
-       Objective findings   {{crtlong.exam}}
+       ► Objective findings   {{crtlong.exam}}
        Fibrosis/edema {{crtlong.exam2}}
        {{crtlong.examr}} 
 
-       Blood tests {{crtlong.labs}}
+       ► Blood tests {{crtlong.labs}}
        {{crtlong.labsr}}       
 
-       Imaging {{crtlong.xray}}
+       ► Imaging {{crtlong.xray}}
        {{crtlong.xrayr}}
     vars:
-      - name: "crtlongXS"
+      - name: "crtlong"
         type: form
         params:
           layout: "H&N cancer chemoRT

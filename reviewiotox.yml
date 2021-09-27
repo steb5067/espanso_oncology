@@ -3,30 +3,31 @@
   matches:
   - trigger: ":revtoxio"
     replace: |
-       ++> Review for {{revtoxio.situation}}
+       ● Review for {{revtoxio.situation}}
        
-       ++> Assessment
+       ● Assessment
        {{revtoxio.asst}}
 
-       ++> Plan
+       ● Plan
        {{revtoxio.plan}} {{revtoxio.planr}}
        {{revtoxio.prednow}} {{revtoxio.prednext}}
        
-       +> Medication changes {{revtoxio.meds}} {{revtoxio.medsr}}
+       ► Medication changes {{revtoxio.meds}} {{revtoxio.medsr}}
 
-       +> Patient discussion {{revtoxio.discuss}}
+       ♦ Patient discussion {{revtoxio.discuss}}
 
-       +> Next review {{revtoxio.nextcycle}} 
+       ◊ Next review {{revtoxio.nextcycle}} 
        
-       ++> Clinical Summary
+       ● Clinical Summary
        Functional status {{revtoxio.func}} {{revtoxio.funcr}}
-       +> Symptoms
+
+       ► Symptoms
        Pain {{revtoxio.pain}} {{revtoxio.painr}}
        Weight {{revtoxio.weight}} Constitutional symptoms  {{revtoxio.constit}}
        Other
        {{revtoxio.symptomsr}}
        
-       +> Treatment toxicity
+       ► Treatment toxicity
        Fatigue {{revtoxio.fatigue}}
        Skin rash {{revtoxio.rash}}
        Pruritus {{revtoxio.itch}}
@@ -39,18 +40,18 @@
        Other indicators of toxicity {{revtoxio.posstox}}
        {{revtoxio.toxicityr}}
 
-       +> General issues
+       ► General issues
        {{revtoxio.gen}} {{revtoxio.genr}}
        
-       +> Objective findings
+       ● Objective findings
        {{revtoxio.exam}}
        {{revtoxio.examr}} 
 
-       +> Blood tests
+       ► Blood tests
        {{revtoxio.labs}}
        {{revtoxio.labsr}}       
 
-       +> Imaging
+       ► Imaging
        {{revtoxio.xray}}
        {{revtoxio.xrayr}}
     vars:

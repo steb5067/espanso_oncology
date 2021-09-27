@@ -3,16 +3,16 @@
   matches:
   - trigger: ":fupgbmn"
     replace: |
-      Situation {{nano.situation}}
-      Gait {{nano.gait}}
-      Strength{{nano.strength}}
-      Ataxia {{nano.ataxia}}
-      Sensation {{nano.sensation}}
-      Visual fields {{nano.visfield}}
-      Facial strength {{nano.face}}
-      Language {{nano.language}}
-      Consciousness {{nano.levelofcons}}
-      Behaviour {{nano.behav}}
+      ● Situation {{nano.situation}}
+      ◊ Gait {{nano.gait}}
+      ◊ Strength{{nano.strength}}
+      ◊ Ataxia {{nano.ataxia}}
+      ◊ Sensation {{nano.sensation}}
+      ◊ Visual fields {{nano.visfield}}
+      ◊ Facial strength {{nano.face}}
+      ◊ Language {{nano.language}}
+      ◊ Consciousness {{nano.levelofcons}}
+      ◊ Behaviour {{nano.behav}}
     vars:
       - name: "nano"
         type: form

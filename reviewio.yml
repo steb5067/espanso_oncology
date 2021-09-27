@@ -3,28 +3,29 @@
   matches:
   - trigger: ":revio"
     replace: |
-       ++> Pretreatment review for {{iorev.situation}}
+       ● Pretreatment review for {{iorev.situation}}
        
-       ++> Assessment {{iorev.asst}}
+       ● Assessment {{iorev.asst}}
 
-       ++> Plan {{iorev.plan}} {{iorev.planr}}
+       ● Plan {{iorev.plan}} {{iorev.planr}}
 
-       +> Medication changes {{iorev.meds}} {{iorev.medsr}}
+       ► Medication changes {{iorev.meds}} {{iorev.medsr}}
 
-       +> Patient discussion {{iorev.discuss}}
+       ♦ Patient discussion {{iorev.discuss}}
 
-       +> Next cycle {{iorev.nextcycle}} 
+       ◊ Next cycle {{iorev.nextcycle}} 
        
-       ++> Clinical Summary
+       ● Clinical Summary
        Functional status {{iorev.func}} {{iorev.funcr}}
-       +> Symptoms
+
+       ► Symptoms
        Pain {{iorev.pain}} {{iorev.painr}}
        Weight {{iorev.weight}} Constitutional symptoms  {{iorev.constit}}
        Palpable abnormality  {{iorev.lump}}
        Other
        {{iorev.symptomsr}}
        
-       +> Treatment toxicity
+       ► Treatment toxicity
        Fatigue {{iorev.fatigue}}
        Skin rash {{iorev.rash}}
        Pruritus {{iorev.itch}}
@@ -37,18 +38,18 @@
        Other indicators of toxicity {{iorev.posstox}}
        {{iorev.toxicityr}}
 
-       +> General issues
+       ► General issues
        {{iorev.gen}} {{iorev.genr}}
        
-       +> Objective findings
+       ● Objective findings
        {{iorev.exam}}
        {{iorev.examr}} 
 
-       +> Blood tests
+       ► Blood tests
        {{iorev.labs}}
        {{iorev.labsr}}       
 
-       +> Imaging
+       ► Imaging
        {{iorev.xray}}
        {{iorev.xrayr}}
     vars:

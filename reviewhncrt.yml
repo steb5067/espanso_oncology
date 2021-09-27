@@ -3,21 +3,21 @@
   matches:
   - trigger: ":revcrt"
     replace: |
-       Review for {{crtrev.situation}}
-       Week {{crtrev.week}}
+       ● Review for {{crtrev.situation}}
+       ◊ Week {{crtrev.week}}
        
-       Assessment {{crtrev.asst}}
+       ● Assessment {{crtrev.asst}}
        
-       Plan {{crtrev.plan}} {{crtrev.planr}}
+       ● Plan {{crtrev.plan}} {{crtrev.planr}}
        
-       Medication changes {{crtrev.meds}} {{crtrev.medsr}}
+       ► Medication changes {{crtrev.meds}} {{crtrev.medsr}}
 
-       Patient discussion {{crtrev.discuss}}
+       ♦ Patient discussion {{crtrev.discuss}}
 
-       Clinical Summary
-       Functional status {{crtrev.func}} {{crtrev.funcr}}
+       ● Clinical Summary
+       ◊ Functional status {{crtrev.func}} {{crtrev.funcr}}
 
-       Subjective
+       ► Subjective
        Pain {{crtrev.pain}} {{crtrev.painr}}
        Ulceration {{crtrev.ulcer}}
        Odynophagia {{crtrev.odyn}}
@@ -42,17 +42,17 @@
        Sleep {{crtrev.sleep}}
        Mood {{crtrev.mood}}
        
-       General issues
+       ► General issues
        {{crtrev.gen}} {crtrev.genr}}
        
-       Objective findings   {{crtrev.exam}}
+       ● Objective findings   {{crtrev.exam}}
        Fibrosis/edema {{crtrev.exam2}}
        {{crtrev.examr}} 
 
-       Blood tests {{crtrev.labs}}
+       ► Blood tests {{crtrev.labs}}
        {{crtrev.labsr}}       
 
-       Imaging {{crtrev.xray}}
+       ► Imaging {{crtrev.xray}}
        {{crtrev.xrayr}}
     vars:
       - name: "crtrev"

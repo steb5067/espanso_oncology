@@ -4,24 +4,24 @@
   - trigger: ":fupmel"
     replace: |
 
-       ++> Skin malignancy followup;  {{fupmel.situation}}
+       ● Skin malignancy followup;  {{fupmel.situation}}
        
-       ++> Assessment {{fupmel.asst}}
+       ● Assessment {{fupmel.asst}}
        
-       ++> Plan {{fupmel.plan}}
+       ● Plan {{fupmel.plan}}
         {{fupmel.planr}}
 
-       +> Discussion with patient
+       ► Discussion with patient
        {{fupmel.discuss}}
        
-       +> Medication changes {{fupmel.meds}}
+       ► Medication changes {{fupmel.meds}}
         {{fupmel.medsr}}
 
        Next review {{fupmel.nextreview}}
 
-       ++> Clinical Summary
+       ● Clinical Summary
        
-       +> Symptoms
+       ► Symptoms
        Pain
        {{fupmel.pain}}
        {{fupmel.painr}}
@@ -32,24 +32,24 @@
        Other symptoms  {{fupmel.othersx}}         
        Other {{fupmel.symptomsr}}
 
-       +> General issues
+       ► General issues
        {{fupmel.gen}} {{fupmel.genr}}
        
-       +> Late effects of therapy
+       ► Late effects of therapy
        {{fupmel.late}}
        {{fupmel.later}}
        {{fupmel.latelrfx}}
        {{fupmel.latelrfxr}}
        
-       ++> Objective findings
+       ● Objective findings
        {{fupmel.exam}}
        {{fupmel.examr}} 
 
-       +> Blood tests
+       ► Blood tests
        {{fupmel.labs}}
        {{fupmel.labsr}}       
 
-       +> Imaging
+       ► Imaging
        {{fupmel.xray}}
        {{fupmel.xrayr}}
     vars:

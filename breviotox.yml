@@ -3,59 +3,59 @@
   matches:
   - trigger: ":brevtoxio"
     replace: |
-       ++> Review for {{brevtoxio.situation}}
+       ●  Review for {{brevtoxio.situation}}
            Secondary toxicity {{brevio.secondary}}
            
-       ++> Assessment
+       ●  Assessment
        {{brevtoxio.asst}}
        Secondary toxicity {{brevtoxio.asst2}}
 
-       ++> Plan
+       ●  Plan
        {{brevtoxio.plan}} {{brevtoxio.planr}}
 
-       +> Medication changes {{brevtoxio.meds}} {{brevtoxio.medsr}}
+       ► Medication changes {{brevtoxio.meds}} {{brevtoxio.medsr}}
        Steroids from {{brevtoxio.prednow}} to {{brevtoxio.prednext}}
        
-       +> Patient discussion {{brevtoxio.discuss}}
+       ► Patient discussion {{brevtoxio.discuss}}
 
-       +> Next review {{brevtoxio.nextcycle}}
+       ► Next review {{brevtoxio.nextcycle}}
        
-       => Toxicity
+       ◊ Toxicity
        Current grade {{brevio.grade}}
        Response {{brevio.resp}}
        Secondary grade {{brevio.grade2}}
        Secondary response {{brevio.resp2}}
        
-       => Steroid issues
+       ◊ Steroid issues
        {{brevio.predae1}}
        {{brevio.predae2}}
        diabetes issues {{brevio.predDM}}
        {{brevio.predaer}}
 
-       ++> Clinical Summary
+       ●  Clinical Summary
        Functional status {{brevtoxio.func}} {{brevtoxio.funcr}}
-       +> Symptoms
+       ►  Symptoms
        Pain {{brevtoxio.pain}} {{brevtoxio.painr}}
        Weight {{brevtoxio.weight}} Constitutional symptoms  {{brevtoxio.constit}}
        Fatigue {{brevtoxio.fatigue}}
        Other   {{brevtoxio.symptomsr}}       
     
-       +> Treatment toxicity
+       ►  Treatment toxicity
        Other indicators of toxicity {{brevtoxio.posstox}}
        {{brevtoxio.toxicityr}}
 
-       +> General issues
+       ►  General issues
        {{brevtoxio.gen}} {{brevtoxio.genr}}
        
-       +> Objective findings
+       ►  Objective findings
        {{brevtoxio.exam}}
        {{brevtoxio.examr}} 
 
-       +> Blood tests
+       ►  Blood tests
        {{brevtoxio.labs}}
        {{brevtoxio.labsr}}       
 
-       +> Imaging
+       ►  Imaging
        {{brevtoxio.xray}}
        {{brevtoxio.xrayr}}
     vars:
