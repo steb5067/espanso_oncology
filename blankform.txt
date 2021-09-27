@@ -3,7 +3,7 @@
   matches:
   - trigger: ":"
     replace: |               # col 4
-      ++> {{name.field1}}
+      ● {{name.field1}}
       
     vars:                   # col 4
       - name: " "           # col 6
@@ -15,3 +15,5 @@
               type: 
               values:             # col 14 for these
                 -                 # col 16
+
+# glyphs ●◊►♦
