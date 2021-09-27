@@ -4,7 +4,7 @@
   - trigger: ":brevtoxio"
     replace: |
        ●  Review for {{brevtoxio.situation}}
-           Secondary toxicity {{brevio.secondary}}
+           Secondary toxicity {{brevtoxio.secondary}}
            
        ●  Assessment
        {{brevtoxio.asst}}
@@ -21,16 +21,16 @@
        ► Next review {{brevtoxio.nextcycle}}
        
        ◊ Toxicity
-       Current grade {{brevio.grade}}
-       Response {{brevio.resp}}
-       Secondary grade {{brevio.grade2}}
-       Secondary response {{brevio.resp2}}
+       Current grade {{brevtoxio.grade}}
+       Response {{brevtoxio.resp}}
+       Secondary grade {{brevtoxio.grade2}}
+       Secondary response {{brevtoxio.resp2}}
        
        ◊ Steroid issues
-       {{brevio.predae1}}
-       {{brevio.predae2}}
-       diabetes issues {{brevio.predDM}}
-       {{brevio.predaer}}
+       {{brevtoxio.predae1}}
+       {{brevtoxio.predae2}}
+       diabetes issues {{brevtoxio.predDM}}
+       {{brevtoxio.predaer}}
 
        ●  Clinical Summary
        Functional status {{brevtoxio.func}} {{brevtoxio.funcr}}
