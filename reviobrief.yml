@@ -3,46 +3,40 @@
   matches:
   - trigger: ":brevio"
     replace: |
-       ● Pretreatment review for {{reviob.situation}}
-       
-       ● Assessment {{reviob.asst}}
-
-       ● Plan {{reviob.plan}} {{reviob.planr}}
-
-       ► Medication changes {{reviob.meds}} {{reviob.medsr}}
-
-       ♦ Patient discussion {{reviob.discuss}}
-
+       ► Pretreatment review for {{reviob.situation}} ◄      
+       ► Assessment ◄
+       {{reviob.asst}}
+       ► Plan ◄
+       {{reviob.plan}}
+       {{reviob.planr}}
+       ► Medication changes ◄
+       {{reviob.meds}} {{reviob.medsr}}
+       ♦ Patient discussion
+       {{reviob.discuss}}
        ◊ Next cycle {{reviob.nextcycle}} 
-       
-       ● Clinical Summary
+       ► Clinical Summary ◄
        Functional status {{reviob.func}} {{reviob.funcr}}
-       ► Symptoms
+       ● Symptoms
        Pain {{reviob.pain}} {{reviob.painr}}
        Weight {{reviob.weight}}
        Other
        {{reviob.symptomsr}}
-       
-       ► Treatment toxicity
+       ● Treatment toxicity
        Fatigue {{reviob.fatigue}}
        Skin rash {{reviob.rash}}
        Pruritus {{reviob.itch}}
        Arthralgias {{reviob.joints}}
        Other indicators of toxicity {{reviob.posstox}}
        {{reviob.toxicityr}}
-
-       ► General issues
+       ● General issues
        {{reviob.gen}} {{reviob.genr}}
-       
-       ► Objective findings
+       ● Objective findings
        {{reviob.exam}}
        {{reviob.examr}} 
-
-       ► Blood tests
+       ● Blood tests
        {{reviob.labs}}
        {{reviob.labsr}}       
-
-       ► Imaging
+       ● Imaging
        {{reviob.xray}}
        {{reviob.xrayr}}
     vars:
@@ -115,6 +109,7 @@
                 - non-pharmacological therapy
                 - stopped medication
                 - started medication
+                - changed dose
                 - multiple changes
             medsr:
               multiline: false

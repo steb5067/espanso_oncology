@@ -16,4 +16,4 @@
               values:             # col 14 for these
                 -                 # col 16
 
-# glyphs ●◊►♦
+# glyphs ●◊►♦◄ 
