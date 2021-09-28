@@ -6,7 +6,8 @@
        ● Review for {{crtlong.situation}}
        ◊ Week {{crtlong.week}}
        
-       ● Assessment {{crtlong.asst}}
+       ● Assessment
+       {{crtlong.asst}}
        
        ● Plan {{crtlong.plan}} {{crtlong.planr}}
        
@@ -150,6 +151,7 @@
                 - no changes
                 - non-pharmacological therapy
                 - stopped medication
+                - changed dose
                 - started medication
             medsr:
               multiline: false

@@ -136,6 +136,7 @@
                 - no changes
                 - non-pharmacological therapy
                 - stopped medication
+                - changed dose
                 - started medication
                 - multiple changes
             req:

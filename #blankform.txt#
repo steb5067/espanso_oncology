@@ -22,4 +22,5 @@
 # eg insert line before  tag </VirtualHost> 
 #=> sed 's/<\/VirtualHost>/yourlinehere\n<\/VirtualHost>/'
 # for i in *.yml; do sed -i 's/tag/yourlinehere\n\tag/' "$i"; done
-for i in *.yml; do sed -i 's/- started medication/- changed dose\n - started medication/' "$i"; done
+# this might work for i in *.yml; do sed -i 's/- started medication/- changed dose\n - started medication/' "$i"; done
+#  for i in *.yml; do sed -i 's/● /► /' "$i"; done

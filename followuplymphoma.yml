@@ -94,6 +94,7 @@
                 - no changes
                 - non-pharmacological therapy
                 - stopped medication
+                - changed dose
                 - started medication
             medsr:
               multiline: false

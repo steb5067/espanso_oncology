@@ -76,8 +76,9 @@
               values:
                 - no changes
                 - stopped medication
+                - changed dose
                 - started medication
-                - stopped and started medication
+                - stopped and  started medication
             medsr:
               multiline: false
             exam:

@@ -1,0 +1,68 @@
+* Cutaneous Squamous cell carcinoma (CuSCC)
+  This is an extremely common cancer in Australia. Whilst the vast majority have a low risk of recurrence and spread a significant minority can progress to give significant morbidity and mortality.
+  
+** Natural history
+   The natural history of untreated CuSCC is in the most part of local progression. Eventually spread to regional lymphatics occurs and metastatic disease can also be seen. Whilst some are indolent there are features predicting for a more aggressive course.
+** Patterns of failure
+*** Anatomical
+    THe dominant initial pattern of failure is local ie in or around the area the cancer first manifested. Spread to regional lymph nodes is seen in about 5\% overall, but the risk is not homogenous.  
+*** Temporal
+    The majority of cases recur locally within 2 to 3 years; recurrences after this taper off but continue to at least 5 years.
+** Multiple primaries
+    As most austrtslians with CuSCC are sun expsoed, multiple primary cancers are frequently seen. There are no absolute factors differentiating a recurrence from a second primary in the area. However, recurrences tend to be larger, more aggressive, more invasive, and associated with multiple risk factors; they also occur in a relatively proximate fashion both anatomically and temporally as discussed.  
+** Factors associated with failure
+Stage (see: Appendix A. TNM staging)
+T stage
+
+M stage
+
+N stage
+
+Regional spread (lymph nodes)*
+
+Perineural invasion*
+
+Histological grade
+
+Higher risk for poorly differentiated subtype
+
+Clinical signs
+
+Higher risk with findings suggesting rapid growth or greater spread (e.g. palpable thickness, diffuse infiltration and induration with poor demarcation of tumour edges, tenderness and inflammation)
+
+Anatomical site
+
+Higher risk for ear, lip
+
+Number of skin cancers (higher risk for multiple lesions)
+
+Recurrence
+
+Higher risk for recurrent/persistent lesions
+
+Treatment
+
+Higher risk for inadequately treated lesions
+
+Aetiology#
+
+Higher risk for non-UV-induced lesions e.g. infection with oncogenic HPV subtypes, exposure to arsenic
+
+Comorbidity
+
+Higher risk in presence of immunosuppression, skin-related comorbidities (e.g scleroderma, xeroderma pigmentosa)
+https://wiki.cancer.org.au/australia/Guidelines:Keratinocyte_carcinoma/Prognosis_SCC
+** Rates of recurrence
+   For high risk cancers the rate of recurrence with optimal 3-D margin negative surgery such as provided by Mohs surgery is ...%. Rates of recurrence with standard excision to negative margins are reported to be ...
+   It is difficult to estimate the risk of margin positive cancer as in general recommendations are for surgery to clear margins. There are some saeries that do report on observation for positive margins. They note a failure rate of ...
+   It thus appears that margin psotiivity increases the risk of relapse by a facotr of ... It is likely this is an underestimate: in general one would not choose observation for patients with multiple factors predictive of risk. 
+** New primaries
+   Given that patients with CuSCC
+** Application to the case
+*** Recurrence versus new primary
+    The patient recurred locally with a more aggressive and invasive phenotype in keeping with the dominant pattern and within ... years again in keeping with the typical temporal pattern. In my opinion, on the balance of probabilities this is a recurrence not a second primary. 
+*** Risk factors
+    THe patients had a history of multiple non-melanoma skin cancers. The patient appears to have had a recurrent lesion (pathology report notes prior cryotherapy); the lesion appears to be substnative (although not specifically measured the size of the excision of 30x40 mm with a positive margin and maximal margins of ... suggest this is likely to be T2). Grade is not speifically stated in thje pathology but the presence of keratinization suggests it is not high grade. Perineural invasion was not present.  Although not on a major risk area, lesions in the head and neck are still of higher risk[...]. Clinical factors suggesting risk (?? not recorded in chart). 
+    Thus this was clearly a high risk CuSCC irrespective of the treatment factors; however the lesion was not adequately treated as demonstrated by the presence of a positive margin and close margins elsewhere (... mm).
+*** risk of recurrence
+    
