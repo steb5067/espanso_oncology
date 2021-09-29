@@ -3,20 +3,20 @@
   matches:
   - trigger: ":lrevcrt"
     replace: |
-       ● Review for {{crtlong.situation}}
+       ► Review for {{crtlong.situation}} ◄
        ◊ Week {{crtlong.week}}      
-       ● Assessment
+       ► Assessment ◄
        {{crtlong.asst}}       
        ► Plan ◄
        {{crtlong.plan}} {{crtlong.planr}}       
-       ● Medication changes
+       ► Medication changes ◄
        {{crtlong.meds}} {{crtlong.medsr}}
-       ● Patient discussion
+       ► Patient discussion ◄
        {{crtlong.discuss}}
-       ● Clinical Summary
+       ► Clinical Summary ◄
        ► Functional status
        {{crtlong.func}} {{crtlong.funcr}}
-       ► Subjective
+       ● Subjective
        Pain {{crtlong.pain}} {{crtlong.painr}}
        Ulceration {{crtlong.ulcer}}
        Odynophagia {{crtlong.odyn}}
@@ -40,7 +40,7 @@
        Sedation {{crtlong.sedate}}
        Sleep {{crtlong.sleep}}
        Mood {{crtlong.mood}}       
-       ► General issues
+       ● General issues
        {{crtlong.gen}} {crtlong.genr}}      
        ● Objective Findings  {{crtlong.exam}}
        Fibrosis/edema {{crtlong.exam2}}

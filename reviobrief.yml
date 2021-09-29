@@ -15,7 +15,7 @@
        ◊ Next cycle {{reviob.nextcycle}} 
        ► Clinical Summary ◄
        Functional status {{reviob.func}} {{reviob.funcr}}
-       ● Symptoms
+       
        Pain {{reviob.pain}} {{reviob.painr}}
        Weight {{reviob.weight}}
        Other  {{reviob.symptomsr}}

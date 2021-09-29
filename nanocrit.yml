@@ -3,7 +3,7 @@
   matches:
   - trigger: ":fupgbmn"
     replace: |
-      ● Situation {{nano.situation}}
+      ► Situation {{nano.situation}} ◄
       ◊ Gait {{nano.gait}}
       ◊ Strength{{nano.strength}}
       ◊ Ataxia {{nano.ataxia}}

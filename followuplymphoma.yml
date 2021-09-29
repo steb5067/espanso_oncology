@@ -3,20 +3,20 @@
   matches:
   - trigger: ":fuplymph"
     replace: |
-       ● Followup for {{fuplymph.situation}}       
+       ► Followup for {{fuplymph.situation}}  ◄      
        ► Assessment ◄
        {{fuplymph.asst}}      
        ► Plan ◄
        {{fuplymph.plan}} {{fuplymph.planr}}      
-       ► Medication changes
+       ► Medication changes ◄
        {{fuplymph.meds}} {{fuplymph.medsr}}
-       ► Patient discussion
+       ► Patient discussion ◄
        {{fuplymph.discuss}}
-       ► Next review
+       ◊ Next review
        {{fuplymph.nextrev}}
-       ● Clinical Summary
+       ► Clinical Summary ◄
        Functional status {{fuplymph.func}} {{fuplymph.funcr}}      
-       ► Symptoms
+        ● Symptoms
        Pain {{fuplymph.pain}}
        notes {{fuplymph.painr}}
        Weight {{fuplymph.weight}}
@@ -27,11 +27,11 @@
        Other {{fuplymph.symptomsr}}
        General issues
        {{fuplymph.gen}} {{fuplymph.genr}}
-       ● Objective Findings
+        ● Objective Findings
        {{fuplymph.exam}}  {{fuplymph.examr}} 
-       ► Laboratory investigations
+        ● Laboratory investigations
        {{fuplymph.labs}}   {{fuplymph.labsr}}       
-       ● Imaging
+        ● Imaging
        {{fuplymph.xray}} {{fuplymph.xrayr}}
     vars:
       - name: "fuplymph"
