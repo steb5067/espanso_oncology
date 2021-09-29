@@ -3,19 +3,17 @@
   matches:
   - trigger: ":fuphn"
     replace: |
-       ● Followup for {{fuphn.situation}}
-       
-       ● Assessment {{fuphn.asst}}
-       
-       ● Plan {{fuphn.plan}} {{fuphn.planr}}
-       
-       ● Medication changes {{fuphn.meds}} {{fuphn.medsr}}
-
-       ● Next review {{fuphn.nextrev}}
-
+       ● Followup for {{fuphn.situation}}       
+       ► Assessment ◄
+       {{fuphn.asst}}       
+       ► Plan ◄
+       {{fuphn.plan}} {{fuphn.planr}}       
+       ● Medication changes
+       {{fuphn.meds}} {{fuphn.medsr}}
+       ● Next review
+       {{fuphn.nextrev}}
        ● Clinical Summary
-       Functional status {{fuphn.func}} {{fuphn.funcr}}
-       
+       Functional status {{fuphn.func}} {{fuphn.funcr}}       
        ► Symptoms
        Pain {{fuphn.pain}} {{fuphn.painr}}
        Constitutional symptoms  {{fuphn.constit}}
@@ -23,8 +21,7 @@
        Ulceration  {{fuphn.ulcer}}
        Weight {{fuphn.weight}}
        Other symptoms  {{fuphn.othersx}}         
-       notes {{fuphn.symptomsr}}
-       
+       notes {{fuphn.symptomsr}}      
        ► Treatment toxicity
        Fatigue {{fuphn.fatigue}}
        Taste change {{fuphn.taste}}
@@ -36,13 +33,14 @@
        Swallowing issues {{fuphn.swallow}}
        Voice and speech {{fuphn.voice}}
        Dental {{fuphn.dental}}
-       Skin changes {{fuphn.skin}}
-       
-       ► Objective findings   {{fuphn.exam}}
+       Skin changes {{fuphn.skin}}      
+       ● Objective Findings
+       {{fuphn.exam}}
        Fibrosis/edema {{fuphn.exam2}} {{fuphn.examr}} 
-
-       ► Blood tests {{fuphn.labs}} {{fuphn.labsr}}       
-       ► Imaging {{fuphn.xray}} {{fuphn.xrayr}}
+       ● Blood tests
+       {{fuphn.labs}} {{fuphn.labsr}}       
+       ● Imaging
+       {{fuphn.xray}} {{fuphn.xrayr}}
     vars:
       - name: "fuphn"
         type: form

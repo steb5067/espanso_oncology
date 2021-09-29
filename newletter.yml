@@ -3,33 +3,33 @@
   matches:
   - trigger: ":new"
     replace: |              
-      ++>  Diagnoses:
+      ► Diagnoses ◄
             {{newletter.dx1}}
             {{newletter.dx2}}
             {{newletter.dxr}}
             
-      ++>  Problems and issues:
+      ► Problems and issues ◄
             {{newletter.prob1}}
             {{newletter.prob2}}
             {{newletter.probr}}
             
-      ++>  Assessment:  
+      ► Assessment ◄
            {{newletter.asst}}
            aim of therapy {{newletter.asst2}}
 
-      ==>  Plan and requested actions:
+      ► ► ►  Plan and requested actions  ◄ ◄ ◄
            {{newletter.plan}}
            {{newletter.planr}}
            
-      ++> Medication changes  
+      ► Medication changes ◄
             {{newletter.meds}}
             {{newletter.medsr}}
             
-      +=+> Requested actions of healthcare professionals:
+      ◊◊◊ Requested actions of healthcare professionals ◊◊◊
             {{newletter.req}}
             {{newletter.reqr}}
             
-      ++>  Information and advice given:
+      ► Information and advice given ◄
             {{newletter.info1}}
             {{newletter.info2}}
             {{newletter.info3}}
@@ -37,16 +37,16 @@
             {{newletter.info5}}            
             {{newletter.info1r}}
             
-      ++>  Functional status:
+        ● Functional status:
            {{newletter.func}} {{newletter.func2}}
            
-       +>  Allergies and adverse reactions:
+        ● Allergies and adverse reactions:
            {{newletter.all}} {{allr}}
            
-      ++> Clinical summary:
+      ► Clinical summary ◄
            {{newletter.summ}}
            
-      ++> Patient and carer concerns, expectations and wishes:
+      ► Patient and carer concerns, expectations and wishes ◄
            {{newletter.concern}} {{newletter.concernr}}
            
 

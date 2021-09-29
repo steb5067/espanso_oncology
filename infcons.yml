@@ -3,32 +3,25 @@
   matches:
   - trigger: ":infcon"
     replace: |
-      ++> Informed consent discussion for {{infcon.situation}}
-
-      +> Treatment primary aim {{infcon.aim1}} NNT {{infcon.nnt1}}
+      ► Informed consent discussion for {{infcon.situation}} ◄
+       ● Treatment primary aim {{infcon.aim1}} NNT {{infcon.nnt1}}
          Secondary aim {{infcon.aim2}} NNT {{infcon.nnt2}}
-
-      +> Regimen {{infcon.reg}}
-
-      +> Means {{infcon.means}}
-
-      ++> Adverse effects
+       ● Regimen {{infcon.reg}}
+       ● Means {{infcon.means}}
+      ►  Adverse effects ◄
           Mild to moderate NNH {{infcon.nnh1}}
           Substantial, affecting QOL NNH {{infcon.nnh2}}
           Severe and lifethreatening NNH {{infcon.nnh3}}
           Common toxicities {{infcon.com}}
           Given information {{infcon.info}}
-
-      ++> reasonable alternatives
+      ► reasonable alternatives ◄
        {{infcon.alt1}} {{infcon.alt1r}}
        {{infcon.alt2}} {{infcon.alt2r}}
        {{infcon.alt3}} {{infcon.alt3r}}
        {{infcon.alt4}} {{infcon.alt4r}}
-
-      ++> specific issues
+      ► specific issues ◄
        {{infcon.spec}} {{infcon.specr}}
-
-      ++> Late effects
+      ► Late effects ◄
         Frequency {{infcon.freq1}} Type {{infcon.typ1}}
         {{infcon.freq2}} {{infcon.typ2}}
         {{infcon.freq3}} {{infcon.typ3}}

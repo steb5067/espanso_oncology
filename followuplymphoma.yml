@@ -3,21 +3,19 @@
   matches:
   - trigger: ":fuplymph"
     replace: |
-       ● Followup for {{fuplymph.situation}}
-       
-       ● Assessment {{fuplymph.asst}}
-       
-       ● Plan {{fuplymph.plan}} {{fuplymph.planr}}
-       
-       ► Medication changes {{fuplymph.meds}} {{fuplymph.medsr}}
-
-       ► Patient discussion {{fuplymph.discuss}}
-
-       ► Next review {{fuplymph.nextrev}}
-
+       ● Followup for {{fuplymph.situation}}       
+       ► Assessment ◄
+       {{fuplymph.asst}}      
+       ► Plan ◄
+       {{fuplymph.plan}} {{fuplymph.planr}}      
+       ► Medication changes
+       {{fuplymph.meds}} {{fuplymph.medsr}}
+       ► Patient discussion
+       {{fuplymph.discuss}}
+       ► Next review
+       {{fuplymph.nextrev}}
        ● Clinical Summary
-       Functional status {{fuplymph.func}} {{fuplymph.funcr}}
-       
+       Functional status {{fuplymph.func}} {{fuplymph.funcr}}      
        ► Symptoms
        Pain {{fuplymph.pain}}
        notes {{fuplymph.painr}}
@@ -27,15 +25,14 @@
        Change in fatigue  {{fuplymph.fatigue}}
        Other concerning symptoms {{fuplymph.othersx}}         
        Other {{fuplymph.symptomsr}}
-
        General issues
        {{fuplymph.gen}} {{fuplymph.genr}}
-
-       ► Objective findings   {{fuplymph.exam}}  {{fuplymph.examr}} 
-
-       ► Laboratory investigations {{fuplymph.labs}}   {{fuplymph.labsr}}       
-
-       ► Imaging {{fuplymph.xray}} {{fuplymph.xrayr}}
+       ● Objective Findings
+       {{fuplymph.exam}}  {{fuplymph.examr}} 
+       ► Laboratory investigations
+       {{fuplymph.labs}}   {{fuplymph.labsr}}       
+       ● Imaging
+       {{fuplymph.xray}} {{fuplymph.xrayr}}
     vars:
       - name: "fuplymph"
         type: form

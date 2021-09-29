@@ -24,3 +24,65 @@
 # for i in *.yml; do sed -i 's/tag/yourlinehere\n\tag/' "$i"; done
 # this might work for i in *.yml; do sed -i 's/- started medication/- changed dose\n - started medication/' "$i"; done
 #  for i in *.yml; do sed -i 's/● /► /' "$i"; done
+ for i in *.yml; do sed -i 's/● Assessment /► Assessment ◄/' "$i"; done
+ for i in *.yml; do sed -i 's/● Plan /► Plan ◄/' "$i"; done
+  for i in *.yml; do sed -i 's/► Medication Changes /► Medication Changes ◄/' "$i"; done
+   for i in *.yml; do sed -i 's/● Clinical Summary /► Clinical Summary ◄/' "$i"; done
+    for i in *.yml; do sed -i 's/► Symptoms /● Symptoms/' "$i"; done
+     for i in *.yml; do sed -i 's/► Treatment toxicity /● Treatment toxicity/' "$i"; done
+      for i in *.yml; do sed -i 's/► General Issues /● General issues/' "$i"; done
+for i in *.yml; do sed -i 's/► Objective findings /● Objective Findings/' "$i"; done
+for i in *.yml; do sed -i 's/► Blood tests /● Blood tests/' "$i"; done
+for i in *.yml; do sed -i 's/► Imaging /● Imaging/' "$i"; done
+
+
+for i in *.yml; do sed -i 's/► General Issues /● General issues/' "$i"; done
+for i in *.yml; do sed -i 's/► General Issues /● General issues/' "$i"; done
+       ► Assessment ◄
+
+       ► Plan ◄
+
+       ► Medication changes ◄
+     
+       ♦ Patient discussion
+ 
+ 
+       ► Clinical Summary ◄
+}
+       
+
+       
+
+      
+
+       
+
+       
+     
+       
+
+
+
+       ● Pretreatment review for {{iorev.situation}}       
+       ● Assessment
+ 
+       ● Plan
+     
+       ► Medication changes
+    
+       ♦ Patient discussion
+   
+       ◊ Next cycle {{iorev.nextcycle}} 
+       ● Clinical Summary
+
+       ► Symptoms
+
+       ► Treatment toxicity
+
+       ► General issues
+  
+       ● Objective findings
+   
+       
+     
+       

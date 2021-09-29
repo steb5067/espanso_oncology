@@ -4,57 +4,47 @@
   - trigger: ":brevtoxio"
     replace: |
        ●  Review for {{brevtoxio.situation}}
-           Secondary toxicity {{brevtoxio.secondary}}
-           
+           Secondary toxicity {{brevtoxio.secondary}}           
        ●  Assessment
        {{brevtoxio.asst}}
        Secondary toxicity {{brevtoxio.asst2}}
-
        ●  Plan
        {{brevtoxio.plan}} {{brevtoxio.planr}}
-
-       ► Medication changes {{brevtoxio.meds}} {{brevtoxio.medsr}}
-       Steroids from {{brevtoxio.prednow}} to {{brevtoxio.prednext}}
-       
-       ► Patient discussion {{brevtoxio.discuss}}
-
-       ► Next review {{brevtoxio.nextcycle}}
-       
+       ► Medication changes
+       {{brevtoxio.meds}} {{brevtoxio.medsr}}
+       Steroids from {{brevtoxio.prednow}} to {{brevtoxio.prednext}}      
+       ► Patient discussion
+       {{brevtoxio.discuss}}
+       ► Next review
+       {{brevtoxio.nextcycle}}      
        ◊ Toxicity
        Current grade {{brevtoxio.grade}}
        Response {{brevtoxio.resp}}
        Secondary grade {{brevtoxio.grade2}}
-       Secondary response {{brevtoxio.resp2}}
-       
+       Secondary response {{brevtoxio.resp2}}       
        ◊ Steroid issues
        {{brevtoxio.predae1}}
        {{brevtoxio.predae2}}
        diabetes issues {{brevtoxio.predDM}}
        {{brevtoxio.predaer}}
-
        ●  Clinical Summary
        Functional status {{brevtoxio.func}} {{brevtoxio.funcr}}
        ►  Symptoms
        Pain {{brevtoxio.pain}} {{brevtoxio.painr}}
        Weight {{brevtoxio.weight}} Constitutional symptoms  {{brevtoxio.constit}}
        Fatigue {{brevtoxio.fatigue}}
-       Other   {{brevtoxio.symptomsr}}       
-    
+       Other   {{brevtoxio.symptomsr}}          
        ►  Treatment toxicity
        Other indicators of toxicity {{brevtoxio.posstox}}
        {{brevtoxio.toxicityr}}
-
        ►  General issues
-       {{brevtoxio.gen}} {{brevtoxio.genr}}
-       
+       {{brevtoxio.gen}} {{brevtoxio.genr}}      
        ►  Objective findings
        {{brevtoxio.exam}}
        {{brevtoxio.examr}} 
-
        ►  Blood tests
        {{brevtoxio.labs}}
        {{brevtoxio.labsr}}       
-
        ►  Imaging
        {{brevtoxio.xray}}
        {{brevtoxio.xrayr}}

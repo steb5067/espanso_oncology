@@ -4,19 +4,18 @@
   - trigger: ":revcrt"
     replace: |
        ● Review for {{crtrev.situation}}
-       ◊ Week {{crtrev.week}}
-       
-       ● Assessment {{crtrev.asst}}
-       
-       ● Plan {{crtrev.plan}} {{crtrev.planr}}
-       
-       ► Medication changes {{crtrev.meds}} {{crtrev.medsr}}
-
-       ♦ Patient discussion {{crtrev.discuss}}
-
+       ◊ Week {{crtrev.week}}       
+       ► Assessment ◄
+       {{crtrev.asst}}      
+       ► Plan ◄
+       {{crtrev.plan}} {{crtrev.planr}}       
+       ► Medication changes
+       {{crtrev.meds}} {{crtrev.medsr}}
+       ♦ Patient discussion
+       {{crtrev.discuss}}
        ● Clinical Summary
-       ◊ Functional status {{crtrev.func}} {{crtrev.funcr}}
-
+       ◊ Functional status
+       {{crtrev.func}} {{crtrev.funcr}}
        ► Subjective
        Pain {{crtrev.pain}} {{crtrev.painr}}
        Ulceration {{crtrev.ulcer}}
@@ -40,19 +39,18 @@
        Constipation {{crtrev.constipation}}
        Sedation {{crtrev.sedate}}
        Sleep {{crtrev.sleep}}
-       Mood {{crtrev.mood}}
-       
+       Mood {{crtrev.mood}}       
        ► General issues
-       {{crtrev.gen}} {crtrev.genr}}
-       
-       ● Objective findings   {{crtrev.exam}}
+       {{crtrev.gen}} {crtrev.genr}}       
+       ● Objective findings
+       {{crtrev.exam}}
        Fibrosis/edema {{crtrev.exam2}}
        {{crtrev.examr}} 
-
-       ► Blood tests {{crtrev.labs}}
+       ● Blood tests
+       {{crtrev.labs}}
        {{crtrev.labsr}}       
-
-       ► Imaging {{crtrev.xray}}
+       ● Imaging
+       {{crtrev.xray}}
        {{crtrev.xrayr}}
     vars:
       - name: "crtrev"

@@ -3,24 +3,20 @@
   matches:
   - trigger: ":fupmel"
     replace: |
-
-       ● Skin malignancy followup;  {{fupmel.situation}}
-       
-       ● Assessment {{fupmel.asst}}
-       
-       ● Plan {{fupmel.plan}}
+       ● Skin malignancy followup;  {{fupmel.situation}}       
+       ► Assessment ◄
+       {{fupmel.asst}}       
+       ► Plan ◄
+       {{fupmel.plan}}
         {{fupmel.planr}}
-
        ► Discussion with patient
-       {{fupmel.discuss}}
-       
-       ► Medication changes {{fupmel.meds}}
+       {{fupmel.discuss}}       
+       ► Medication changes
+       {{fupmel.meds}}
         {{fupmel.medsr}}
-
-       Next review {{fupmel.nextreview}}
-
-       ● Clinical Summary
-       
+       ♦ Next review
+       {{fupmel.nextreview}}
+       ► Clinical Summary ◄     
        ► Symptoms
        Pain
        {{fupmel.pain}}
@@ -31,24 +27,19 @@
        Change in fatigue  {{fupmel.fatigue}}
        Other symptoms  {{fupmel.othersx}}         
        Other {{fupmel.symptomsr}}
-
        ► General issues
-       {{fupmel.gen}} {{fupmel.genr}}
-       
+       {{fupmel.gen}} {{fupmel.genr}}      
        ► Late effects of therapy
        {{fupmel.late}}
        {{fupmel.later}}
        {{fupmel.latelrfx}}
-       {{fupmel.latelrfxr}}
-       
+       {{fupmel.latelrfxr}}      
        ● Objective findings
        {{fupmel.exam}}
        {{fupmel.examr}} 
-
        ► Blood tests
        {{fupmel.labs}}
        {{fupmel.labsr}}       
-
        ► Imaging
        {{fupmel.xray}}
        {{fupmel.xrayr}}

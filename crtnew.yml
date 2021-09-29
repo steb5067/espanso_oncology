@@ -4,21 +4,19 @@
   - trigger: ":lrevcrt"
     replace: |
        ● Review for {{crtlong.situation}}
-       ◊ Week {{crtlong.week}}
-       
+       ◊ Week {{crtlong.week}}      
        ● Assessment
-       {{crtlong.asst}}
-       
-       ● Plan {{crtlong.plan}} {{crtlong.planr}}
-       
-       ● Medication changes {{crtlong.meds}} {{crtlong.medsr}}
-
-       ● Patient discussion {{crtlong.discuss}}
-
+       {{crtlong.asst}}       
+       ► Plan ◄
+       {{crtlong.plan}} {{crtlong.planr}}       
+       ● Medication changes
+       {{crtlong.meds}} {{crtlong.medsr}}
+       ● Patient discussion
+       {{crtlong.discuss}}
        ● Clinical Summary
-       ► Functional status {{crtlong.func}} {{crtlong.funcr}}
-
-       ►Subjective
+       ► Functional status
+       {{crtlong.func}} {{crtlong.funcr}}
+       ► Subjective
        Pain {{crtlong.pain}} {{crtlong.painr}}
        Ulceration {{crtlong.ulcer}}
        Odynophagia {{crtlong.odyn}}
@@ -41,19 +39,15 @@
        Constipation {{crtrv.constipation}}
        Sedation {{crtlong.sedate}}
        Sleep {{crtlong.sleep}}
-       Mood {{crtlong.mood}}
-       
+       Mood {{crtlong.mood}}       
        ► General issues
-       {{crtlong.gen}} {crtlong.genr}}
-       
-       ► Objective findings   {{crtlong.exam}}
+       {{crtlong.gen}} {crtlong.genr}}      
+       ● Objective Findings  {{crtlong.exam}}
        Fibrosis/edema {{crtlong.exam2}}
        {{crtlong.examr}} 
-
-       ► Blood tests {{crtlong.labs}}
+       ● Blood tests{{crtlong.labs}}
        {{crtlong.labsr}}       
-
-       ► Imaging {{crtlong.xray}}
+       ● Imaging{{crtlong.xray}}
        {{crtlong.xrayr}}
     vars:
       - name: "crtlong"

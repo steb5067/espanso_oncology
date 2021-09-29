@@ -7,8 +7,7 @@
        ► Assessment ◄
        {{reviob.asst}}
        ► Plan ◄
-       {{reviob.plan}}
-       {{reviob.planr}}
+       {{reviob.plan}} {{reviob.planr}}
        ► Medication changes ◄
        {{reviob.meds}} {{reviob.medsr}}
        ♦ Patient discussion
@@ -19,8 +18,7 @@
        ● Symptoms
        Pain {{reviob.pain}} {{reviob.painr}}
        Weight {{reviob.weight}}
-       Other
-       {{reviob.symptomsr}}
+       Other  {{reviob.symptomsr}}
        ● Treatment toxicity
        Fatigue {{reviob.fatigue}}
        Skin rash {{reviob.rash}}
@@ -31,14 +29,11 @@
        ● General issues
        {{reviob.gen}} {{reviob.genr}}
        ● Objective findings
-       {{reviob.exam}}
-       {{reviob.examr}} 
+       {{reviob.exam}} {{reviob.examr}} 
        ● Blood tests
-       {{reviob.labs}}
-       {{reviob.labsr}}       
+       {{reviob.labs}} {{reviob.labsr}}       
        ● Imaging
-       {{reviob.xray}}
-       {{reviob.xrayr}}
+       {{reviob.xray}} {{reviob.xrayr}}
     vars:
       - name: "reviob"
         type: form
