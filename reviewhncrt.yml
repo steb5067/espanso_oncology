@@ -3,7 +3,7 @@
   matches:
   - trigger: ":revcrt"
     replace: |
-        ► Review for {{crtrev.situation}} ◄
+       ► Review for {{crtrev.situation}} ◄
        ◊ Week {{crtrev.week}}       
        ► Assessment ◄
        {{crtrev.asst}}      
