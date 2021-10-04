@@ -25,7 +25,7 @@
        Change in fatigue  {{fuplymph.fatigue}}
        Other concerning symptoms {{fuplymph.othersx}}         
        Other {{fuplymph.symptomsr}}
-       General issues
+       ● General issues
        {{fuplymph.gen}} {{fuplymph.genr}}
         ● Objective Findings
        {{fuplymph.exam}}  {{fuplymph.examr}} 
