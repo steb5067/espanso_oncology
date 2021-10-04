@@ -3,7 +3,7 @@
   matches:
   - trigger: ":fuphn"
     replace: |
-       ► Followup for {{fuphn.situation}}       
+       ► Followup for {{fuphn.situation}} ◄       
        ► Assessment ◄
        {{fuphn.asst}}       
        ► Plan ◄
@@ -33,7 +33,9 @@
        Swallowing issues {{fuphn.swallow}}
        Voice and speech {{fuphn.voice}}
        Dental {{fuphn.dental}}
-       Skin changes {{fuphn.skin}}      
+       Skin changes {{fuphn.skin}}
+       ● General issues
+       {{fuphn.gen}} {{fuphn.genr}}
        ● Objective Findings
        {{fuphn.exam}}
        Fibrosis/edema {{fuphn.exam2}} {{fuphn.examr}} 
