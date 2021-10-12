@@ -1,7 +1,7 @@
   name: exps
   parent: default
   matches:
-    - trigger: ":newletter"
+    - trigger: ":letnew"
       word: true
       replace:  |
          Diagnoses:
@@ -24,7 +24,7 @@
 
          Information and advice given:
 
-    - trigger: ":revletter"
+    - trigger: ":letrev"
       word: true
       replace:  |
         Diagnoses
@@ -49,7 +49,7 @@
       
         Medication changes:
       
-    - trigger: ":rxletter"
+    - trigger: ":letrx"
       word: true
       replace:  |
         Diagnoses:
